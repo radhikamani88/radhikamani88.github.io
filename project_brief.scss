@@ -1,0 +1,39 @@
+@import 'variable.scss';
+
+.home-brief {
+    padding-bottom: 1rem;
+    height: 100%;
+}
+
+.home-project-title {
+    font-family: $lemonde-stack;
+    padding-bottom: 1rem;
+}
+
+.home-project-subtitle {
+    font-family: $font-stack;
+    padding-bottom: 1rem;
+}
+
+.home-project-blurb {
+    font-family: $font-stack;
+}
+
+.home-project-brief {
+    padding-right: 2rem;
+    background-color: white;
+    opacity: 0.8;
+    height: 100%;
+}
+
+.home-project-tags {
+    text-transform: uppercase;
+    font-family: $font-stack;
+}
+
+.project-banner-setting {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 2rem;
+}

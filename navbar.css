@@ -1,0 +1,42 @@
+/* line 3, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+body {
+  position: relative; }
+
+/* line 7, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important; }
+
+/* line 13, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+.navbar {
+  margin-bottom: 0px; }
+
+/* line 17, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+.navbar-header {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "ff-meta-web-pro", sans-serif; }
+
+/* line 23, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+.navbar-nav {
+  font-family: "ff-meta-web-pro", sans-serif; }
+
+/* line 27, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+.affix ~ .container-fluid {
+  position: relative;
+  top: 50px; }
+
+/* line 32, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+.navbar-brand {
+  color: #0047AB !important; }
+
+/* line 36, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+.navbar-brand-currentpage {
+  font-weight: bold; }
+
+/* line 40, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
+.navbar-default {
+  background-color: #FFFFFF !important; }
+
+/*# sourceMappingURL=navbar.css.map */

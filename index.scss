@@ -1,0 +1,99 @@
+@import 'common.scss';
+@import 'link.scss';
+
+p,
+h6 {
+    font-family: $font-stack;
+}
+
+.site-sub-title {
+    font-family: $font-stack;
+    text-align: center;
+}
+
+.site-menu {
+    font-family: $font-stack;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.headline {
+    padding: 10rem 0;
+}
+
+.project1-banner {
+    background-image: url("img/origin_banner_resized_3.png");
+}
+
+.project2-banner {
+    background-image: url("http://placehold.it/933x700");
+    
+}
+
+.home-brief {
+    padding-bottom: 2rem;
+}
+.home-project-title {
+    font-family: $lemonde-stack;
+    padding-bottom: 1rem;
+}
+
+.home-project-subtitle {
+    font-family: $font-stack;
+    padding-bottom: 1rem;
+}
+
+.home-project-brief {
+    padding-right: 2rem;
+}
+
+.home-project-tags {
+    text-transform: uppercase;
+    font-family: $font-stack;
+}
+
+.view-case-study0 {
+    padding-top: 1rem; 
+}
+
+.view-case-study a {
+    font-family: $font-stack;
+    padding: 1rem;
+    border: 1px solid darkgray;
+}
+
+.view-case-study a:hover {
+    color: white;
+    background-color: $color-cobaltblue;
+}
+
+@media (min-width: 768px) {
+    .site-sub-title {
+        text-align: left;
+    }
+
+    .site-menu {
+        font-family: $font-stack;
+        text-align: right;
+    }
+
+    .vcenter {
+        display: inline-block;
+        float: none;
+        vertical-align:bottom;
+    }    
+    
+    .project-banner-setting {
+        margin-top: 0;
+    }
+    
+    .home-brief {
+        padding-bottom: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1400px !important;
+    }
+}

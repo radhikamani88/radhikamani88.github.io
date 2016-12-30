@@ -1,0 +1,42 @@
+@import 'variable.scss';
+
+body {
+    position: relative;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-header {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $font-stack;
+}
+
+.navbar-nav {
+    font-family: $font-stack;
+}
+
+.affix ~ .container-fluid {
+    position: relative;
+    top: 50px;
+}
+
+.navbar-brand {
+    color: $color-cobaltblue !important;
+}
+
+.navbar-brand-currentpage {
+    font-weight: bold;
+}
+
+.navbar-default {
+    background-color: #FFFFFF !important;
+}

@@ -1,0 +1,35 @@
+/* line 3, /home/local/ANT/ajgopala/portfolio_new/link.scss */
+a {
+  position: relative;
+  color: #000;
+  text-decoration: none; }
+
+/* line 9, /home/local/ANT/ajgopala/portfolio_new/link.scss */
+a:hover {
+  color: #000;
+  text-decoration: none; }
+
+/* line 14, /home/local/ANT/ajgopala/portfolio_new/link.scss */
+a:before {
+  text-decoration: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+
+/* line 30, /home/local/ANT/ajgopala/portfolio_new/link.scss */
+a:hover:before {
+  text-decoration: none;
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
+
+/*# sourceMappingURL=link.css.map */
