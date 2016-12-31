@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- typekit fonts -->
     <script src="https://use.typekit.net/tpy0zci.js"></script>
     <script>
         try {
@@ -15,44 +16,42 @@
         }
         catch (e) {}
     </script>
-    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
+    
+    <!-- Fontawesome, Bootstrap, JQuery -->
+    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="goldbootstrap.css">-->
+    
+    <!-- Common css for all work pages -->
     <link rel="stylesheet" href="work.css">
     
+    <!-- CSS specific to this page -->
     <style>
-        .parallax {
-            background-image: url("img/origin_banner.jpg");
-            background-attachment: fixed;
-            background-size: auto;
-            height: 940px;
-        }
-        
-        .pattern {
-            background-color:white;
-            background-image:
-                radial-gradient(midnightblue 9px, transparent 10px),        
-                repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);    
-            background-size: 30px 30px, 90px 90px; 
-            background-position: 0 0;
-        }
+        .parallax-image {
+            background-image: url("img/origin_banner.jpg");            
+        }        
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <div class="container-fluid work-header parallax">
-        <div class="row home-brief vcenter">
-            <div class="col-sm-1">&nbsp;</div>
-            <div class="col-sm-4 home-project-brief">
-                <h4 class="home-project-title">Latitude 90 - the origin</h4>
-                <h3 class="home-project-subtitle">First of it's kind, mobile-social hybrid deduction game</h3>
-                <p class="home-project-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor mi, malesuada in maximus nec, efficitur eget nibh. Integer mattis congue maximus. Donec sed convallis enim, et consequat dolor. Donec pharetra, diam nec lacinia vehicula, dui libero aliquet neque, eu volutpat augue justo nec justo. Quisque pharetra ultricies dictum.</p>
-                <h6 class="home-project-tags">research, redesign</h6>
-                <p class="home-project-blurb">Sep '15 - Dec '15</p>                        
+    <div class="container-fluid work-header parallax parallax-image">
+        <div class="row fullheight">
+            <div class="col-sm-8 fullheight">
+                    <div class="row smrow">&nbsp;</div>
+                    <div class="row goldenheight">
+                        <div class="col-sm-4" style="width:23.62%;">&nbsp;</div>
+                        <div class="col-sm-4 fullheight" style="background-color:white;">
+                                <h4 class="home-project-title">Latitude 90 - the origin</h4>
+                                <h3 class="home-project-subtitle">First of it's kind, mobile-social hybrid deduction game</h3>
+                                <p class="home-project-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor mi, malesuada in maximus nec, efficitur eget nibh. Integer mattis congue maximus. Donec sed convallis enim, et consequat dolor. Donec pharetra, diam nec lacinia vehicula, dui libero aliquet neque, eu volutpat augue justo nec justo. Quisque pharetra ultricies dictum.</p>
+                                <h6 class="home-project-tags">research, redesign</h6>
+                                <p class="home-project-blurb">Sep '15 - Dec '15</p>
+                        </div>
+                    </div>            
             </div>
+            <div class="col-gold-lg">&nbsp;</div>
         </div>
     </div>
     
