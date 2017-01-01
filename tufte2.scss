@@ -177,6 +177,11 @@ article {
         position: relative;
         max-width: 40%;
     }
+    
+    figure.fullwidth {
+        margin-top: $ledding;
+    }
+    
     figure.fullwidth figcaption {
         margin-right: 24%;
     }
@@ -229,7 +234,7 @@ article {
         margin-right: $sidenotemargin;
         width: $width;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: $ledding;
         font-size: 1.1rem;
         line-height: 1.3;
         vertical-align: baseline;
