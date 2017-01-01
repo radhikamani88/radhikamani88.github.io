@@ -6,43 +6,48 @@ $width: 60%;
 $sidenotemargin: -($width+10%);
 $black: rgba(0,0,0,.8);
 $psize: 1.2rem;
+$ledding: 2.1rem;
+$fontweight: 400;
+
+// 48.h1 33.h2 30.h3 27.subtitle 21.blockquote.p.newthought 16.5.footer 15.5.sidenote
+// 1.45 1.1 1.1 1.28 1.3 1
 
 /* Tufte CSS styles */
 html {
     font-size: 15px;
+    text-rendering: optimizeLegibility;
 }
 
 body {
     color: $black;
     counter-reset: sidenote-counter;
+//    background-color: #EAEAE1 !important;
 }
 
 article {
     h1 {
         font-family: $header-stack;
-        font-weight: 400;
-        margin-top: 4rem;
-        margin-bottom: 1.5rem;
-        font-size: 3.2rem;
+        font-weight: $fontweight;
+        margin-top: 4.2rem;
+        margin-bottom: 1rem;
+        font-size: 3.2rem; // 48px
         line-height: 1;
     }
     h2 {
         font-family: $header-stack;
         font-style: italic;
-        font-weight: 400;
+        font-weight: $fontweight;
         margin-top: 2.1rem;
-        margin-bottom: 0;
-        font-size: 2.2rem;
+        font-size: 2.2rem; // 33px
         line-height: 1;
     }
     h3 {
         font-family: $header-stack;
         font-style: italic;
-        font-weight: 400;
-        font-size: 1.7rem;
-        margin-top: 2rem;
-        margin-bottom: 0;
-        line-height: 1;
+        font-weight: $fontweight;
+        font-size: 1.7rem; // 30px
+        margin-top: 2.0rem;
+        line-height: 1.23;
     }
     hr {
         display: block;
@@ -52,14 +57,14 @@ article {
         border-top: 1px solid #ccc;
         margin: 1em 0;
         padding: 0;
-    }
+    }    
 }
 
 p.subtitle {
     font-style: italic;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.8rem; // 27px
     display: block;
     line-height: 1;
 }
@@ -85,23 +90,34 @@ article {
     p,
     ol,
     ul {
-        font-size: $psize;
+        font-size: $psize; // 18px
     }
     p {
         font-family: $selected-stack !important;
-        line-height: 2.1rem;
-        margin-top: 1.4rem;
-        margin-bottom: 1.4rem;
+        font-weight: $fontweight;
+        line-height: $ledding * 1.0 / $psize;
+        margin-top: $ledding;
+        margin-bottom: 0;
         padding-right: 0;
         vertical-align: baseline;
     }
+        
+    p + p {
+        margin-top: 0;
+        text-indent: $ledding;
+    }
+    
+    br {
+        line-height: $ledding;
+    }
+        
     /* Chapter Epigraphs */
     div.epigraph {
         margin: 5em 0;
     }
     div.epigraph > blockquote {
-        margin-top: 3em;
-        margin-bottom: 3em;
+        margin-top: $ledding;
+        margin-bottom: $ledding;
     }
     div.epigraph > blockquote,
     div.epigraph > blockquote > p {
@@ -116,16 +132,19 @@ article {
     /* end chapter epigraphs styles */
     blockquote {
         border-left: none;
-        font-size: 1.4rem;
+        font-size: 1.4rem; // 21px
     }
     blockquote p {
         width: $width;
         margin-right: 40px;
     }
     blockquote footer {
-        width: $width;
-        font-size: 1.1rem;
-        text-align: right;
+        margin-top: $ledding;
+        width: $width !important;
+        font-size: 1.1rem !important; // 16.5px
+        text-align: right !important;
+        font-family: $selected-stack;
+        color: inherit;
     }
     section>ol,
     section>ul {
@@ -145,7 +164,7 @@ article {
         max-width: 55%;
         -webkit-margin-start: 0;
         -webkit-margin-end: 0;
-        margin: 0 0 3em 0;
+        margin: $ledding 0 $ledding 0;
     }
     figcaption {
         float: right;
@@ -295,6 +314,7 @@ article {
     pre.code {
         font-size: 0.9rem;
         width: 52.5%;
+        margin-top: $ledding;
         margin-left: 2.5%;
         border:none !important;
         background-color: white;
