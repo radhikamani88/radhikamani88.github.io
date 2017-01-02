@@ -16,7 +16,8 @@ $beigecolorbg: #EAEAE1 !important;
 
 /* Tufte CSS styles */
 html {
-    font-size: 15px;
+    font-size: 15px; // fallback if vw unit not supported
+    font-size: 0.78vw; // basic responsive behavior
     text-rendering: optimizeLegibility;
 }
 
