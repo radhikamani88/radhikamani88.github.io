@@ -390,15 +390,8 @@ article {
     }
 }
 
-/* @group Tablets, Small Computers */
+/* @group Mobile, Tablets, Small Computers */
 @media only screen and (min-width: 0) and (max-width: 1099px) {
-    html {
-        font-size: 13px;
-    }
-}
-
-/* @group Mobile */
-@media only screen and (min-width: 0) and (max-width: 767px) {
     html {
         font-size: 13px;
     }
