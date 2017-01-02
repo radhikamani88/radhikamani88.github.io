@@ -62,38 +62,53 @@
 .home-project-blurb {
   font-family: "ff-meta-web-pro", sans-serif; }
 
-/* line 38, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
-.home-project-brief {
-  padding-right: 2rem;
-  background-color: white;
-  height: 100%; }
-
-/* line 45, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 44, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .home-project-tags {
   text-transform: uppercase;
   font-family: "ff-meta-web-pro", sans-serif; }
 
-/* line 50, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
-.project-banner-setting {
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  margin-top: 2rem; }
+/* line 64, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+.image-container {
+  width: 100%; }
 
-/* line 57, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 68, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+.center-image {
+  float: right;
+  height: auto;
+  max-width: 100%;
+  margin: 0 0 0 auto; }
+
+/* line 75, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .parallax {
   background-attachment: fixed;
   background-size: auto; }
 
-@media (max-height: 990px) {
-  /* line 63, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
-  .parallax {
-    height: 940px; } }
+@media only screen and (min-width: 767px) and (max-width: 1920px) {
+  /* line 81, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  .home-project-cover {
+    height: 940px;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  /* line 89, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  .home-project-left {
+    padding-left: 0;
+    padding-right: 5rem; }
+  /* line 94, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  .home-project-right {
+    padding-right: 0; } }
 
-@media (max-height: 768px) {
-  /* line 69, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
-  .parallax {
-    height: 718px; } }
+/* @group Mobile */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+  /* line 101, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  .center-image {
+    float: none;
+    margin: auto; }
+  /* line 106, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  .home-project-cover {
+    padding-bottom: 3rem;
+    padding-top: 3rem; } }
 
 /* Import ET Book styles
    adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
