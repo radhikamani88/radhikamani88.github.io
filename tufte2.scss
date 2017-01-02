@@ -378,8 +378,32 @@ article {
     }
 }
 
-@media (max-width: 760px) {
+/* @group Desktop Only */
+@media only screen and (min-width: 1100px) and (max-width: 1441px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* @group Tablets, Small Computers */
+@media only screen and (min-width: 0) and (max-width: 1099px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+/* @group Mobile */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    html {
+        font-size: 13px;
+    }
+    
     body {}
+    
+    article {
+        p {
+            width: 100%;
+        }
     p,
     footer {
         width: 100%;
@@ -434,25 +458,7 @@ article {
     img {
         width: 100%;
     }
-}
-
-/* @group Desktop Only */
-@media only screen and (min-width: 1100px) and (max-width: 1441px) {
-    html {
-        font-size: 15px;
     }
-}
+    
 
-/* @group Tablets, Small Computers */
-@media only screen and (min-width: 0) and (max-width: 1099px) {
-    html {
-        font-size: 13px;
-    }
-}
-
-/* @group Mobile */
-@media only screen and (min-width: 0) and (max-width: 767px) {
-        html {
-        font-size: 13px;
-    }
 }

@@ -552,43 +552,62 @@ article {
   article label.margin-toggle:not(.sidenote-number) {
     display: none; }
 
-@media (max-width: 760px) {
+/* @group Desktop Only */
+@media only screen and (min-width: 1100px) and (max-width: 1441px) {
   /* line 383, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  p,
-  footer {
-    width: 100%; }
-  /* line 387, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  pre.code {
-    width: 97%; }
+  html {
+    font-size: 15px; } }
+
+/* @group Tablets, Small Computers */
+@media only screen and (min-width: 0) and (max-width: 1099px) {
   /* line 390, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  ul {
+  html {
+    font-size: 13px; } }
+
+/* @group Mobile */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+  /* line 397, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  html {
+    font-size: 13px; }
+  /* line 404, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article p {
+    width: 100%; }
+  /* line 407, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article p,
+  article footer {
+    width: 100%; }
+  /* line 411, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article pre.code {
+    width: 97%; }
+  /* line 414, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article ul {
     width: 85%; }
-  /* line 393, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  figure {
+  /* line 417, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article figure {
     max-width: 90%; }
-  /* line 396, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  figcaption,
-  figure.fullwidth figcaption {
+  /* line 420, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article figcaption,
+  article figure.fullwidth figcaption {
     margin-right: 0%;
     max-width: none; }
-  /* line 401, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  blockquote {
+  /* line 425, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article blockquote {
     margin-left: 1.5em;
     margin-right: 0em; }
-  /* line 405, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  blockquote p,
-  blockquote footer {
+  /* line 429, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article blockquote p,
+  article blockquote footer {
     width: 100%; }
-  /* line 409, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  label.margin-toggle:not(.sidenote-number) {
+  /* line 433, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article label.margin-toggle:not(.sidenote-number) {
     display: inline; }
-  /* line 412, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  .sidenote,
-  .marginnote {
+  /* line 436, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article .sidenote,
+  article .marginnote {
     display: none; }
-  /* line 416, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote {
+  /* line 440, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article .margin-toggle:checked + .sidenote,
+  article .margin-toggle:checked + .marginnote {
     display: block;
     float: left;
     left: 1rem;
@@ -597,34 +616,16 @@ article {
     margin: 1rem 2.5%;
     vertical-align: baseline;
     position: relative; }
-  /* line 427, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  label {
+  /* line 451, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article label {
     cursor: pointer; }
-  /* line 430, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  div.table-wrapper,
-  table {
+  /* line 454, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article div.table-wrapper,
+  article table {
     width: 85%; }
-  /* line 434, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  img {
+  /* line 458, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  article img {
     width: 100%; } }
-
-/* @group Desktop Only */
-@media only screen and (min-width: 1100px) and (max-width: 1441px) {
-  /* line 441, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  html {
-    font-size: 15px; } }
-
-/* @group Tablets, Small Computers */
-@media only screen and (min-width: 0) and (max-width: 1099px) {
-  /* line 448, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  html {
-    font-size: 13px; } }
-
-/* @group Mobile */
-@media only screen and (min-width: 0) and (max-width: 767px) {
-  /* line 455, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  html {
-    font-size: 13px; } }
 
 /* line 5, /home/local/ANT/ajgopala/portfolio_new/work.scss */
 .work-header {
