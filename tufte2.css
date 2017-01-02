@@ -387,4 +387,22 @@ article {
   img {
     width: 100%; } }
 
+/* @group Desktop Only */
+@media only screen and (min-width: 1100px) and (max-width: 1441px) {
+  /* line 441, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  html {
+    font-size: 15px; } }
+
+/* @group Tablets, Small Computers */
+@media only screen and (min-width: 0) and (max-width: 1099px) {
+  /* line 448, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  html {
+    font-size: 13px; } }
+
+/* @group Mobile */
+@media only screen and (min-width: 0) and (max-width: 767px) {
+  /* line 455, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  html {
+    font-size: 13px; } }
+
 /*# sourceMappingURL=tufte2.css.map */
