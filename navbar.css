@@ -68,7 +68,7 @@ body {
   background-color: #FFFFFF !important;
   -webkit-box-shadow: 0px 2px 6px 0px black;
   -moz-box-shadow: 0px 2px 6px 0px black;
-  box-shadow: 0px 2px 6px 0px black;
+  box-shadow: 0px 2px 6px 0px #d3d3d3;
   border-radius: 2px; }
 
 /*# sourceMappingURL=navbar.css.map */
