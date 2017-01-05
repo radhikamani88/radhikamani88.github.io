@@ -56,67 +56,71 @@
 /* line 29, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .home-project-subtitle {
   font-family: "ff-meta-web-pro", sans-serif;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.5em;
+  font-weight: 500;
+  font-size: 2.3em; }
 
-/* line 34, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 38, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .step {
   font-family: "ff-meta-web-pro", sans-serif; }
 
-/* line 38, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 42, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .home-project-blurb {
   font-family: "ff-meta-web-pro", sans-serif; }
 
-/* line 48, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 52, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .home-project-tags {
   text-transform: uppercase;
   font-family: "ff-meta-web-pro", sans-serif; }
 
-/* line 61, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 65, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .project-banner-setting {
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   margin-top: 2rem; }
 
-/* line 68, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 72, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .image-container {
   width: 100%; }
 
-/* line 72, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 76, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .center-image {
   float: right;
   height: auto;
   max-width: 100%;
   margin: 0 0 0 auto; }
 
-/* line 79, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+/* line 83, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
 .parallax {
   background-attachment: fixed;
   background-size: auto; }
 
 @media only screen and (min-width: 767px) and (max-width: 1920px) {
-  /* line 85, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  /* line 89, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
   .home-project-cover {
     height: 940px;
     padding: 0 5%;
     display: flex;
     flex-direction: column;
     justify-content: center; }
-  /* line 93, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  /* line 97, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
   .home-project-left {
     padding-left: 0;
     padding-right: 5rem; }
-  /* line 98, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  /* line 102, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
   .home-project-right {
     padding-right: 0; } }
 
 /* @group Mobile */
 @media only screen and (min-width: 0) and (max-width: 769px) {
-  /* line 105, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  /* line 109, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
   .center-image {
     float: none;
     margin: auto; }
-  /* line 110, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
+  /* line 114, /home/local/ANT/ajgopala/portfolio_new/project_brief.scss */
   .home-project-cover {
     padding-bottom: 3rem;
     padding-top: 3rem; } }

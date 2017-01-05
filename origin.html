@@ -14,60 +14,61 @@
             });
         } catch (e) {}
     </script>
-                    <!-- Fontawesome, Bootstrap, JQuery -->
-                    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!--                            <link rel="stylesheet" href="goldbootstrap.css">-->
-                        <!-- Common css for all work pages -->
-                        <link rel="stylesheet" href="work.css">
-                            <!-- CSS specific to this page -->
-                            <style>
-        .parallax-image {
-            background-image: url("img/origin_banner.jpg");
+
+    <!-- Fontawesome, Bootstrap, JQuery -->
+    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Common css for all work pages -->
+    <link rel="stylesheet" href="work.css">
+    <!-- CSS specific to this page -->
+        
+    <style>
+        .navbar-default {
+            background-color: #293E68;
         }
+        
+        .navbar-brand {
+            color: white !important;
+        }
+        
+        .navbar-nav {
+            color: white !important;
+        }
+        
+        .navbar-default .navbar-nav>li>a {
+            color: white !important;
+        }
+        
+        .navbar-default .navbar-nav>li>a:hover {
+            color: black !important;
+        }
+
     </style>
+          
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
-        
-        <!-- Old solution -->
-        <!--
-        <div class="container-fluid work-header parallax parallax-image">
-            <div class="row fullheight">
-                <div class="col-sm-8 fullheight">
-                    <div class="row smrow">&nbsp;</div>
-                    <div class="row goldenheight">
-                        <div class="col-sm-4" style="width:23.62%;">&nbsp;</div>
-                        <div class="col-sm-4 fullheight" style="background-color:white;">
-                            <h4 class="home-project-title">Latitude 90 - the origin</h4>
-                            <h3 class="home-project-subtitle">First of it's kind, mobile-social hybrid deduction game</h3>
-                            <p class="home-project-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor mi, malesuada in maximus nec, efficitur eget nibh. Integer mattis congue maximus. Donec sed convallis enim, et consequat dolor. Donec pharetra, diam nec lacinia
-        vehicula, dui libero aliquet neque, eu volutpat augue justo nec justo. Quisque pharetra ultricies dictum.</p>
-                            <h6 class="home-project-tags">research, redesign</h6>
-                            <p class="home-project-blurb">Sep '15 - Dec '15</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-gold-lg">&nbsp;</div>
-            </div>
-        </div>
-        -->
-        
-        <div class="container-fluid home-project-cover" style="background-color:#293E68;">
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">        
+        <div class="container-fluid home-project-cover" style="background-color:white;">
             <div class="row">
-                <div class="col-md-4 home-project-left">
-                    <h4 class="home-project-title">Latitude 90 - the origin</h4>
-                    <h3 class="home-project-subtitle">First of it's kind, mobile-social hybrid deduction game</h3>
-                    <p class="home-project-blurb">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor mi, malesuada in maximus nec, efficitur eget nibh. Integer mattis congue maximus. Donec sed convallis enim, et consequat dolor. Donec pharetra, diam nec lacinia vehicula, dui libero aliquet neque, eu volutpat augue justo nec justo. Quisque pharetra ultricies dictum.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor mi, malesuada in maximus nec, efficitur eget nibh. Integer mattis congue maximus. Donec sed convallis enim, et consequat dolor. Donec pharetra, diam nec lacinia vehicula, dui libero aliquet neque, eu volutpat augue justo nec justo. Quisque pharetra ultricies dictum.
-                    </p>
+                <div class="col-md-6 home-project-left">
+                <table>
+				  <tr>
+						<td class="project"><h4 class="home-project-title" style="padding-bottom:0;">Latitude 90 - the origin</h4></td>
+						<td class="line" style="padding-left:1em; vertical-align:middle;"><svg height="6" width="100%"><line x1="0" y1="0" x2="100%" y2="0" style="stroke:#222 ;stroke-width:3"/></svg> </td>
+				  </tr>
+				</table>                    
+                    <h3 class="home-project-subtitle">
+                        Indie gaming company, <a href="#">Ghost roadhouse</a> had an exciting game concept, but mobile app usage was very low.
+                        To do this, they hired us to redesign mobile game to improve app engagement.
+                    </h3>
+                    <h3 class="home-project-subtitle">In <b>12 weeks</b>, they had an app that got rave reviews on kickstarter and <a href="https://www.kickstarter.com/projects/1479338853/latitude-90-the-origin">$20,000</a> funding.</h3>
                     <h6 class="home-project-tags">research, redesign</h6>
                     <p class="home-project-blurb">Sep '15 - Dec '15</p>
                 </div>
-                <div class="col-md-8 home-project-right">
-                    <img src="http://placehold.it/1500x925" class="center-image">
+                <div class="col-md-6 home-project-right">
+                    <img src="img/origin_banner_resized_3.png" class="center-image img-responsive">
                 </div>
             </div>
         </div>
@@ -119,275 +120,362 @@
                 </div>
             </div>
         </nav>
+        
+      
         <div class="container">
-            <article>
+            <article class="nobottompadding">
                 <section>
-                    <h2 id="intro">Introduction</h2>
-                    <p>Tufte CSS provides tools to style web articles using the ideas demonstrated by Edward Tufte’s books and handouts. Tufte’s style is known for its simplicity, extensive use of sidenotes, tight integration of graphics with text, and carefully
-chosen typography.</p>
-                    <p>Tufte CSS was created by 
-                        <a href="http://www.daveliepmann.com">Dave Liepmann</a> and is now an Edward Tufte project. The original idea was cribbed from 
-                        <a href="https://tufte-latex.github.io/tufte-latex/">Tufte-
-                            <span class="latex">L
-                                <span class="latex-sup">a</span>T
-                                <span class="latex-sub">e</span>X
-                            </span>
-                        </a>                    and 
-                        <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">R Markdown’s Tufte Handout format</a>. We give hearty thanks to all the people who have contributed to those projects.
-                    </p>
-                    <p>If you see anything that Tufte CSS could improve, we welcome your contribution in the form of an issue or pull request on the GitHub project: 
-                        <a href="https://github.com/edwardtufte/tufte-css">tufte-css</a>. Please note the 
-                        <a href="https://github.com/edwardtufte/tufte-css#contributing">contribution guidelines</a>.
-                    </p>
-                    <p>Finally, a reminder about the goal of this project. The web is not print. Webpages are not books. Therefore, the goal of Tufte CSS is not to say “websites should look like this interpretation of Tufte’s books” but rather “here are some
-techniques Tufte developed that we’ve found useful in print; maybe you can find a way to make them useful on the web”. Tufte CSS is merely a sketch of one way to implement this particular set of ideas. It should be a starting point,
-not a design goal, because any project should present their information as best suits their particular circumstances.</p>
-                </section>
-                <section>
-                    <h2 id="getting-started">Getting Started</h2>
-                    <p>To use Tufte CSS, copy 
-                        <code>tufte.css</code> and the 
-                        <code>et-book</code> directory of font files to your project directory, then add the following to your HTML document’s 
-                        <code>head</code> block:
-                    </p>
-                    <pre class="code">&lt;link rel="stylesheet" href="tufte.css"/&gt;</pre>
-                    <p>Now you just have to use the provided CSS rules, and the Tufte CSS conventions described in this document. For best results, View Source and Inspect Element frequently.</p>
-                </section>
-                <section>
-                    <h2 id="fundamentals">Fundamentals</h2>
-                    <h3 id="fundamentals--sections-and-headers">Sections and Headings</h3>
-                    <p>Organize your document with an 
-                        <code>article</code> element inside your 
-                        <code>body</code> tag. Inside that, use 
-                        <code>section</code> tags around each logical grouping of text and headings.
-                    </p>
-                    <p>Tufte CSS uses 
-                        <code>h1</code> for the document title, 
-                        <code>p</code> with class 
-                        <code>subtitle</code> for the document subtitle, 
-                        <code>h2</code> for section headings, and 
-                        <code>h3</code> for low-level headings. More specific headings
-are not supported. If you feel the urge to reach for a heading of level 4 or greater, consider redesigning your document:
-                    </p>
-                    <blockquote cite="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">
-                        <p>[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of 
-                            <em>sentences</em>                        which then cumulate sequentially into 
-                            <em>paragraphs</em>, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.
-                        </p>
-                        <footer>
-                            <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">Edward Tufte, forum post, ‘Book design: advice and examples’ thread</a>
-                        </footer>
-                    </blockquote>
-                    <p>As a bonus, this excerpt regarding the use of headings provides an example of block quotes. In Tufte CSS they are just lightly styled, semantically correct HTML using 
-                        <code>blockquote</code> and 
-                        <code>footer</code> elements. See page 20
-of 
-                        <a href="https://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a> for an example in print.
-                    </p>
-                    <p>
-                        <span class="newthought">In his later books
-                            <label for="sn-in-his-later-books" class="margin-toggle sidenote-number"></label>
-                        </span>
-                        <input type="checkbox" id="sn-in-his-later-books" class="margin-toggle" />
-                        <span class="sidenote">
-                            <a href="http://www.edwardtufte.com/tufte/books_be">
-                                <em>Beautiful Evidence</em>
-                            </a>
-                        </span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and the first few words of the sentence
-set in small caps. For this we use a span with the class 
-                        <code>newthought</code>, as demonstrated at the beginning of this paragraph. Vertical spacing is accomplished separately through 
-                        <code>&lt;section&gt;</code> tags. Be consistent:
-though we do so in this paragraph for the purpose of demonstration, do not alternate use of header elements and the 
-                        <code>newthought</code> technique. Pick one approach and stick to it.
-                    </p>
-                    <h3 id="fundamentals--text">Text</h3>
-                    <p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. Tufte CSS uses 
-                        <code>#fffff8</code> and 
-                        <code>#111111</code> because they are nearly indistinguishable
-from their ‘pure’ cousins, but dial down the harsh contrast. We stick to the greyscale for text, reserving color for specific, careful use in figures and images.
-                    </p>
-                    <p>In print, Tufte has used the proprietary Monotype Bembo
-
-                        <label for="sn-proprietary-monotype-bembo" class="margin-toggle sidenote-number"></label>
-                        <input type="checkbox" id="sn-proprietary-monotype-bembo" class="margin-toggle" />
-                        <span class="sidenote">See Tufte’s comment in the 
-                            <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt">Tufte book fonts</a> thread.
-                        </span> font. A similar effect is achieved in digital formats with the now open-source
-
-                        <a href="https://github.com/edwardtufte/et-book">ETBook</a>, which Tufte CSS supplies with a 
-                        <code>@font-face</code> reference to a .ttf file. In case ETBook somehow doesn’t work, Tufte CSS shifts gracefully to other serif fonts like
-Palatino and Georgia.
-                    </p>
-                    <p>Also notice how Tufte CSS includes separate font files for bold (strong) and italic (emphasis), instead of relying on the browser to mechanically transform the text. This is typographic best practice.</p>
-                    <p class="sans">If you prefer sans-serifs, use the 
-                        <code>sans</code> class. It relies on Gill Sans, Tufte’s sans-serif font of choice.
-                    </p>
-                    <p>Links in Tufte CSS match the body text in color and do not change on mouseover or when clicked. Here is a 
-                        <a href="#">dummy example</a> that goes nowhere. These links are underlined, since this is the most widely recognized indicator of
-clickable text.
-
-                        <label for="mn-blue-links" class="margin-toggle">&#8853;</label>
-                        <input type="checkbox" id="mn-blue-links" class="margin-toggle" />
-                        <span class="marginnote">Blue text, while also a widely recognizable clickable-text indicator, is crass and distracting. Luckily, it is also rendered unnecessary by the use of underlining.</span> However, because most browsers’ default
-underlining does not clear descenders and is so thick and distracting, the underline effect is instead achieved using CSS trickery involving background gradients instead of standard 
-                        <code>text-decoration</code>. Credit goes to Adam
-Schwartz for that technique.
-                    </p>
-                    <p>As always, these design choices are merely one approach that Tufte CSS provides by default. Other approaches, such as changing color on click or mouseover, or using highlighting or color instead of underlining to denote links, could also
-be made to work. The goal is to make sentences readable without interference from links, as well as to make links immediately identifiable even by casual web users.</p>
-                </section>
-                <section>
-                    <h2 id="epigraphs">Epigraphs</h2>
-                    <div class="epigraph">
-                        <blockquote>
-                            <p>The English language . . . becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.</p>
-                            <footer>George Orwell, “Politics and the English Language”</footer>
-                        </blockquote>
-                        <blockquote>
-                            <p>For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.</p>
-                            <footer>Richard P. Feynman, 
-                                <cite>“What Do You Care What Other People Think?”</cite>
-                            </footer>
-                        </blockquote>
-                        <blockquote>
-                            <p>I do not paint things, I paint only the differences between things.</p>
-                            <footer>Henri Matisse, 
-                                <cite>Henri Matisse Dessins: thèmes et variations</cite> (Paris, 1943), 37
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <p>If you’d like to introduce your page or a section of your page with some quotes, use epigraphs. Modeled after chapter epigraphs in Tufte’s books (particularly 
-                        <em>Beautiful Evidence</em>), these are 
-                        <code>blockquote</code> elements with
-a bit of specialized styling. Quoted text is italicized. The source goes in a 
-                        <code>footer</code> element inside the 
-                        <code>blockquote</code>. We have provided three examples in the epigraph of this section, demonstrating shorter and
-longer quotes, with and without a paragraph tag, and showing how multiple quotes within an epigraph fit together with the use of a wrapper class.
-                    </p>
-                </section>
-                <section>
-                    <h2 id="sidenotes">Sidenotes: Footnotes and Marginal Notes</h2>
-                    <p>One of the most distinctive features of Tufte’s style is his extensive use of sidenotes.
-
-                        <label for="sn-extensive-use-of-sidenotes" class="margin-toggle sidenote-number"></label>
-                        <input type="checkbox" id="sn-extensive-use-of-sidenotes" class="margin-toggle" />
-                        <span class="sidenote">This is a sidenote.</span> Sidenotes are like footnotes, except they don’t force the reader to jump their eye to the bottom of the page, but instead display off to the side in the margin. Perhaps you have noticed
-their use in this document already. You are very astute.
-
-                    </p>
-                    <p>Sidenotes are a great example of the web not being like print. On sufficiently large viewports, Tufte CSS uses the margin for sidenotes, margin notes, and small figures. On smaller viewports, elements that would go in the margin are hidden
-until the user toggles them into view. The goal is to present related but not necessary information such as asides or citations 
-                        <em>as close as possible</em> to the text that references them. At the same time, this secondary information
-should stay out of the way of the eye, not interfering with the progression of ideas in the main text.
-                    </p>
-                    <p>Sidenotes consist of two elements: a superscript reference number that goes inline with the text, and a sidenote with content. To add the former, just put a label and dummy checkbox into the text where you want the reference to go, like
-so:</p>
-                    <pre class="code">
-&lt;label for="sn-demo"
-class="margin-toggle sidenote-number"&gt;
-&lt;/label&gt;
-&lt;input type="checkbox"
-id="sn-demo"
-class="margin-toggle"/&gt;</pre>
-                    <p>You must manually assign a reference 
-                        <code>id</code> to each side or margin note, replacing “sn-demo” in the 
-                        <code>for</code> and the 
-                        <code>id</code> attribute values with an appropriate descriptor. It is useful to use prefixes like 
-                        <code>sn-</code>                    for sidenotes and 
-                        <code>mn-</code> for margin notes.
-                    </p>
-                    <p>Immediately adjacent to that sidenote reference in the main text goes the sidenote content itself, in a 
-                        <code>span</code> with class 
-                        <code>sidenote</code>. This tag is also inserted directly in the middle of the body text, but is either
-pushed into the margin or hidden by default. Make sure to position your sidenotes correctly by keeping the sidenote-number label close to the sidenote itself.
-                    </p>
-                    <p>If you want a sidenote without footnote-style numberings, then you want a margin note.
-
-                        <label for="mn-demo" class="margin-toggle">&#8853;</label>
-                        <input type="checkbox" id="mn-demo" class="margin-toggle" />
-                        <span class="marginnote">
-This is a margin note. Notice there isn’t a number preceding the note.
-</span> On large screens, a margin note is just a sidenote that omits the reference number. This lessens the distracting effect taking away from the flow of the main text, but can increase the cognitive load of matching
-a margin note to its referent text. However, on small screens, a margin note is like a sidenote except its viewability-toggle is a symbol rather than a reference number. This document currently uses the symbol &#8853; (
-                        <code>&amp;#8853;</code>),
-but it’s up to you.
-                    </p>
-                    <p>Margin notes are created just like sidenotes, but with the 
-                        <code>marginnote</code> class for the content and the 
-                        <code>margin-toggle</code> class for the label and dummy checkbox. For instance, here is the code for the margin note used
-in the previous paragraph:
-                    </p>
-                    <pre class="code">
-                    some code here
-                    </pre>
-                    <p>Figures in the margin are created as margin notes, as demonstrated in the next section.</p>
-                </section>
-                <section>
-                    <h2 id="figures">Figures</h2>
-                    <p>
-                        Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.
-                    </p>
-                    <p>
-                        Figures should try to use the <code>figure</code> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like so:
-                    </p>
-                    <figure>
-                        <label for="mn-exports-imports" class="margin-toggle">&#8853;</label>
-                        <input type="checkbox" id="mn-exports-imports" class="margin-toggle" />
-                        <span class="marginnote">From Edward Tufte, 
-                            <em>Visual Display of Quantitative Information</em>, page 92.
-                        </span>
-                        <img src="img/exports-imports.png" alt="Exports and Imports to and from Denmark & Norway from 1700 to 1780" />
-                    </figure>
+                    <h2 id="my_role">My role</h2>
                     <p>
                         <label for="mn-figure-1" class="margin-toggle">&#8853;</label>
                         <input type="checkbox" id="mn-figure-1" class="margin-toggle" />
                         <span class="marginnote">
-                            <img src="img/rhino.png" alt="Image of a Rhinoceros"/>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” 
-                            <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s 
-                            <em>Visual Explanations</em>.
+                            <img class="img-responsive" src="img/w_origin/ba.png" width="50%" alt="Before After versions of app"/>
+                            <em>Redesigned app in 12 weeks.</em>
                         </span> 
-                        But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <code>p</code> tag, as seen to the right of this paragraph.
+                    </p>
+                    <p class="firstpara">
+                        I took the role of a UX designer and project manager along with another UX designer in a total team of 4 people that worked on this project as part of the University of Michigan, Design clinic program. My contributions were as follows:
+                    </p>
+                    <dl>
+                        <dt>Led research</dt>
+                        <dd>scheduled meetings, found participants to ethnographic studies. Did heuristic evaluation and competitive analysis. Identified gaps in game mechanics and UI.</dd>
+                        <dt>Brainstorming and wireframing for IA improvements</dt>
+                        <dd>Research revealed several IA gaps. After brainstorming, I communicated my ideas via wireframes to my team mates and conducted user studies to validate the ideas.</dd>
+                        <dt>Project management</dt>
+                        <dd>To ensure timely delivery after 12 weeks, I managed the project timeline, produced biweekly reports to give it to administrators of the design clinic program, planned and organized all meetings with team mates and external participants.</dd>
+                    </dl>
+                    <p>
+                        <label for="mn-figure-1" class="margin-toggle">&#8853;</label>
+                        <input type="checkbox" id="mn-figure-1" class="margin-toggle" />
+                        <span class="marginnote">
+                            <iframe width="250" height="200" src="https://www.youtube.com/embed/aQTQ8frIyCg" frameborder="0" allowfullscreen></iframe>
+                            <br/>
+                            <em>Watch this video for a game tutorial.</em>
+                        </span> 
+                    </p>
+                    <h2 id="game_overview">Game overview</h2>
+                    <p>
+                        To help understand the rest of the document, I will explain the necessary portions of the game first.
                     </p>
                     <p>
-                        If you need a full-width figure, give it the <code>fullwidth</code> class. Make sure that’s inside an <code>article</code>, and it will take up (almost) the full width of the screen. This approach is demonstrated below using Edward Tufte’s English translation of the Napoleon’s March data visualization. From <em>Beautiful Evidence</em>, page 122-124.
+                        Set in Antartica, a virus in Antartic science station has infected a patient. 
+                        The goal is to find patient 0 before everyone is infected, using clues and tools provided by the game app and social communication.
                     </p>
-                    <figure class="fullwidth">
-                        <img src="img/napoleons-march.png" alt="Figurative map of the successive losses of the French Army in the Russian campaign, 1812-1813" />
-                    </figure>
-                </section>
-                <section>
-                    <h2 id="code">Code</h2>
-                    <p>Technical jargon, programming language terms, and code samples are denoted with the 
-                        <code>code</code> class, as I’ve been using in this document to denote HTML. Code needs to be monospace for formatting purposes and to aid in code analysis, but it must maintain its readability. To those ends, Tufte CSS follows GitHub’s font selection, which shifts gracefully along the monospace spectrum from the elegant but rare Consolas all the way to good old reliable Courier.
+                    <p>
+                        At any point in the game, there are 2 groups of people: <em>Researchers</em> and <em>Infected</em>. During the game, we get to test biological samples of other researchers and check if they are infected
                     </p>
-                    <p>Extended code examples should use a 
-                        <code>pre</code> tag with class 
-                        <code>code</code>. This adds control over indentation and overflow as well:
+                    
+                    <h2 id="approach">Approach</h2>
+                    <p>
+                        I suggested that we divide 12 weeks into <b>6 sprints of 2 weeks each</b> as that minimizes administrative overhead and allows us to track progress effectively. We <b>did the following steps in the 6 sprints</b> and each week we would produce a report documenting our progress, findings and results in that sprint.
                     </p>
-                    <pre class="code">;; Some code examples in Clojure. This is a comment.</pre>
-                </section>
-                <section>
-                    <h2 id="imagequilts">ImageQuilts</h2>
-                    <p>Tufte CSS provides support for Edward Tufte and Adam Schwartz’s 
-                        <a href="http://imagequilts.com/">ImageQuilts</a>. See the 
-                        <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003wk">ET forum announcement thread</a> for
-                        more on quilts. Some have ragged edges, others straight. Include these images just as you would any other 
-                        <code>figure</code>.
-                    </p>
-                    <p>This is an ImageQuilt surveying Chinese calligraphy, placed in a full-width figure to accomodate its girth:</p>
-                    <figure class="fullwidth">
-                        <img src="img/imagequilt-chinese-calligraphy.png" alt="Image of Chinese Calligraphy" />
-                    </figure>
-                    <p>Here is an ImageQuilt of 47 animal sounds over and over, in a figure constrained to the main text region. This quilt has ragged edges, but the image itself is of course still rectangular.</p>
                     <figure>
-                        <img src="img/imagequilt-animal-sounds.png" alt="Image of animal sounds" />
+                        <img src="img/w_origin/Approach1.png" class="img-responsive">
                     </figure>
+                    <h2 id="research">Research</h2>
+                    <h3 id="competitive_analysis">Competitive analysis &mdash; does game concept need redesign?</h3>
+                    <p>
+                        As none of us had worked in this domain before and had not studied similar social deduction games we decide to first spend time doing that. <b>Mafia</b>, <b>The resistance</b> and <b>Avalon</b> were the 3 games evaluated by us. After each game, team members provided feedback, listing one thing they enjoyed and one thing they wanted improved.
+                    </p>
+                    <figure>
+                        <img class="img-responsive" src="img/w_origin/ca.png">
+                    </figure>
+                    <p>
+                        We found out that the competitors had the following drawbacks. However, the game mechanics of Latitude 90 was trying to address these issues and hence we decided to retain those aspects of game play of Latitude 90.
+                    </p>
+                    
+                    <div class="table-responsive">
+                        <table class="competitive-table table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Goal</th>
+                                    <th>Competitors</th>
+                                    <th>Latitude 90 - Origin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="goal-col">
+                                        <dl>
+                                            <dt>Player involvement</dt>
+                                            <dd>
+                                                In these games, players usually die midway game due to no fault of theirs. This reduced game engagement. Players don't die in Latitude 90 however and hence we found it to be superior in that respect.
+                                            </dd>
+                                        </dl>
+                                    </td>
+                                    <td><i class="fa fa-times fa-3"></i></td>
+                                    <td><i class="fa fa-check fa-3"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <dl>
+                                            <dt>Help players make conclusive informed decisions</dt>
+                                            <dd>
+                                                As there was no computer involved in these games, it was very hard for players to find any conclusive evidence to make progress in finding who the adversary was. This usually led to dissapointment as players were killed incorrectly and forced to sit out the rest of the game.
+                                            </dd>
+                                        </dl>
+                                    </td>
+                                    <td><i class="fa fa-times fa-3"></i></td>
+                                    <td><i class="fa fa-check fa-3"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        <span class="newthought">no</span>, overall, our conclusion was that the game concept and mechanics are well designed and did not see any need to improve on those improve on them based on competitive analysis.
+                    </p>
+                    
+                    <h3 id="play_testing">Playtesting &mdash; Ethnographic study</h3>
+                    <p>
+                        As none of us were experts in social deduction games, we decided to conduct ethnographic studies to study the behavior of players when they are playing this game. This was viable since we were in an university and it was easy to find participants who were interested in social deduction games and had played such games before.
+                    </p>
+                    <div class="videowrapper2">
+                        <div class="videoWrapper">
+                            
+                            <iframe width="560" height="349" src="https://www.youtube.com/embed/M3GMufRaZVU" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>                    
+                    <p>
+                        4 of 5 total sessions were with the same two playtest groups. It was this iterative user feedback that powered our Agile process. We collected <b>100+ responses and 10+ hours of footage</b>. Playtesting was ideal as it let us both observe users naturally and receive direct feedback afterwards. During each game, the team recorded notable interactions in-game (positive and negative). After each game, we conducted moderated sessions where each participant provided feedback. We had the following <b>findings</b>:
+                    </p>
+                    <table class="playtest-table table table-striped table-bordered">
+                        <tr>
+                            <td class="playtest-symbol"><img class="img-responsive" width="50%" src="img/w_origin/chat.png"></td>
+                            <td>
+                                <dl>
+                                    <dt>Social interactions are heart and soul</dt>
+                                    <dd>
+                                        Players were so engrossed in discussion, deception, deduction, discovery and betrayal that they forget their phones. Players enjoy the process of discussion, deduction, deception, discovery, and betrayal. These interactions had such a lasting impact that they often carried over multiple rounds of the game. 
+                                    </dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="playtest-symbol"><img class="img-responsive" width="50%" src="img/w_origin/confused.svg"></td>
+                            <td>
+                                <dl>
+                                    <dt>UI confusing</dt>
+                                    <dd>
+                                        We found that the initial version of the UI that we were testing had several UI issues. Newcomers found it hard to navigate the app. Experienced users were confused by the game and accidentaly misled to reveal game-breaking information during the game due to the app.
+                                    </dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="playtest-symbol"><img class="img-responsive" width="50%" src="img/w_origin/focus.png"></td>
+                            <td>
+                                <dl>
+                                    <dt>Unclear how the app fit with the rest of the game</dt>
+                                    <dd>
+                                        While the app was providing useful information and clues and people liked the app, people were not clear about what the role of the app is. There weren't clear what steps of the game are played in the app vs. in the real world.
+                                    </dd>
+                                </dl>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3 id="heuristic_evaluation">7 independent heuristic evaluations</h3>
+                    <p>
+                        The purpose of this research was to catch any issues we may have potentially missed in playtesting and identify how we would be able to address them as we made our transition from web to mobile. We found <b>2 primary</b> issues:
+                    </p>
+                    <table class="heuristic-table table table-bordered table-striped">
+                        <tr>
+                            <td class="heuristic-symbol">
+                                <img class="img-responsive" width="50%" src="img/w_origin/feedback.svg">
+                            </td>
+                            <td>
+                                <dl>
+                                    <dt>No system feedback</dt>
+                                    <dd>Actions did not offer confirmation. In end-game states game outcome was decided without explicitly informing every user</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="heuristic-symbol">
+                                <img class="img-responsive" src="img/w_origin/prevent.svg" width="50%">
+                            </td>
+                            <td>
+                                <dl>
+                                    <dt>No error prevention</dt>
+                                    <dd>Unintentional errors were common and public and private notifications were indistinguishable</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                    </table>
                 </section>
                 <section>
-                    <h2 id="epilogue">Epilogue</h2>
-                    <p>Many thanks go to Edward Tufte for leading the way with his work. It is only through his kind and careful editing that this project accomplishes what it does. All errors of implementation are of course mine.</p>
+                    <h2 id="final_design">Final design</h2>
+                    
+                    <figure>
+                        <img class="img-responsive" src="img/w_origin/ba.png" alt="Before After versions of app"/>
+                    </figure>
+                    
+                    <h3 id="design_improvements">Design improvements</h3>
+                    <table class="design_improvements_table table table-bordered table-striped">
+                        <tr>
+                            <td class="playtest-symbol"><img class="img-responsive" width="100%" src="img/w_origin/compass_discover.svg"></td>
+                            <td>
+                                <dl>
+                                    <dt>Improve feature discoverability</dt>
+                                    <dd>Discover casting vote, mark suspicion etc. easily. Provide good visual cues for events occurred and available actions</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="playtest-symbol"><img class="img-responsive" width="100%" src="img/w_origin/inform.svg"></td>
+                            <td>
+                                <dl>
+                                    <dt>Always inform system state</dt>
+                                    <dd>
+                                        Enable them to make most informed decisions
+                                    </dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="playtest-symbol"><img class="img-responsive" width="100%" src="img/w_origin/support.svg"></td>
+                            <td>
+                                <dl>
+                                    <dt>Don't try to replace the real world</dt>
+                                    <dd>Augment social interactions with mobile game, but don't try to replace it. Help users execute their intentions quickly on their mobile phone so that they can go back to the real world quickly. Let's keep a goal to make them look away from the phone 80%-90% of the time</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <h3>34 unique views, 15 new icons</h3>
+                    <p>
+                        Final design consisted of 34 unique views, 15 new icons and we transitioned from a browser based web experience to a fully native mobile application.
+                    </p>
                 </section>
             </article>
         </div>
+        <div class="container-fluid">
+            <a href="https://s3-us-west-2.amazonaws.com/www.radhikamani.me/img/new/home/clinic/OriginMockups.png">
+                <img class="img-responsive" src="https://s3-us-west-2.amazonaws.com/www.radhikamani.me/img/new/home/clinic/OriginMockups.png">
+            </a>
+        </div>
+
+        <div class="container">
+            <article>
+                <section>
+                    <h3 id="iconography">Iconography</h3>
+                    <div class="fullwidth">
+                    <figure>
+                        <img src="img/w_origin/icon.png">
+                    </figure>
+                    </div>
+                    
+                    <h2>What UI improvements did we make?</h2>
+                    <p>&nbsp;</p>
+                    <div class="row">
+                        <div class="col-md-4"><img src="img/w_origin/imp1.png"></div>
+                        <div class="col-md-4"><img src="img/w_origin/imp2.png"></div>
+                        <div class="col-md-4">
+                            <b>Sticky header</b>
+                            <ol>
+                                <li>Provided a count of Infected and Researcher players in the top-right.</li>
+                                <li>Inspired both a sense of progress for Infected players and a sense of urgency in the Researchers.</li>
+                                <li>Helped make informed decisions</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <p>&nbsp;</p>                    
+                    <div class="row">
+                        <div class="col-md-4"><img src="img/w_origin/imp3.png"></div>
+                        <div class="col-md-4"><img src="img/w_origin/imp4.png"></div>
+                        <div class="col-md-4">
+                            <b>Progress Bar and Timer</b>
+                            <p>Don't make players anxious of when next package will arrive. Let them focus on social interactions.</p>
+                        </div>
+                    </div>
+                    
+                    <p>&nbsp;</p>
+                    <div class="row">
+                        <div class="col-md-4"><img src="img/w_origin/imp5.png"></div>
+                        <div class="col-md-4"><img src="img/w_origin/imp6.png"></div>
+                        <div class="col-md-4">
+                            <b>Clue Card</b>
+                            <p>Suspicions are color coded and marking suspicion requires fewer interactions</p>
+                        </div>
+                    </div>
+                    
+                    <p>&nbsp;</p>
+                    <h2>How did we adapt good parts to mobile interface?</h2>
+                    <p>&nbsp;</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/w_origin/ada1.png">
+                        </div>
+                        <div class="col-md-6">
+                            <b>To improve discoverability:</b>
+                            <ol>
+                            <li>Transitioned the navigation from scroll format to a tab format</li><li>
+                            Introduced sticky header that includes game-critical information</li><li>
+                            Introduced drawer menus into the 'rule and role card' to improve accessibility and improve readability</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <p>&nbsp;</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/w_origin/ada2.png">
+                        </div>
+                        <div class="col-md-6">
+                            <b>To improve discoverability:</b>
+                            <ol>
+                            <li>Transitioned the navigation from scroll format to a tab format</li><li>
+                            Introduced sticky header that includes game-critical information</li><li>
+                            Introduced drawer menus into the 'rule and role card' to improve accessibility and improve readability</li>
+                            </ol>
+                        </div>
+                    </div>
+                
+                    <p>&nbsp;</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/w_origin/ada3.png">
+                        </div>
+                        <div class="col-md-6">
+                            <b>To improve discoverability:</b>
+                            <ol>
+                            <li>
+                                Redesigned 'suspect' icons for the 'suspicion grid',  utilizing colors and details to provide visual identity while maintaining the same silhouette to demonstrate similar function.
+                            </li>
+                            <li>
+                                Redesigned 'role' icons to reflect greater granularity within the Infected team. Previously they had all been represented by the same 'hazard' icon on the left. In order to represent the evolution within 'Infected' roles, the new icons build off one another to indicate progression.
+                            </li>
+                            </ol>
+                        </div>
+                    </div>
+                
+                </section>    
+                    
+                <section>    
+                    <h2 id="testimonials">Impact</h2>
+                    <p>
+                        <label for="mn-figure-3" class="margin-toggle">&#8853;</label>
+                        <input type="checkbox" id="mn-figure-3" class="margin-toggle" />
+                        <span class="marginnote">
+                            <iframe width="250" height="200" src="https://www.youtube.com/embed/TFCOGp--v9c?feature=oembed&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+                            <br/>
+                            <em>User testimonials after redesign</em>
+                        </span>
+                    </p>
+                    <blockquote>
+                        <p>I absolutely love this game ... It's addictive, fast-paced, and you never know when this could be infected ... I can't wait till this game is out</p>
+                        <footer>Kristin Genchi, <cite>Buckeye gamefest committee member</cite></footer>
+                    </blockquote>
+                    <blockquote>
+                        <p>My werewolf killer! It blew me away ... Lots of deductive reasoning as well as trust/deception skills  ... Can't wait to find this game again and play it</p>
+                        <footer>Matthew Campbell, <cite>Creator of beyond protocol</cite></footer>
+                    </blockquote>
+                </section>
+            </article>
+        </div>
+
     </body>
 </html>
