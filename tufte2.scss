@@ -95,7 +95,16 @@ body {
     }
 }
 
+.dark {
+    background-color: #F4F6F7;
+}
+
+.light {
+    background-color: lighten(#F4F6F7, 1%);
+}
+
 .nobottompadding {
+    padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
 
@@ -164,6 +173,8 @@ article {
 
 article {
     section {
+        margin-top: 1rem;
+        padding-left: 2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
