@@ -91,29 +91,25 @@
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="#intro">Introduction</a>
+                                <a href="#my_role">My role</a>
                             </li>
                             <li>
-                                <a href="#getting-started">Getting started</a>
+                                <a href="#game_overview">Game overview</a>
                             </li>
                             <li>
-                                <a href="#fundamentals">Fundamentals</a>
+                                <a href="#approach">Approach</a>
                             </li>
                             <li>
-                                <a href="#epigraphs">Epigraphs</a>
+                                <a href="#research">Research</a>
                             </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Research 
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#section41">Competitive analysis</a>
-                                    </li>
-                                    <li>
-                                        <a href="#section42">Play testing</a>
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="#final_design">Final design</a>
+                            </li>
+                            <li>
+                                <a href="#details">Details</a>
+                            </li>
+                            <li>
+                                <a href="#impact">Impact</a>
                             </li>
                         </ul>
                     </div>
@@ -130,7 +126,7 @@
                         <label for="mn-figure-1" class="margin-toggle">&#8853;</label>
                         <input type="checkbox" id="mn-figure-1" class="margin-toggle" />
                         <span class="marginnote">
-                            <img class="img-responsive" src="img/w_origin/ba.png" width="50%" alt="Before After versions of app"/>
+                            <img class="img-responsive" src="img/w_origin/ba.png" alt="Before After versions of app"/>
                             <em>Redesigned app in 12 weeks.</em>
                         </span> 
                     </p>
@@ -374,14 +370,19 @@
                     </figure>
                     </div>
                 </section>
-            </article>
-        </div>
-        
-        <div class="container">
-            <article>
-                <section class="dark">
-                    <h1>Details</h1>
-                    <h2>What UI improvements did we make?</h2>
+                <section>
+                    <h2>Interaction map</h2>
+                    <h3>Map for launch and role assignment</h3>
+                    <figure class="fullwidth">
+                        <img class="img-responsive" src="img/w_origin/int1.png">
+                    </figure>
+                    <h3>Suspicion tracking and experiments/packages</h3>
+                    <figure class="fullwidth">
+                        <img class="img-responsive" src="img/w_origin/int2.png">
+                    </figure>
+
+                    <h2 id="details">Details</h2>
+                    <h3>What UI improvements did we make?</h3>
                     <p>&nbsp;</p>
                     <div class="row">
                         <div class="col-md-4"><img src="img/w_origin/imp1.png"></div>
@@ -402,7 +403,7 @@
                         <div class="col-md-4"><img src="img/w_origin/imp4.png"></div>
                         <div class="col-md-4">
                             <b>Progress Bar and Timer</b>
-                            <p>Don't make players anxious of when next package will arrive. Let them focus on social interactions.</p>
+                            <p class="wideformat">Don't make players anxious of when next package will arrive. Let them focus on social interactions.</p>
                         </div>
                     </div>
                     
@@ -412,12 +413,12 @@
                         <div class="col-md-4"><img src="img/w_origin/imp6.png"></div>
                         <div class="col-md-4">
                             <b>Clue Card</b>
-                            <p>Suspicions are color coded and marking suspicion requires fewer interactions</p>
+                            <p class="wideformat">Suspicions are color coded and marking suspicion requires fewer interactions</p>
                         </div>
                     </div>
                     
                     <p>&nbsp;</p>
-                    <h2>How did we adapt good parts to mobile interface?</h2>
+                    <h3>How did we adapt good parts to mobile interface?</h3>
                     <p>&nbsp;</p>
                     <div class="row">
                         <div class="col-md-6">
@@ -440,10 +441,9 @@
                         </div>
                         <div class="col-md-6">
                             <b>To improve discoverability:</b>
-                            <ol>
-                            <li>Transitioned the navigation from scroll format to a tab format</li><li>
-                            Introduced sticky header that includes game-critical information</li><li>
-                            Introduced drawer menus into the 'rule and role card' to improve accessibility and improve readability</li>
+                            <ol><li>
+                            Transitioned to a grid-based view from a list-based view for the 'game lobby' and 'suspicions card' to improve accessibility</li><li>
+Introduced a section header dedicated to system status feedback so users know when an action has been completed</li>
                             </ol>
                         </div>
                     </div>
@@ -466,10 +466,7 @@
                         </div>
                     </div>
                 
-                </section>    
-                    
-                <section>    
-                    <h2 id="testimonials">Impact</h2>
+                    <h2 id="impact">Impact</h2>
                     <p>
                         <label for="mn-figure-3" class="margin-toggle">&#8853;</label>
                         <input type="checkbox" id="mn-figure-3" class="margin-toggle" />

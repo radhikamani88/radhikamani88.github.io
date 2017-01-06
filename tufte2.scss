@@ -1,8 +1,8 @@
 @import 'variable.scss';
 
-$selected-stack: $fftisaserif-stack;
+$selected-stack: $serif-stac0; // $fftisaserif-stack;
 $header-stack: $freightsanspro-stack; // $lucidagrande-stack;// $selected-stack;
-$width: 60%;
+$width: 50%;
 $sidenotemargin: -($width+10%);
 $black: rgba(0,0,0,.8);
 $psize: 1.06rem;
@@ -30,6 +30,10 @@ html {
     vertical-align: middle !important;
 }
 
+.wideformat {
+    width: 100%;
+}
+
 .competitive-table, .playtest-table, .heuristic-table, .design_improvements_table {
 
         margin-top: $ledding;
@@ -54,17 +58,19 @@ html {
             width: 20%;
         }
 
+        dt,
         dd {
             width: 100%;
         }
 }
+
 
 .playtest-symbol, .heuristic-symbol {
     vertical-align: middle !important;
 }
 
 .videowrapper2 {
-    width: 65%;
+    width: $width;
     margin-top: $ledding;
 }
 
@@ -197,10 +203,10 @@ article {
         vertical-align: baseline;
     }
     
-    p,dd {
-        padding-right: 9rem;
-        padding-right: 9rem;
-    }
+//    p,dd {
+//        padding-right: 9rem;
+//        padding-right: 9rem;
+//    }
     
     p,dd {
         font-family: $selected-stack !important;
@@ -278,7 +284,7 @@ article {
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;
-        max-width: 55%;
+        max-width: $width;
         -webkit-margin-start: 0;
         -webkit-margin-end: 0;
         margin: $ledding 0 $ledding 0;
@@ -399,11 +405,11 @@ article {
     footer,
     dd,
     dt {
-        width: 65%;
+        width: $width;
     }
     
     table {
-        width: 65% !important;
+        width: $width !important;
     }
     
     .twocolumnlist {
