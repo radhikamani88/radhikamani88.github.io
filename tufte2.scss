@@ -9,7 +9,7 @@ $psize: 1.06rem;
 $ledding: 1.86rem;
 $fontweight: 400;
 $beigebg:'yes';
-$beigecolorbg: lighten(#EAEAE1,9%) !important;
+$beigecolorbg: #fcfdfd !important;
 $column-gap: 3em;
 
 // 48.h1 33.h2 30.h3 27.subtitle 21.blockquote.p.newthought 16.5.footer 15.5.sidenote
@@ -96,11 +96,11 @@ body {
 }
 
 .dark {
-    background-color: #F4F6F7;
+    background-color: white;
 }
 
 .light {
-    background-color: lighten(#F4F6F7, 1%);
+    background-color: white;
 }
 
 .nobottompadding {
@@ -174,7 +174,7 @@ article {
 article {
     section {
         margin-top: 1rem;
-        padding-left: 2rem;
+//        padding-left: 2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
@@ -195,6 +195,11 @@ article {
         margin-bottom: 0;
         padding-right: 0;
         vertical-align: baseline;
+    }
+    
+    p,dd {
+        padding-right: 9rem;
+        padding-right: 9rem;
     }
     
     p,dd {
