@@ -210,7 +210,7 @@ article {
     vertical-align: baseline; }
   /* line 211, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   article p, article dd {
-    font-family: "georgia", "times new roman", serif !important; }
+    font-family: "ff-meta-web-pro", sans-serif !important; }
   /* line 215, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   article dt {
     font-family: "freight-sans-pro", sans-serif !important; }
@@ -258,7 +258,7 @@ article {
     width: 50% !important;
     font-size: 1.1rem !important;
     text-align: right !important;
-    font-family: "georgia", "times new roman", serif;
+    font-family: "ff-meta-web-pro", sans-serif;
     color: inherit; }
   /* line 271, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   article section > ol,
@@ -269,7 +269,7 @@ article {
   /* line 277, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   article li {
     padding: 0.5rem 0;
-    font-family: "georgia", "times new roman", serif; }
+    font-family: "ff-meta-web-pro", sans-serif; }
   /* line 281, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   article figure {
     padding: 0;
