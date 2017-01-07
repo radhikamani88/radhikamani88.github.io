@@ -1,0 +1,16 @@
+mixin banner_mixin(Title, SubTitle, Tags, Date, Image)
+    div(class="container-fluid home-project-cover" style="background-color:white;")
+        div(class="row")
+            div(class="col-md-6 home-project-left")
+                table
+                    tr
+                        td(class="project")
+                            h4(class="home-project-title" style="padding-bottom:0;")!= Title
+                        td(class="line" style="padding-left:1em; vertical-align:middle;")
+                            svg(height="6" width="100%")
+                                line(x1="0" y1="0" x2="100%" y2="0" style="stroke:#222 ;stroke-width:3")
+                h3(class="home-project-subtitle")!= SubTitle
+                h6(class="home-project-tags")!= Tags                    
+                p(class="home-project-blurb")!= Date                    
+            div(class="col-md-6 home-project-right")
+                img(class="img-responsive" src!=Image class="center-image img-responsive")

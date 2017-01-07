@@ -1,0 +1,67 @@
+include common_banner.jade
+include common_navbar.jade
+include common_head.jade
+
+- var PageTitle = "Portfolio website design"
+
+doctype html
+html(lang="en")
+    +head_mixin(PageTitle)
+    
+    body(data-spy="scroll" data-target=".navbar" data-offset="50")
+    
+        +banner_mixin(
+            PageTitle,
+            
+            "An journey filled with lessons and learnings as I ventured to build a portfolio capturing my work. Experiences in an UX approach to portfolio website design, website creation and front-end development.",
+                        
+            "front-end development: HTML, CSS3, SCSS, Javascript, Jade, npm <br/> typography, IA",
+            
+            "Dec'16 - Jan'17",
+            
+            "http://placehold.it/1500x925"
+        )
+        
+        +navbar_mixin(pageTitle, [["challenge","Challenge"]])
+        
+        .container
+            .row
+                article
+                    section
+                        h1 Making of Portfolio website
+                        p.subtitle Letting the work speak for itself
+                        
+                        p.firstpara I wanted to make a portfolio website to showcase all my work. This was a dauting task at first for me because I had never built a website before and I was not sure what I should put in website. Soon, a thought occured to me &mdash; why not approach the portfolio website design as a UX problem?
+                        
+                        h2 Attacking it as a UX problem
+                        
+                        p Upon inspecting it as a UX problem, I realized that I first needed to define a success criteria (goal) for my portfolio. In turn that led me to ask &mdash; Who is the target audience? 
+                        
+                        p It wasn't me of course, since I already have all the reports generated while working on these projects with me. Instead, the target audience was prospective employers. I then asked myself &mdash; what would they like to see in my portfolio. Clearly, the work done my one in my past projects needed to be of the highest quality, but that is not something that I can affect in this website. Instead, I settled on the following goals for the website:
+                        
+                        h3 Goals
+                        
+                        dl
+                            dt Let work speak for itself
+                            dd I didn't want this website to be the primary source of interest for the reader. I wanted reader to be more focused on my project work
+                            
+                            dt Help reader assess project quality quickly
+                            dd I was aware that readers have tor read hunders of portfolios and are short on time. Hence, I wanted the content to be structured such that one is able to quickly scan it and assess quality of project quickly
+                            
+                            dt Reader should feel they are being guided through one portion of website to another
+                            dd d.
+                            
+                            dt Allow reader to read on any device type
+                            dd This meant the website need to be responsive at-least and being adaptive to device type would be a very nice thing to have.
+                        
+                        h3(id="") Development challenge
+                        p The 1st version of my website used a wordpress theme. However, after adding a couple of my portfolio projects to my website using that theme I wanted to change the layout of the project work pages a bit. All of a sudden, I was faced with the task of understanding and changing a code base that I didn't understand. The wordpress theme did not use SCSS and hence even simple things like changing the font-size proportionally for various text elements like P, H1, H2 etc. took a lot of time! Because the wordpress theme was not documented changing the layout of the pages was also not a comfortable experience.
+                        p I then tried using <a href='http://wix.com'>Wix</a>. I was initially satisfied with Wix. I really like that the fact that I completely control the layout of the website. Sadly, it was too good to be true. I soon found out that Wix websites are not mobile-friendly or responsive by default. Wix does give us a mobile viewer, however, that is severely lacking in features and there is no easy way to check if the website will look good for different device types.
+                        p In fact, chrome 'developer tools' has way better support for testing responsiveness and adaptiveness of your website than Wix!
+                        ul
+                            li Concept
+                                ul 
+                                    li 1st version process oriented text heavy. 2nd was visually attractive
+                            li process oriented and text heavy. 2nd was visually attractive.
+                        
+                        

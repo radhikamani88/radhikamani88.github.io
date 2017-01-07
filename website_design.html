@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio website design</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="https://use.typekit.net/tpy0zci.js"></script>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <script type="text/javascript">
+      try {
+          Typekit.load({
+          async: true
+          } );
+      } catch (e) {}
+    </script>
+    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="work.css"/>
+    <style>
+      .navbar-default {
+          background-color: #293E68;
+      }
+      
+      .navbar-brand {
+          color: white !important;
+      }
+      
+      .navbar-nav {
+          color: white !important;
+      }
+      
+      .navbar-default .navbar-nav>li>a {
+          color: white !important;
+      }
+      
+      .navbar-default .navbar-nav>li>a:hover {
+          color: black !important;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class="container-fluid home-project-cover" style="background-color:white">
+      <div class="row">
+        <div class="col-md-6 home-project-left">
+          <table>
+            <tr>
+              <td class="project">
+                <h4 class="home-project-title" style="padding-bottom:0">Portfolio website design</h4>
+              </td>
+              <td class="line" style="padding-left:1em; vertical-align:middle">
+                <svg height="6" width="100%">
+                  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#222 ;stroke-width:3"></line>
+                </svg>
+              </td>
+            </tr>
+          </table>
+          <h3 class="home-project-subtitle">An journey filled with lessons and learnings as I ventured to build a portfolio capturing my work. Experiences in an UX approach to portfolio website design, website creation and front-end development.</h3>
+          <h6 class="home-project-tags">front-end development: HTML, CSS3, SCSS, Javascript, Jade, npm <br/> typography, IA</h6>
+          <p class="home-project-blurb">Dec'16 - Jan'17</p>
+        </div>
+        <div class="col-md-6 home-project-right"><img class="img-responsive center-image img-responsive" src="http://placehold.it/1500x925"/></div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="700">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <p><a class="navbar-brand" href="index.html">Home</a><span class="navbar-brand">/</span><span class="navbar-brand navbar-brand-currentpage"></span></p>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="challenge">Challenge</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <article>
+          <section>
+            <h1>Making of Portfolio website</h1>
+            <p class="subtitle">Letting the work speak for itself</p>
+            <p class="firstpara">I wanted to make a portfolio website to showcase all my work. This was a dauting task at first for me because I had never built a website before and I was not sure what I should put in website. Soon, a thought occured to me &mdash; why not approach the portfolio website design as a UX problem?</p>
+            <h2>Attacking it as a UX problem</h2>
+            <p>Upon inspecting it as a UX problem, I realized that I first needed to define a success criteria (goal) for my portfolio. In turn that led me to ask &mdash; Who is the target audience? </p>
+            <p>It wasn't me of course, since I already have all the reports generated while working on these projects with me. Instead, the target audience was prospective employers. I then asked myself &mdash; what would they like to see in my portfolio. Clearly, the work done my one in my past projects needed to be of the highest quality, but that is not something that I can affect in this website. Instead, I settled on the following goals for the website:</p>
+            <h3>Goals</h3>
+            <dl>
+              <dt>Let work speak for itself</dt>
+              <dd>I didn't want this website to be the primary source of interest for the reader. I wanted reader to be more focused on my project work</dd>
+              <dt>Help reader assess project quality quickly</dt>
+              <dd>I was aware that readers have tor read hunders of portfolios and are short on time. Hence, I wanted the content to be structured such that one is able to quickly scan it and assess quality of project quickly</dd>
+              <dt>Reader should feel they are being guided through one portion of website to another</dt>
+              <dd>d.</dd>
+              <dt>Allow reader to read on any device type</dt>
+              <dd>This meant the website need to be responsive at-least and being adaptive to device type would be a very nice thing to have.</dd>
+            </dl>
+            <h3 id="">Development challenge</h3>
+            <p>The 1st version of my website used a wordpress theme. However, after adding a couple of my portfolio projects to my website using that theme I wanted to change the layout of the project work pages a bit. All of a sudden, I was faced with the task of understanding and changing a code base that I didn't understand. The wordpress theme did not use SCSS and hence even simple things like changing the font-size proportionally for various text elements like P, H1, H2 etc. took a lot of time! Because the wordpress theme was not documented changing the layout of the pages was also not a comfortable experience.</p>
+            <p>I then tried using <a href='http://wix.com'>Wix</a>. I was initially satisfied with Wix. I really like that the fact that I completely control the layout of the website. Sadly, it was too good to be true. I soon found out that Wix websites are not mobile-friendly or responsive by default. Wix does give us a mobile viewer, however, that is severely lacking in features and there is no easy way to check if the website will look good for different device types.</p>
+            <p>In fact, chrome 'developer tools' has way better support for testing responsiveness and adaptiveness of your website than Wix!</p>
+            <ul>
+              <li>Concept
+                <ul> 
+                  <li>1st version process oriented text heavy. 2nd was visually attractive</li>
+                </ul>
+              </li>
+              <li>process oriented and text heavy. 2nd was visually attractive.</li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

@@ -156,9 +156,9 @@ article {
 }
 
 p.subtitle {
-    font-style: italic;
+//    font-style: italic;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: $ledding;
     font-size: 1.8rem; // 27px
     display: block;
     line-height: 1;

@@ -1,0 +1,18 @@
+mixin navbar_mixin(Title, NavItems)
+    nav(class="navbar navbar-default" data-spy="affix" data-offset-top="700")
+        .container
+            .navbar-header
+                button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                p
+                    a.navbar-brand(href="index.html")= "Home"
+                    span.navbar-brand= "/"
+                    span(class="navbar-brand navbar-brand-currentpage")= Title
+            div
+                #myNavbar(class="collapse navbar-collapse")
+                    ul.nav.navbar-nav
+                        each val in NavItems
+                            li
+                                a(href=val[0])= val[1]

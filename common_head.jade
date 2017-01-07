@@ -1,0 +1,38 @@
+mixin head_mixin(PageTitle)
+    head
+        title= PageTitle
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        script(src="https://use.typekit.net/tpy0zci.js")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        script(type="text/javascript").
+            try {
+                Typekit.load({
+                async: true
+                } );
+            } catch (e) {}
+        script(src="https://use.fontawesome.com/a3a5e3ece9.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        link(rel="stylesheet" href="work.css")
+        style.
+            .navbar-default {
+                background-color: #293E68;
+            }
+
+            .navbar-brand {
+                color: white !important;
+            }
+
+            .navbar-nav {
+                color: white !important;
+            }
+
+            .navbar-default .navbar-nav>li>a {
+                color: white !important;
+            }
+
+            .navbar-default .navbar-nav>li>a:hover {
+                color: black !important;
+            }

@@ -1,0 +1,32 @@
+include common_head.jade
+include common_banner.jade
+include common_navbar.jade
+
+- var pageTitle = "Latitude 90 - the origin"
+
+doctype html
+
+html(lang="en")
+
+  +head_mixin("Sample title")
+  
+  body(data-spy="scroll" data-target=".navbar" data-offset="50")
+  
+    +banner_mixin(
+        pageTitle,
+        
+        "Indie gaming company, \
+        <a href='http://www.ghostroadhouse.com'>Ghost roadhouse</a> had an exciting game concept, but mobile app usage was very low. To do this, they hired us to redesign mobile game to improve app engagement. \
+        <br/> \
+        In <b>12 weeks</b>, they had an app that got rave reviews on kickstarter and \
+        <a href='https://www.kickstarter.com/projects/1479338853/latitude-90-the-origin'>$20,000</a> \
+        funding",
+        
+        "research, redesign",
+        
+        "Sep '15 - Dec '15",
+        
+        "img/origin_banner_resized_3.png"
+    )
+    
+    +navbar_mixin(pageTitle, [[0,0],[1,1],[2,2]])
