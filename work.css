@@ -297,29 +297,30 @@ html {
   width: 100%; }
 
 /* line 37, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-.competitive-table, .playtest-table, .heuristic-table, .design_improvements_table {
+.competitive-table, .playtest-table, .heuristic-table, .design_improvements_table, .w_pd_ia_table {
   margin-top: 1.86rem; }
   /* line 41, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  .competitive-table th, .playtest-table th, .heuristic-table th, .design_improvements_table th {
+  .competitive-table th, .playtest-table th, .heuristic-table th, .design_improvements_table th, .w_pd_ia_table th {
     font-family: "freight-sans-pro", sans-serif !important; }
   /* line 45, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  .competitive-table .fa-check, .playtest-table .fa-check, .heuristic-table .fa-check, .design_improvements_table .fa-check {
+  .competitive-table .fa-check, .playtest-table .fa-check, .heuristic-table .fa-check, .design_improvements_table .fa-check, .w_pd_ia_table .fa-check {
     color: forestgreen; }
   /* line 49, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  .competitive-table .fa-times, .playtest-table .fa-times, .heuristic-table .fa-times, .design_improvements_table .fa-times {
+  .competitive-table .fa-times, .playtest-table .fa-times, .heuristic-table .fa-times, .design_improvements_table .fa-times, .w_pd_ia_table .fa-times {
     color: firebrick; }
   /* line 53, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  .competitive-table .goal-col, .playtest-table .goal-col, .heuristic-table .goal-col, .design_improvements_table .goal-col {
+  .competitive-table .goal-col, .playtest-table .goal-col, .heuristic-table .goal-col, .design_improvements_table .goal-col, .w_pd_ia_table .goal-col {
     width: 60%; }
   /* line 57, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
-  .competitive-table .rest-col, .playtest-table .rest-col, .heuristic-table .rest-col, .design_improvements_table .rest-col {
+  .competitive-table .rest-col, .playtest-table .rest-col, .heuristic-table .rest-col, .design_improvements_table .rest-col, .w_pd_ia_table .rest-col {
     width: 20%; }
   /* line 61, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .competitive-table dt,
   .competitive-table dd, .playtest-table dt,
   .playtest-table dd, .heuristic-table dt,
   .heuristic-table dd, .design_improvements_table dt,
-  .design_improvements_table dd {
+  .design_improvements_table dd, .w_pd_ia_table dt,
+  .w_pd_ia_table dd {
     width: 100%; }
 
 /* line 68, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */

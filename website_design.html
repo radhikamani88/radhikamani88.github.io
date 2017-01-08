@@ -86,19 +86,82 @@
             <p class="subtitle">Letting the work speak for itself</p>
             <p class="firstpara">I wanted to make a portfolio website to showcase all my work. This was a dauting task at first for me because I had never built a website before and I was not sure what I should put in website. Soon, a thought occured to me &mdash; why not approach the portfolio website design as a UX problem?</p>
             <h2>Attacking it as a UX problem</h2>
-            <p>Upon inspecting it as a UX problem, I realized that I first needed to define a success criteria (goal) for my portfolio. In turn that led me to ask &mdash; Who is the target audience? </p>
-            <p>It wasn't me of course, since I already have all the reports generated while working on these projects with me. Instead, the target audience was prospective employers. I then asked myself &mdash; what would they like to see in my portfolio. Clearly, the work done my one in my past projects needed to be of the highest quality, but that is not something that I can affect in this website. Instead, I settled on the following goals for the website:</p>
+            <p>Upon inspecting it as a UX problem, I realized that I first needed to define a success criteria (goal) for my portfolio. In turn that led me to ask &mdash; Who is the target audience?</p>
+            <p>I kept the target audience was prospective employers. I then asked myself &mdash; what would prospective employers like to see in my portfolio? </p>
+            <h3>Research</h3>
+            <p>It would have been awesome if I could directly ask the prospective employers what they expected out of a portfolio. Since, that was not possible, I did a bunch of research of my own:</p>
+            <ul>
+              <li>Talked to seniors at my university and visited their portfolio websites. e.g. <a href="http://joycesakata.com" target=_blank>joyce sakata</a> and <a href="http://siddharthsoni.com" target=_blank>siddharth soni</a></li>
+              <li>Looked at portfolios of UX designers employed already e.g. <a href="http://simonpan.com" target=_blank>simonpan.com</a></li>
+              <li>Read various internet articles on building a portfolio. e.g. <a target=_blank href="http://www.usabilitycounts.com/2013/12/10/ux-portfolios-tell-story">usabilitycounts.com article - how to make a UX portfolio</a></li>
+            </ul>
             <h3>Goals</h3>
+            <p>Based on above research I set the following design goals.</p>
             <dl>
               <dt>Let work speak for itself</dt>
               <dd>I didn't want this website to be the primary source of interest for the reader. I wanted reader to be more focused on my project work</dd>
               <dt>Help reader assess project quality quickly</dt>
-              <dd>I was aware that readers have tor read hunders of portfolios and are short on time. Hence, I wanted the content to be structured such that one is able to quickly scan it and assess quality of project quickly</dd>
+              <dd>I was aware that readers have to read hundreds of portfolios and are short on time. Hence, I wanted the content to be structured such that one is able to quickly scan it and assess quality of project quickly</dd>
               <dt>Reader should feel they are being guided through one portion of website to another</dt>
-              <dd>d.</dd>
+              <dd>Since I won't be present to walk through the portfolio the reader, the website should be able to guide reader through the portfolio</dd>
               <dt>Allow reader to read on any device type</dt>
-              <dd>This meant the website need to be responsive at-least and being adaptive to device type would be a very nice thing to have.</dd>
+              <dd>This meant the website need to be responsive at-least and being adaptive to device type would be a very nice thing to have</dd>
             </dl>
+            <h3>Brainstorming and design decisions</h3>
+            <dl>
+              <dt>No flashy website. Keep it simple. Less is more.</dt>
+              <dd>To meet the criteria of letting the project work speak for itself and to not let this portfolio website come in the way of my projects, I decided to keep my portfolio website simple.</dd>
+            </dl>
+            <dl>
+              <dt>Home page information architecture</dt>
+              <dd>Above design goals led me to research and think deeply about the Information Architecture (IA) of this website. I sketched quickly various alternatives for the home page IA, evaluated pros-cons and picked one alternative.</dd>
+            </dl>
+            <div class="table-responsive">
+              <table class="w_pd_ia_table table table-bordered table-striped">
+                <tbody>
+                  <tr>
+                    <td class="playtest-symbol" style="text-align:center"><img class="img-responsive" src="img/w_portfoliio_design/ia1.png"><i class="fa fa-times"></i></td>
+                    <td>
+                      <dl>
+                        <dt>Grid of projects</dt>
+                        <dd>Here is a grid of portfolio projects. I didn't go with this format because it didn't meet the criteria of allowing me to guide the user through the portfolio. Presented with a grid of options, all the projects in a row are presented at an equal accessibility and importance level and the reader would be inclined to click any one of them.</dd>
+                      </dl>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="playtest-symbol" style="text-align:center"><img class="img-responsive" src="img/w_portfoliio_design/ia2.png"><i class="fa fa-times"></i></td>
+                    <td>
+                      <dl>
+                        <dt>Vertical list of project cards</dt>
+                        <dd>This option was better than previous. The projects presented top-down in a list implicitly rank the projects and the reader is inclined to click and read the first one. However, each item's primary content is an image and doesn't allow me to provide some summary information about each project which will allow reader to quickly assess impact of reader. An image alone may not give enough clues about the impact of this project and may not interest reader enough to read the project.</dd>
+                      </dl>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="playtest-symbol" style="text-align:center"><img class="img-responsive" src="img/w_portfoliio_design/ia3.png"><i class="fa fa-check"></i></td>
+                    <td>
+                      <dl>
+                        <dt>Vertical list of projects w/ blurb and image</dt>
+                        <dd>I selected this layout because it allowed me to present information in a prioritized fashion and present a short blurb describing purpose, impact, role and technologies involved in this project along with the project image to allow readers to quickly scan through the crux of this project.</dd>
+                      </dl>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <dl>
+              <dt>Project work page information architectures</dt>
+              <dd>I also evaluated alternative IAs for my project work pages.                                            </dd>
+            </dl>
+            <div class="table-responsive">
+              <table class="w_pd_ia_table table table-bordered table-striped">
+                <tbody>
+                  <tr>
+                    <td class="playtest-symbol" style="text-align:center"><img src=""><i class="fa fa-times"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <h3 id="">Development challenge</h3>
             <p>The 1st version of my website used a wordpress theme. However, after adding a couple of my portfolio projects to my website using that theme I wanted to change the layout of the project work pages a bit. All of a sudden, I was faced with the task of understanding and changing a code base that I didn't understand. The wordpress theme did not use SCSS and hence even simple things like changing the font-size proportionally for various text elements like P, H1, H2 etc. took a lot of time! Because the wordpress theme was not documented changing the layout of the pages was also not a comfortable experience.</p>
             <p>I then tried using <a href='http://wix.com'>Wix</a>. I was initially satisfied with Wix. I really like that the fact that I completely control the layout of the website. Sadly, it was too good to be true. I soon found out that Wix websites are not mobile-friendly or responsive by default. Wix does give us a mobile viewer, however, that is severely lacking in features and there is no easy way to check if the website will look good for different device types.</p>
