@@ -46,6 +46,10 @@
           color: #293E68;
       }
       
+      body {
+          border-top: 6px solid #293E68;
+      }
+      
     </style>
     <div class="container-fluid home-project-cover" style="background-color:white">
       <div class="row">
@@ -180,7 +184,7 @@
       </div>
       <div class="row">
         <div class="col-md-8 center-block" style="float:none;padding-top:5%">
-          <h2 class="h2tufte" style="padding-bottom:5%;text-align:center"> Detailed wireframe of selected solution of Home page</h2><img class="img-responsive" src="img/w_portfoliio_design/home_page_ia1.png" style="margin: 0 auto">
+          <h2 class="h2tufte" style="padding-bottom:5%;text-align:center"> Detailed wireframe of selected solution of Home page</h2><img class="img-responsive" src="img/w_portfoliio_design/home_page_ia1.png" style="margin: 0 auto;width:50%">
         </div>
       </div>
     </div>
@@ -215,7 +219,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <article>
+        <article class="nobottompadding">
           <section>
             <h3>Typography</h3>
             <p>
@@ -233,9 +237,10 @@
               <li>The line width of the main content of the website is set so that approximately at-most 8-15 main words fit per line. This usually comes to around 88-90 characters per line.</li>
               <li>The font used is ff-meta-web-pro for main body text and freight-sans-pro for the headlines</li>
               <li>The text is flush left aligned</li>
-              <li>No use of h4, h5 and h6 elements. Content is adjusted if needed.</li>
+              <li>No use of h4, h5 and h6 elements. Content is adjusted if needed</li>
+              <li>First paragraph does not have a text indentation but all subsequent paragraphs do and the subsequent paragraph continues on the next line in this imaginary notebook.</li>
             </ol>
-            <h2>Edward Tufte - Margin notes, links <br/>and mixing graphics with text</h2>
+            <h3>Edward Tufte - Margin notes, links <br/>and mixing graphics with text</h3>
             <p>
               <label class="margin-toggle" for="mn-figure-2">&#8853;</label>
               <input class="margin-toggle" type="checkbox" id="mn-figure-2"><span class="marginnote" style="text-align:center"><img src="img/w_portfoliio_design/sidenote.gif"><br><span class="ptufte">&copy; Edward Tufte</span></span>
@@ -246,17 +251,36 @@
             <p>Tufte's books make extensive use of margin notes to provide additional information that is useful but not necessary for completeness of main content. I have followed this guideline to provide additional imagery and useful information.</p>
             <p>The practices followed by Edward Tufte have been put down in a CSS file as a Github project called <a href="https://github.com/edwardtufte/tufte-css">Tufte-CSS</a></p>
             <h2 id="">Development</h2>
-            <p>The 1st version of my website used a wordpress theme. However, after adding a couple of my portfolio projects to my website using that theme I wanted to change the layout of the project work pages a bit. All of a sudden, I was faced with the task of understanding and changing a code base that I didn't understand. The wordpress theme did not use SCSS and hence even simple things like changing the font-size proportionally for various text elements like P, H1, H2 etc. took a lot of time! Because the wordpress theme was not documented changing the layout of the pages was also not a comfortable experience.</p>
-            <p>I then tried using <a href='http://wix.com'>Wix</a>. I was initially satisfied with Wix. I really like that the fact that I completely control the layout of the website. Sadly, it was too good to be true. I soon found out that Wix websites are not mobile-friendly or responsive by default. Wix does give us a mobile viewer, however, that is severely lacking in features and there is no easy way to check if the website will look good for different device types.</p>
-            <p>In fact, chrome 'developer tools' has way better support for testing responsiveness and adaptiveness of your website than Wix!</p>
-            <ul>
-              <li>Concept
-                <ul> 
-                  <li>1st version process oriented text heavy. 2nd was visually attractive</li>
-                </ul>
-              </li>
-              <li>process oriented and text heavy. 2nd was visually attractive.</li>
-            </ul>
+            <h3>Themes and Wix didn't suffice</h3>
+            <p>First I tried using an existing theme from the internet and altering it. However, that was not extensible enough to be able to modify it to meet the new design that I had produced. I ran into the same issue with many themes.</p>
+            <p>I then turned to <strong>Wix</strong>. I was initially satisfied with Wix. I really like that the fact that I completely control the layout of the website. Sadly, it was too good to be true. </p>
+            <p>Wix has the following drawbacks:</p>
+            <ol>
+              <li>Wix websites are not mobile-friendly or responsive by default</li>
+              <li>Wix does give us a mobile viewer, however, that is severely lacking in features and there is no easy way to check if the website will look good for different device types. Google chrome has better support for testing responsiveness than Wix.</li>
+            </ol>
+            <h3>Decided to hand code</h3>
+            <p>I really want to get full control of the layout and be able to reuse my layout specifications across all pages and minimize duplicate work. As existing tools did not suffice, I hand coded it myself.</p>
+            <p>The website is built using <strong>Bootstrap v3</strong>. I apply the <strong>DRY principle</strong> and use <strong>SCSS</strong> and <strong>Jade</strong> to that advantage.</p>
+            <p>I used Brackets editor. Code can be found here.</p>
+          </section>
+        </article>
+      </div>
+    </div>
+    <div class="container-fluid showcase">
+      <div class="row">
+        <div class="col-md-8 center-block" style="float:none">                       
+          <h2 class="h2tufte" style="padding-bottom:1%;text-align:center"> My IDE setup</h2><img class="img-responsive" src="img/w_portfoliio_design/brackets.png" style="margin: 0 auto">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <article class="nobottompadding">
+          <section>
+            <h3>Lessons learnt</h3>
+            <p>Designing this portfolio myself has been a great learning experience. I mastered a lot of CSS3 concepts, SCSS, Jade and Javascript because of this project. I learnt a lot about typography and fonts.</p>
+            <p>It was also immensely satisfying to applying UX design principles to design my own portfolio.</p>
           </section>
         </article>
       </div>

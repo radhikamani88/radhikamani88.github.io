@@ -815,3 +815,7 @@ article {
   background-color: #F5F5F5; }
 
 /*# sourceMappingURL=work.css.map */
+
+body {
+    border-top: 6px solid #293E68;
+}
