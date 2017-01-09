@@ -1,0 +1,42 @@
+include common_head.jade
+include common_banner.jade
+include common_navbar.jade
+
+- var pageTitle = "Instapark"
+
+doctype html
+
+html(lang="en")
+
+    +head_mixin("Sample title")
+
+    body(data-spy="scroll" data-target=".navbar" data-offset="50")
+  
+        style.
+            h1, h2, h3 {
+                color: #293E68;
+            }
+
+            body {
+                border-top: 6px solid #293E68;
+            }
+
+        +banner_mixin(
+            pageTitle,
+
+            "It is very hard to find parking at University of Michigan during rush hours and during events. Many students have vacant garage spots and are willing to rent them for additional money. <br/><br/>Unfortunately, no centralized platform exists to facilitate these activities in seamless manner. Instapark is a solution to ths problem.",
+
+            "ideation, competitive analysis, user interviews, wireframing, prototyping, usability testing",
+
+            "Sept'15 - Dec'15",
+
+            "http://placehold.it/1500x925"
+        )
+
+        +navbar_mixin(pageTitle, [["challenge","Challenge"]])
+
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h1 Making of Portfolio website
