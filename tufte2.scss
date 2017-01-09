@@ -110,7 +110,6 @@ body {
 }
 
 .nobottompadding {
-    padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
 
@@ -175,6 +174,41 @@ p.subtitle {
 article {
     position: relative;
     padding: 5rem 0rem;
+}
+
+.ptufte {
+    font-family: $selected-stack !important;
+    font-weight: $fontweight;
+    line-height: $ledding * 1.0 / $psize;
+    margin-top: $ledding;
+    margin-bottom: 0;
+    padding-right: 0;
+    vertical-align: baseline;
+}
+
+.h3tufte {
+    font-family: $header-stack;
+    font-weight: $fontweight;
+    font-size: 1.7rem; // 30px
+    margin-top: 2.0rem;
+    line-height: 1.23;
+}
+
+.h2tufte {
+    font-family: $header-stack;
+    font-weight: $fontweight;
+    margin-top: 2.1rem;
+    font-size: 2.2rem; // 33px
+    line-height: 1;
+}
+
+.showcase {
+    margin: 5px;
+    background-color:lightgray;
+    color: black;
+    background-image: linear-gradient(lightgray, antiquewhite);
+    padding:5%;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
 article {

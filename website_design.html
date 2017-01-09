@@ -41,6 +41,12 @@
     </style>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <style>
+      h1, h2, h3 {
+          color: #293E68;
+      }
+      
+    </style>
     <div class="container-fluid home-project-cover" style="background-color:white">
       <div class="row">
         <div class="col-md-6 home-project-left">
@@ -80,7 +86,7 @@
     </nav>
     <div class="container">
       <div class="row">
-        <article>
+        <article class="nobottompadding">
           <section>
             <h1>Making of Portfolio website</h1>
             <p class="subtitle">Letting the work speak for itself</p>
@@ -88,81 +94,158 @@
             <h2>Attacking it as a UX problem</h2>
             <p>Upon inspecting it as a UX problem, I realized that I first needed to define a success criteria (goal) for my portfolio. In turn that led me to ask &mdash; Who is the target audience?</p>
             <p>I kept the target audience was prospective employers. I then asked myself &mdash; what would prospective employers like to see in my portfolio? </p>
-            <h3>Research</h3>
+            <h2>Research</h2>
             <p>It would have been awesome if I could directly ask the prospective employers what they expected out of a portfolio. Since, that was not possible, I did a bunch of research of my own:</p>
             <ul>
-              <li>Talked to seniors at my university and visited their portfolio websites. e.g. <a href="http://joycesakata.com" target=_blank>joyce sakata</a> and <a href="http://siddharthsoni.com" target=_blank>siddharth soni</a></li>
-              <li>Looked at portfolios of UX designers employed already e.g. <a href="http://simonpan.com" target=_blank>simonpan.com</a></li>
-              <li>Read various internet articles on building a portfolio. e.g. <a target=_blank href="http://www.usabilitycounts.com/2013/12/10/ux-portfolios-tell-story">usabilitycounts.com article - how to make a UX portfolio</a></li>
+              <li>Talked to seniors at my university and visited their portfolio websites</li>
+              <li>Looked at portfolios of UX designers employed already</li>
+              <li>Read various internet articles on building a portfolio</li>
             </ul>
-            <h3>Goals</h3>
+            <h2>Goals</h2>
             <p>Based on above research I set the following design goals.</p>
-            <dl>
-              <dt>Let work speak for itself</dt>
-              <dd>I didn't want this website to be the primary source of interest for the reader. I wanted reader to be more focused on my project work</dd>
-              <dt>Help reader assess project quality quickly</dt>
-              <dd>I was aware that readers have to read hundreds of portfolios and are short on time. Hence, I wanted the content to be structured such that one is able to quickly scan it and assess quality of project quickly</dd>
-              <dt>Reader should feel they are being guided through one portion of website to another</dt>
-              <dd>Since I won't be present to walk through the portfolio the reader, the website should be able to guide reader through the portfolio</dd>
-              <dt>Allow reader to read on any device type</dt>
-              <dd>This meant the website need to be responsive at-least and being adaptive to device type would be a very nice thing to have</dd>
-            </dl>
-            <h3>Brainstorming and design decisions</h3>
-            <dl>
-              <dt>No flashy website. Keep it simple. Less is more.</dt>
-              <dd>To meet the criteria of letting the project work speak for itself and to not let this portfolio website come in the way of my projects, I decided to keep my portfolio website simple.</dd>
-            </dl>
-            <dl>
-              <dt>Home page information architecture</dt>
-              <dd>Above design goals led me to research and think deeply about the Information Architecture (IA) of this website. I sketched quickly various alternatives for the home page IA, evaluated pros-cons and picked one alternative.</dd>
-            </dl>
-            <div class="table-responsive">
-              <table class="w_pd_ia_table table table-bordered table-striped">
-                <tbody>
-                  <tr>
-                    <td class="playtest-symbol" style="text-align:center"><img class="img-responsive" src="img/w_portfoliio_design/ia1.png"><i class="fa fa-times"></i></td>
-                    <td>
-                      <dl>
-                        <dt>Grid of projects</dt>
-                        <dd>Here is a grid of portfolio projects. I didn't go with this format because it didn't meet the criteria of allowing me to guide the user through the portfolio. Presented with a grid of options, all the projects in a row are presented at an equal accessibility and importance level and the reader would be inclined to click any one of them.</dd>
-                      </dl>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="playtest-symbol" style="text-align:center"><img class="img-responsive" src="img/w_portfoliio_design/ia2.png"><i class="fa fa-times"></i></td>
-                    <td>
-                      <dl>
-                        <dt>Vertical list of project cards</dt>
-                        <dd>This option was better than previous. The projects presented top-down in a list implicitly rank the projects and the reader is inclined to click and read the first one. However, each item's primary content is an image and doesn't allow me to provide some summary information about each project which will allow reader to quickly assess impact of reader. An image alone may not give enough clues about the impact of this project and may not interest reader enough to read the project.</dd>
-                      </dl>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="playtest-symbol" style="text-align:center"><img class="img-responsive" src="img/w_portfoliio_design/ia3.png"><i class="fa fa-check"></i></td>
-                    <td>
-                      <dl>
-                        <dt>Vertical list of projects w/ blurb and image</dt>
-                        <dd>I selected this layout because it allowed me to present information in a prioritized fashion and present a short blurb describing purpose, impact, role and technologies involved in this project along with the project image to allow readers to quickly scan through the crux of this project.</dd>
-                      </dl>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <dl>
-              <dt>Project work page information architectures</dt>
-              <dd>I also evaluated alternative IAs for my project work pages.                                            </dd>
-            </dl>
-            <div class="table-responsive">
-              <table class="w_pd_ia_table table table-bordered table-striped">
-                <tbody>
-                  <tr>
-                    <td class="playtest-symbol" style="text-align:center"><img src=""><i class="fa fa-times"></i></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <h3 id="">Development challenge</h3>
+            <table class="table table-bordered heuristic-table">
+              <tbody>
+                <tr>
+                  <td class="col-md-6">
+                    <dl>
+                      <dt>Let work speak for itself</dt>
+                      <dd>I didn't want this website to be the primary source of interest for the reader. I wanted reader to be more focused on my project work</dd>
+                    </dl>
+                  </td>
+                  <td class="col-md-6">
+                    <dl>
+                      <dt>Reader can quickly assess work quality</dt>
+                      <dd>I was aware that readers have to read hundreds of portfolios and are short on time. Help them help me.</dd>
+                    </dl>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="col-md-6">
+                    <dl>
+                      <dt>Reader is guided through my work</dt>
+                      <dd>Since I won't be present to walk through the portfolio the reader, the website should be able to guide reader through the portfolio</dd>
+                    </dl>
+                  </td>
+                  <td class="col-md-6">
+                    <dl>
+                      <dt>Reader can read on any device type</dt>
+                      <dd>This meant the website need to be responsive at-least and being adaptive to device type would be a very nice thing to have                        </dd>
+                    </dl>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Explorations &amp; decisions</h2>
+            <h3>KISS principle. Occam's razor</h3>
+            <p>No fancy animations and Javascript libraries that distract or conflict with animation present in your actual work. Keep website design simple and let your real work shine through. When it doubt choose the simpler option.</p>
+            <h3>Home page IA</h3>
+            <p>Above design goals led me to research and think deeply about the Information Architecture (IA) of this website. I sketched quickly various alternatives for the home page IA, evaluated pros-cons and picked one alternative.</p><br>
+          </section>
+        </article>
+      </div>
+    </div>
+    <div class="container-fluid showcase">                       
+      <div class="row" style="text-align:center; padding-bottom:5%">
+        <h2 class="h2tufte">Different solutions evaluated for home page IA</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">               
+          <h3 class="h3tufte">Grid of projects</h3>
+          <figure class="fullwidth"><img class="img-responsive" src="img/w_portfoliio_design/ia1.png"></figure><br>
+          <p class="ptufte"><strong>Discarded</strong> because:</p>
+          <ul class="ptufte">
+            <li>didn't meet the criteria of allowing me to guide the user through the portfolio. </li>
+            <li>Presented with a grid of options, all the projects in a row are presented at an equal accessibility and importance level and the reader would be inclined to click any one of them.</li>
+          </ul>
+        </div>
+        <div class="col-md-4">                   
+          <h3 class="h3tufte">Vertical list of project cards</h3>
+          <figure class="fullwidth"><img class="img-responsive" src="img/w_portfoliio_design/ia2.png"></figure><br>
+          <p class="ptufte">The projects presented top-down in a list implicitly rank the projects and the reader is inclined to click and read the first one. However, I <strong>discarded it</strong> because:</p>
+          <ul class="ptufte"> 
+            <li>Each item's primary content is an image and doesn't allow me to provide some summary information about each project which will allow reader to quickly assess impact of reader. </li>
+            <li>An image alone may not give enough clues about the impact of this project and may not interest reader enough to read the project.</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h3tufte"> Vertical list of projects w/ blurb and image</h3>
+          <figure class="fullwidth"><img class="img-responsive" src="img/w_portfoliio_design/ia3.png"></figure><br>
+          <p class="ptufte"><strong>Selected</strong> because:</p>
+          <ul class="ptufte"> 
+            <li>it allowed me to present information in a prioritized fashion</li>
+            <li>present a short blurb describing purpose, impact, role and technologies involved in this project along with the project image</li>
+            <li>allows readers to quickly scan through the crux of this project.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 center-block" style="float:none;padding-top:5%">
+          <h2 class="h2tufte" style="padding-bottom:5%;text-align:center"> Detailed wireframe of selected solution of Home page</h2><img class="img-responsive" src="img/w_portfoliio_design/home_page_ia1.png" style="margin: 0 auto">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <article class="nobottompadding">
+          <section>
+            <h3>Work page IA</h3>
+            <p>I also evaluated alternative IAs for my work pages. Here is the selected project design in much greater detail. I selected this one because of the following reasons:</p>
+            <ul>
+              <li>Simple &mdash; No fancy animations to distract reader from core content of project</li>
+              <li>Good use of <strong>negative space</strong> &mdash; to bring attention to main content</li>
+              <li>Navigation and scan-ability &mdash; <strong>Fixed navbar</strong> and properly sized headers make scanning text easy. <strong>Other projects</strong> at bottom makes it easy to jump to other projects instead of having to navigate to home page.</li>
+            </ul>
+            <p>Below is wireframes of the project work pages.</p>
+          </section>
+        </article>
+      </div>
+    </div>
+    <div class="container-fluid showcase">
+      <div class="row">
+        <div class="col-md-4">
+          <h3 class="h3tufte">Page work detail page</h3><a href="img/w_portfoliio_design/work_page_ia1.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia1.png" title="click to see full size image" style="width:75%"></a>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h3tufte">After scrolling past the navbar</h3><a href="img/w_portfoliio_design/work_page_ia2.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia2.png" title="click to see full size image" style="width:75%"></a>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h3tufte">Ability to add wide containers</h3><a href="img/w_portfoliio_design/work_page_ia3.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia3.png" title="click to see full size image" style="width:75%"></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <article>
+          <section>
+            <h3>Typography</h3>
+            <p>
+              <label class="margin-toggle" for="mn-figure-1">&#8853;</label>
+              <input class="margin-toggle" type="checkbox" id="mn-figure-1"><span class="marginnote"><img src="img/w_portfoliio_design/book.jpg"><br><br><br><img src="img/w_portfoliio_design/typographicscale.gif"><span class="ptufte">the standard typographic scale as an example</span></span>
+            </p>
+            <p class="firstpara">I spent a considerable amount of time researching about setting the tyography of the website. This was the first time I had embarked on a deep study of typography and arrangement of textual content on websites. Since, I only had basic education background on this topic, I started researching online and looked around for resources on this topic.</p>
+            <p>I found the following book very useful and many of my typographic decisions are based on this book: <strong>Elements of typographic style applied to the web</strong> by <em>Robert Bringhurst</em>. Robert gives a clear set of guidelines for typographic newcomers to follow to get typesetting basics correct.</p>
+            <p>In implementing the typesetting for this website, I applied the following design choices:</p>
+            <ol>
+              <li>A mixed font-scale is used. The difference between body text and h1 text size is based on the traditional font scale. The difference between h1, h2 and h3 is approximating the perfect-fourth scale.</li>
+              <li>The entire text is laid out on an imaginary notebook-like canvas where the line-height is based on the base font size of the paragraph text</li>
+              <li>margin + line-height + padding = N x base font line-height</li>
+              <li>Regardless of combination of h1, h2, h3 and p elements used the text is aligned properly on the line-height boundaries on this imaginary canvas.</li>
+              <li>The line width of the main content of the website is set so that approximately at-most 8-15 main words fit per line. This usually comes to around 88-90 characters per line.</li>
+              <li>The font used is ff-meta-web-pro for main body text and freight-sans-pro for the headlines</li>
+              <li>The text is flush left aligned</li>
+              <li>No use of h4, h5 and h6 elements. Content is adjusted if needed.</li>
+            </ol>
+            <h2>Edward Tufte - Margin notes, links <br/>and mixing graphics with text</h2>
+            <p>
+              <label class="margin-toggle" for="mn-figure-2">&#8853;</label>
+              <input class="margin-toggle" type="checkbox" id="mn-figure-2"><span class="marginnote" style="text-align:center"><img src="img/w_portfoliio_design/sidenote.gif"><br><span class="ptufte">&copy; Edward Tufte</span></span>
+            </p>
+            <p class="firstpara">I am a fan of <strong>Edward Tufte</strong>'s books. </p>
+            <p>Tufte's books follow a specific typographic style and he strongly advocated mixing graphics with text to make text more interesting to read and to aid in explanation of text. I have followed that practice in this website as well. I felt the guidance was very appropriate for portfolio websites.</p>
+            <p>Edward Tufte also provides a special markup for hyperlinks. The default underlining provided by browsers for hyperlinks is very thick and it draws the link over the descenders of letters in text. Tufte provides CSS code which does better job at underlining links.</p>
+            <p>Tufte's books make extensive use of margin notes to provide additional information that is useful but not necessary for completeness of main content. I have followed this guideline to provide additional imagery and useful information.</p>
+            <p>The practices followed by Edward Tufte have been put down in a CSS file as a Github project called <a href="https://github.com/edwardtufte/tufte-css">Tufte-CSS</a></p>
+            <h2 id="">Development</h2>
             <p>The 1st version of my website used a wordpress theme. However, after adding a couple of my portfolio projects to my website using that theme I wanted to change the layout of the project work pages a bit. All of a sudden, I was faced with the task of understanding and changing a code base that I didn't understand. The wordpress theme did not use SCSS and hence even simple things like changing the font-size proportionally for various text elements like P, H1, H2 etc. took a lot of time! Because the wordpress theme was not documented changing the layout of the pages was also not a comfortable experience.</p>
             <p>I then tried using <a href='http://wix.com'>Wix</a>. I was initially satisfied with Wix. I really like that the fact that I completely control the layout of the website. Sadly, it was too good to be true. I soon found out that Wix websites are not mobile-friendly or responsive by default. Wix does give us a mobile viewer, however, that is severely lacking in features and there is no easy way to check if the website will look good for different device types.</p>
             <p>In fact, chrome 'developer tools' has way better support for testing responsiveness and adaptiveness of your website than Wix!</p>
