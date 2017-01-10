@@ -1,6 +1,7 @@
 include common_head.jade
 include common_banner.jade
 include common_navbar.jade
+include common_clickable_image.jade
 
 - var pageTitle = "Instapark"
 
@@ -8,7 +9,7 @@ doctype html
 
 html(lang="en")
 
-    +head_mixin("Sample title")
+    +head_mixin(pageTitle)
 
     body(data-spy="scroll" data-target=".navbar" data-offset="50")
   
@@ -39,4 +40,151 @@ html(lang="en")
             .row
                 article.nobottompadding
                     section
-                        h1 Making of Portfolio website
+                        h1 Making of Instapark
+                        p.subtitle Convenient parking solution for universities
+                        
+                        p
+                            label(for="mn-figure-1" class="margin-toggle").
+                                &#8853;
+                            input(type="checkbox" id="mn-figure-1" class="margin-toggle")
+                            span.marginnote Talking to friends at other universities, I found out that this issue exists elsewhere as well. For this project I restricted the target audience to University of Michigan community.                        
+                                                
+                        p Parking is a problem at University of Michigan. During class hours, students and faculty find it hard to find parking inside the campus. Fortunately, however, parking spots do exist &mdash; it is just hard to find them. 
+                        p Add to that, the prices of parking spots vary by place and time of day. This problem is amplified during Michigan events when everybody wants to for example, park close to the stadium. Students who are usually running short on cash have a tough time finding parking. Here too, students are willing to rent out their personal parking spots for additional money during events. 
+                        p Unfortunately, no application exists to solve these problems. As a student, I was myself frustrated by these problems and thought of building an application to address these needs.
+                        
+                        h2 Process
+                        
+                        h3 Methodology
+                        
+                        p For this project, I followed the <strong>participatory design methodology</strong>. This was feasible since I had ready access to student and faculty to participate in design sessions.
+                        p I also conducted small user focus groups to collect enough data points for backing up my research, used surveys to understand user's needs, behaviors and attitudes and did concept ranking to prioritize app features. 
+                        p I also engaged the user in preliminary prototyping, mockups and wireframing in order to understand the user's wants and needs accurately.
+                        p This proved to be extremely useful because there were many discoveries along the way and I had to adjust the product feature set along the way.
+                        
+                        h3 Deliverables and Roadmap
+                        
+                        p I wanted to be thoroughly grounded in research, but I also wanted to iterate quickly and produce deliverables to track and show progress. To that end, I prepared following roadmap. 
+                        p I executed it properly and finished on time.
+        
+        .container-fluid.showcase
+            .row
+                +clickable_responsive_image("img/w_instapark/approach.png", "margin:0 auto;")
+                                
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h3 Discoveries and course corrections &mdash; yes, of course!
+                        
+                        p
+                            label(for="mn-figure-2" class="margin-toggle").
+                                &#8853;
+                            input(type="checkbox" id="mn-figure-2" class="margin-toggle")
+                            span.marginnote                                
+                                img(src="img/w_instapark/treasuremap.jpeg" class="img-responsive")
+                            
+                        p The product design for this product did not follow a linear trajectory. It reminded me so much of treasure hunt cartoons I saw when I was a kid. 
+                        p The initial product focused heavily on late night parking and women safety. However, after more research I found out that that was not the case and price, availability and convenience were important factors. Finding parking for events turned out to be an important ask as well.
+                        p Because I was iterating quickly through various design artifacts like paper prototypes and low-fis initially, I found it easy to change product direction without much loss of effort.                        
+
+                        h2 Defining MVP1
+
+                        h3 Ideation
+                        
+                        p I brainstormed couple of different ideas to address the parking problems of students. I sketched them quickly and presented them to stakeholders. Stakeholders provided feedback. This armed me with data to decide what design solution to explore further.
+                        p I explored 7 different concepts: 
+                        ol(style="column-count:2; column-gap:3rem;")
+                            li Biking to campus
+                            li P2P parking marketplace
+                            li Facilitate street parking
+                            li Facilitate carpooling, 
+                            li Facilitate usage of public transportation
+                            li Facilitate park and ride
+                            li Valet parking app
+                        figure
+                            +clickable_responsive_image("img/w_instapark/8concepts.png")        
+                            
+                        h3 Competitive analysis
+                        
+                        p I did <strong>SWOT</strong> analysis to identify the strengths and weaknesses of competitors. I decided to use the top 3 competitive apps based on the user ratings in the android play store.                        
+
+        .container-fluid.showcase
+            .row
+                .col-md-4
+                    +clickable_responsive_image("img/w_instapark/c1.jpg")
+                .col-md-4
+                    +clickable_responsive_image("img/w_instapark/c2.jpg")
+                .col-md-4
+                    +clickable_responsive_image("img/w_instapark/c3.jpg")
+
+        .container
+            .row
+                article.nobottompadding
+                    section                    
+                        h3 Differentiators
+                        ul
+                            li None supported navigation integration
+                            li None provided real-time parking information based on pricing and location. There is at-least 1 parking information web-service that can be used to implement this feature today. e.g. <a href="http://www.parkwhiz.com/developers/">ParkWhiz</a>
+                            li None provided support for events via a P2P marketplace to support the local student community
+
+                    
+                        h3 MVP1 list = ideation + competitive analysis
+
+                        p Based on the research data collected during ideation and competitive analysis, I narrowed down the MVP1 feature list to provide cheap, real-time street parking and building a P2P parking marketplace.
+                        
+                        h3 Storyboarding &mdash; Communicating MVP1 to stakeholders
+                        
+                        p  With the initial features decided, I did storyboarding to prioritize scenarios and explore the experience I would like to provide. I also shared this storyboard with stakeholders and they were able to get a feel of the solution that could be provided by the application.
+                        
+        .container-fluid.showcase
+            .row
+                .col-md-6
+                    +clickable_responsive_image("img/w_instapark/story1.png")
+                .col-md-6
+                    +clickable_responsive_image("img/w_instapark/story2.png")
+                        
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h2 Designing MVP1
+                        
+                        h3 Personas
+                        
+                        p With the target audience and feature set for MVP1 decided, I created personas capturing the movitation, goals and frustration of my target audience to help me guidance through designing the experience.
+
+        .container-fluid.showcase
+            .row
+                .col-md-6
+                    +clickable_responsive_image("img/w_instapark/p1.jpg")
+                .col-md-6
+                    +clickable_responsive_image("img/w_instapark/p2.jpg")
+
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h3 Paper prototype
+                        
+                        p I wanted to get a quick round of feedback about the design from my customers and hence I decided to build a paper prototype. I got useful feedback through this method.
+                        
+                        .videowrapper2
+                            .videoWrapper
+                                iframe(width="560" height="315" src="https://www.youtube.com/embed/u2Vou5hSM4g" frameborder="0" allowfullscreen)
+                                
+                        p <strong>Findings</strong>
+                        ol
+                            li They found the event parking interactions long and confusing. 
+                            li They were not interested in payment through the application.
+                        
+                        p I addressed these 2 issues in my next iteration
+                        
+                        h3 Rigorous evaluation of alternatives
+                        
+                        p The paper prototype indicated that app's IA and interactions need to be thought out carefully and I decided to take a more rigorous approach to get the information architecture and flow optimized for the use cases.
+                        p I perused my research findings and came up with a list of design goals (criteria) to help me evaluate various design alternatives.
+                        
+                        
+                        
+                        
