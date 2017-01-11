@@ -12,3 +12,7 @@ mixin card(image_src, style_setting, Title, Blurb)
             .row
                 h3.h3tufte= Title
                 p.ptufte= Blurb    
+
+mixin card_no_title(image_src, style_setting)
+    .card(style="padding:1rem;")
+        +clickable_responsive_image(image_src, style_setting)
