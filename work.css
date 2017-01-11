@@ -816,7 +816,24 @@ article {
   background-color: #F5F5F5; }
 
 /* line 9, /home/local/ANT/ajgopala/portfolio_new/work.scss */
-body {
-  border-top: 6px solid #293E68; }
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: white; }
+
+/* On mouse-over, add a deeper shadow */
+/* line 17, /home/local/ANT/ajgopala/portfolio_new/work.scss */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+/* Add some padding inside the card container */
+/* line 22, /home/local/ANT/ajgopala/portfolio_new/work.scss */
+.container {
+  padding: 2px 16px; }
+
+/* line 28, /home/local/ANT/ajgopala/portfolio_new/work.scss */
+.card-row {
+  padding: 1rem; }
 
 /*# sourceMappingURL=work.css.map */

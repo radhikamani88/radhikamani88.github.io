@@ -2,3 +2,13 @@ mixin clickable_responsive_image(img_src, style_setting)
     - style_setting = style_setting || ''
     a(href=img_src target="_blank")
         img(class="img-responsive" src=img_src style=style_setting title="Click to see enlarged image")
+        
+mixin card(image_src, style_setting, Title, Blurb)
+    - Title = Title || 'Title 1';
+    - Blurb = Blurb || 'Blurb 1';    
+    .card(style="padding:1rem;")
+        +clickable_responsive_image(image_src, style_setting)
+        .container-fluid
+            .row
+                h3.h3tufte= Title
+                p.ptufte= Blurb    

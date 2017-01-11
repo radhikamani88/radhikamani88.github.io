@@ -194,3 +194,24 @@ html(lang="en")
                             li Help customers become successful sellers on your platform
                             li Behave smart and execute recoverable actions
                         
+                        p Keeping these design goals in mind, I brainstormed various information architectures for the application as well as various solutions for various screens. e.g. Event display, Displaying search results, Messaging and the main screen
+                        
+        .container-fluid.showcase
+            .row(style="padding-bottom:5%;text-align:center;")
+                h2.h2tufte Evaluate multiple solutions for overall app IA
+            .row
+                +card("img/w_instapark/ia_alternatives.png", "", "Overall app IA", "How to design IA for overall app? All above design goals considered. 4 solutions evaluated")
+            .row(style="padding-bottom:5%;text-align:center;")
+                h2.h2tufte Evaluate multiple solutions for different tasks.
+            .row.card-row
+                .col-md-4.card-col
+                    +card("img/w_instapark/br1.jpeg", "", "Screen for find parking - First screen of app", "Brainstormed how to show the nearby parking spots available. Factors considered: (1) locating cheapest or closest spot out of N available spots must be easy. (2) Useful spot information must be easy visible (3) Minimize interactions. Did QOC analysis and picked best solution")
+                .col-md-4.card-col
+                    +card("img/w_instapark/br2.jpeg", "", "Explore various personal renting spots quickly", "Brainstormed how to show parking spots available for events. Factors considered: (1) finding cheapest or cloest spot must be easy (2) Minimize interactions (3) Exploring various personal renting spots' information must be super easy")
+                .col-md-4.card-col
+                    +card("img/w_instapark/br3.jpeg", "", "Designing overall event parking flow", "Factors considered: (1) Minimize interactions to request parking (2) Make common and suggested cases very easy (3) Give options to explore deeper if needed.")
+            .row.card-row
+                .col-md-4.card-col
+                    +card("img/w_instapark/br4.jpeg", "", "Seler spot management", "How does seller manage the spots? Factors considered: (1) Improve engagement. Help the seller price spot correctly. (2) Provide good at-a-glance views so that user is engaged constantly (3) Minimize interactions (4) Optmized for sellers who are selling personal home parking spots first")
+                .col-md-4.card-col
+                    +card("img/w_instapark/br9.jpeg", "", "Finding parking spots by specifying destination location", "How to design for advanced use case wherer user wants to find parking for a different location other than currently placed. Factors considered: (1) Don't make common cases hard. (2) Minimize interactions (3) Don't visually obstruct other useful information")
