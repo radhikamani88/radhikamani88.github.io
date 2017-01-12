@@ -1,0 +1,83 @@
+include common_head.jade
+include common_banner.jade
+include common_navbar.jade
+include common_clickable_image.jade
+
+- var pageTitle = "Graphic design"
+
+doctype html
+
+html(lang="en")
+
+    +head_mixin(pageTitle)
+
+    body(data-spy="scroll" data-target=".navbar" data-offset="50")
+  
+        link(rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+        link(rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
+        script(type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
+
+  
+        style.
+            h1, h2, h3 {
+                color: #293E68;
+            }
+
+        +navbar_mixin(pageTitle, [["challenge","Challenge"]])
+
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h1 My Graphic work
+                        p.subtitle An eclectic collection
+                        
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h2 Twitter themes
+                        p Twitter background themes based on season
+                        
+            style.
+                .slick-next::before {
+                    color: black;
+                }
+                .slick-prev::before {
+                    color: black;
+                }
+
+            .row
+                div#myid
+                    div
+                        +clickable_responsive_image("img/w_graphic/g1.png")
+                    div
+                        +clickable_responsive_image("img/w_graphic/g2.png")
+                    div
+                        +clickable_responsive_image("img/w_graphic/g3.png")
+                        
+            script.
+                $(document).ready(function(){
+                  $('#myid').slick();
+                });
+
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h2 Mealapp - Mobile app design
+                        p MealApp is the mobile platform for University of Michigan Dining services. It allows you to browse meal menu from different dining halls across the campus. The project was to provide visual design scheme to the University.
+                        br
+                        +clickable_responsive_image("img/w_graphic/meal.webp")
+
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h2 Poster for fictional conference
+                        
+                        br
+                        
+                        +clickable_responsive_image("img/w_graphic/b1.png")
+                        +clickable_responsive_image("img/w_graphic/b2.png")
+                        +clickable_responsive_image("img/w_graphic/b3.png")
