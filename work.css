@@ -458,15 +458,9 @@ article {
 /* line 205, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
 .showcase {
   margin: 5px;
-  background-color: lightgray;
+  background-color: white;
   color: black;
-  padding: 5%;
-  background: -webkit-linear-gradient(90deg, #dee1e1 10%, #f4f4f4 90%);
-  /* Chrome 10+, Saf5.1+ */
-  background: -moz-linear-gradient(90deg, #dee1e1 10%, #f4f4f4 90%);
-  /* FF3.6+ */
-  background: linear-gradient(90deg, #dee1e1 10%, #f4f4f4 90%);
-  /* W3C */ }
+  padding: 5%; }
 
 /* line 217, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
 article {

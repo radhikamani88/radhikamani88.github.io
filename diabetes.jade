@@ -1,0 +1,69 @@
+include common_banner.jade
+include common_navbar.jade
+include common_head.jade
+include common_clickable_image.jade
+
+- var PageTitle = "Diabetes prevalence"
+
+doctype html
+html(lang="en")
+    +head_mixin(PageTitle)
+    
+    body(data-spy="scroll" data-target=".navbar" data-offset="50")
+
+        style.
+            h1, h2, h3 {
+                color: #293E68;
+            }
+                
+        +banner_mixin(
+            PageTitle,
+            
+            "Is there any relation between income and diabetes prevalence?",
+                        
+            "Data set collection, Programming, Data visualization",
+            
+            "Feb '16 - 1 day",
+            
+            "http://placehold.it/1500x925"
+        )
+        
+        +navbar_mixin(pageTitle, [["challenge","Challenge"]])
+        
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h1 Diabetes prevalence
+                        p.subtitle Is there any relation between income and diabetes prevalence?
+                        
+                        p.firstpara I did this project out of my own interest when I started studying data visualization during my free time. Here, I decided to use visualization to gain insights in the diabetes prevalence dataset provided by World bank. I wanted to know if there was any relationship between the income group of the country and the diabetes prevalence percentages.
+                        
+                        h2 Process
+                        
+                        p The dataset consisted of 2 files. One described the diabetes prevalence percentages per country. Another file provided the income category of each country. To plot the bubbles at the right coordinates on the geographical map, I also needed latitude and longitude data for each country which I got from the Open geocode website. I then combined all the data from various files into a single JSON object. I used D3.js to build this visualization and the JSON data produced earlier the data fed to D3.js code.
+                        
+                        h2 Design choices
+                        
+                        ol
+                            li To aid in this analysis I constructed the visualization provided below where I used a proportional symbol map to encode the diabetes prevalence percentages in the size of the bubble and the color of the bubble indicates the income category. 
+                            li There are only 5 categories but these rankings can be ranked in descending order by income and hence I decided to use various tints of the same color to indicate the drop in income.
+                            li I used violet color because it is usually used in health related contexts.
+
+        .container-fluid
+            .row(style="padding-bottom:5%;")
+                .col-md-12
+                    .videowrapper2
+                        .videoWrapper
+                            iframe(src="d3.html" width="1140px" height="540px")
+
+        .container
+            .row
+                article
+                    section 
+                        h2 Insights
+                        
+                        p One interesting insight you can get immediately from this visualization is that the larger bubbles are always lighter than the smaller bubbles. What this means is that diabetes prevalence is more common in low-income countries compared to high-income countries.Smaller islands like French Polynesia have the highest diabetes prevalence percentages. You can find the interactive D3visualiation below. Code is available on Github here Github
+
+
+

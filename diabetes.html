@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Diabetes prevalence</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="https://use.typekit.net/tpy0zci.js"></script>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <script type="text/javascript">
+      try {
+          Typekit.load({
+          async: true
+          } );
+      } catch (e) {}
+    </script>
+    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="work.css"/>
+    <style>
+      .navbar-default {
+          background-color: #293E68;
+      }
+      
+      .navbar-brand {
+          color: white !important;
+      }
+      
+      .navbar-nav {
+          color: white !important;
+      }
+      
+      .navbar-default .navbar-nav>li>a {
+          color: white !important;
+      }
+      
+      .navbar-default .navbar-nav>li>a:hover {
+          color: black !important;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <style>
+      h1, h2, h3 {
+          color: #293E68;
+      }
+          
+    </style>
+    <div class="container-fluid home-project-cover" style="background-color:white">
+      <div class="row">
+        <div class="col-md-6 home-project-left">
+          <table>
+            <tr>
+              <td class="project">
+                <h4 class="home-project-title" style="padding-bottom:0">Diabetes prevalence</h4>
+              </td>
+              <td class="line" style="padding-left:1em; vertical-align:middle">
+                <svg height="6" width="100%">
+                  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#222 ;stroke-width:3"></line>
+                </svg>
+              </td>
+            </tr>
+          </table>
+          <h3 class="home-project-subtitle">Is there any relation between income and diabetes prevalence?</h3>
+          <h6 class="home-project-tags">Data set collection, Programming, Data visualization</h6>
+          <p class="home-project-blurb">Feb '16 - 1 day</p>
+        </div>
+        <div class="col-md-6 home-project-right"><img class="img-responsive center-image img-responsive" src="http://placehold.it/1500x925"/></div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="700">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <p><a class="navbar-brand" href="index.html">Home</a><span class="navbar-brand">/</span><span class="navbar-brand navbar-brand-currentpage"></span></p>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="challenge">Challenge</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <article class="nobottompadding">
+          <section>
+            <h1>Diabetes prevalence</h1>
+            <p class="subtitle">Is there any relation between income and diabetes prevalence?</p>
+            <p class="firstpara">I did this project out of my own interest when I started studying data visualization during my free time. Here, I decided to use visualization to gain insights in the diabetes prevalence dataset provided by World bank. I wanted to know if there was any relationship between the income group of the country and the diabetes prevalence percentages.</p>
+            <h2>Process</h2>
+            <p>The dataset consisted of 2 files. One described the diabetes prevalence percentages per country. Another file provided the income category of each country. To plot the bubbles at the right coordinates on the geographical map, I also needed latitude and longitude data for each country which I got from the Open geocode website. I then combined all the data from various files into a single JSON object. I used D3.js to build this visualization and the JSON data produced earlier the data fed to D3.js code.</p>
+            <h2>Design choices</h2>
+            <ol>
+              <li>To aid in this analysis I constructed the visualization provided below where I used a proportional symbol map to encode the diabetes prevalence percentages in the size of the bubble and the color of the bubble indicates the income category. </li>
+              <li>There are only 5 categories but these rankings can be ranked in descending order by income and hence I decided to use various tints of the same color to indicate the drop in income.</li>
+              <li>I used violet color because it is usually used in health related contexts.</li>
+            </ol>
+          </section>
+        </article>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row" style="padding-bottom:5%">
+        <div class="col-md-12">
+          <div class="videowrapper2">
+            <div class="videoWrapper">
+              <iframe src="d3.html" width="1140px" height="540px"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <article>
+          <section> 
+            <h2>Insights</h2>
+            <p>One interesting insight you can get immediately from this visualization is that the larger bubbles are always lighter than the smaller bubbles. What this means is that diabetes prevalence is more common in low-income countries compared to high-income countries.Smaller islands like French Polynesia have the highest diabetes prevalence percentages. You can find the interactive D3visualiation below. Code is available on Github here Github</p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
