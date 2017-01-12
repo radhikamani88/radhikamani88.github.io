@@ -1,0 +1,92 @@
+include common_banner.jade
+include common_navbar.jade
+include common_head.jade
+include common_clickable_image.jade
+
+- var PageTitle = "Bassis"
+
+doctype html
+html(lang="en")
+    +head_mixin(PageTitle)
+    
+    body(data-spy="scroll" data-target=".navbar" data-offset="50")
+
+        style.
+            h1, h2, h3 {
+                color: #293E68;
+            }
+                
+        +banner_mixin(
+            PageTitle,
+            
+            "Many music apps focus on managing song libraries and listening. Shure wanted a music app that is social to help promote brand awareness of their Sound instruments",
+                        
+            "Idea generator, Paper mockups, Material design",
+            
+            "",
+            
+            "http://placehold.it/1500x925"
+        )
+        
+        +navbar_mixin(pageTitle, [["challenge","Challenge"]])
+        
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h1 Shure design jam
+                        p.subtitle Raise Shure brand awareness by making a truly social music app
+                        
+                        p There was no existing mobile application to make the music truly social. Many music apps focus on managing song libraries and listening. Shure wanted a music app that is social to help promote brand awareness of their Sound instruments
+                        
+                        h2 Ideation
+                        
+                        p We started the design process by brainstorming our ideas for deciding on features for our product. Next we decided to make a product which is intuitive and simple to follow. This helps the user to easily record and share as well as enjoy the concert too. We concluded that it will be easier to make a mobile application as it would be easy to carry to concerts and any place of social gatherings. We also decided the target audience to be anybody who is a regular concert goer and likes to share music with friends. 
+                        
+                        h3 Competitive analysis
+                        
+                        p I did the competitive analysis for the project for which I focused on the looking at the existing application available in google play store. 
+                        
+                        p he application that I felt was more useful for this purpose was the Boomio. Boomio had the following features for recording and sharing the music:
+                        
+                        ol
+                            li Boomio is a social, music-sharing platform that allows users to send songs to their friends and followers.
+                            li It has a facebook feed like feature which allows users to respond to each post with comments, likes, or add more songs to create themed playlists
+                            li Alternatively, artists can use the app to promote their music and engage with listeners directly.
+                            
+                        p Shortcomings of Boomio were that it allowed only get one play for free and there was no real time sharing. 
+
+                        p Another application that I analyzed was the existing application by SHURE called MOTIV.It's features were:
+                        ol
+                            li Allows for high quality recordings by the use of filters
+                            li File sharing via email, text, iTunes, Airdrop and Dropbox
+                            
+                        p Shortcomings of MOTIV were that there was no social sharing and uers cannot comment or share music files.
+
+            
+                        h2 Design
+                        
+                        h3 MVP1 feature list
+                        
+                        p After looking at the existing competitors on the market and MOTIV application on google play store, I decided on adding the feature of Gps locator and LONG PRESS INTERACTION gesture. I believe that one finger press would be good for quick recording. Further, GPS feature would help the users to locate events nearby. In addition, it would also have a default location based on the GPS location. Some of the other features we decided included the following 
+                        
+                        ol
+                            li Can record and collaborate
+                            li Share with friends using facebook, twitter links
+                            li Filters to improve the sound quality
+                            li Can add new friends through facebook for sharing music during social gathering
+                            
+        .container-fluid.showcase
+            .row(style="padding:5%;text-align:center")
+                h2.h2tufte Brainstorming, wireframing and IA
+            .row
+                .col-md-6
+                    +card_no_title("img/w_shure/b1.jpg")
+                .col-md-6
+                    +card_no_title("img/w_shure/b2.jpg")
+            .row(style="padding:5%;text-align:center")
+                h2.h2tufte Final Mid-fi mockup
+            .row(style="margin:0 auto;text-align:center;")
+                .col-md-8.center-block(style="float:none;") 
+                    +card_no_title("img/w_shure/final.jpg", "margin: 0 auto;")
+            
