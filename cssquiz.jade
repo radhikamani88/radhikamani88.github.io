@@ -1,0 +1,77 @@
+include common_banner.jade
+include common_navbar.jade
+include common_head.jade
+include common_clickable_image.jade
+
+- var PageTitle = "CSS Quizzer"
+
+doctype html
+html(lang="en")
+    +head_mixin(PageTitle)
+    
+    body(data-spy="scroll" data-target=".navbar" data-offset="50")
+
+        style.
+            h1, h2, h3 {
+                color: #293E68;
+            }
+                
+        +banner_mixin(
+            PageTitle,
+            
+            "An journey filled with lessons and learnings as I ventured to build a portfolio capturing my work. Experiences in an UX approach to portfolio website design, website creation and front-end development.",
+                        
+            "front-end development: HTML, CSS3, SCSS, Javascript, Jade, npm <br/> typography, IA",
+            
+            "Dec'16 - Jan'17",
+            
+            "http://placehold.it/1500x925"
+        )
+        
+        +navbar_mixin(pageTitle, [["challenge","Challenge"]])
+        
+        .container
+            .row
+                article.nobottompadding
+                    section
+                        h1 Making of CSS Quizzer webapp
+                        p.subtitle Helping people learn CSS
+                        
+                        h2 Problem statement
+                        
+                        p For our Web design class, we had to do a small project involving 2 people. We decided to make a CSS Quizzer to help people learn CSS. The primarly purpose of this project was to practice our programming skills and learn how to use Python and Flask to create a web application. We also deployed this application on Heroku and learnt about Web application deployment processes. 
+
+
+                        h2 Solution
+                        
+                        p We built a mobile-friendly webapp for CSS quiz. It has the following features:
+                        ol
+                            li Supports two kinds of questions: Multiple choice and Fill in the blanks
+                            li Explanation of answers is provided in the quiz to aid in learning
+                        
+                        h2 Technologies learnt
+                        
+                        ol
+                            li Python
+                            li Flask
+                            li Heroku
+                            li Git
+                        
+                        h2 Hosted link
+                        
+                        a(href="http://si539-css-quiz.herokuapp.com/") CSS Quizzer
+                        
+                        
+        .container-fluid.showcase
+            .row(style="padding-bottom:5%;text-align:center;")
+                h2.h2tufte Screenshots
+            .row(style="padding-bottom:5%;")
+                .col-md-6
+                    +card("img/w_css/q1.png", "", "Question 1", "Multiple choice questions")
+                .col-md-6
+                    +card("img/w_css/q2.png", "", "Question 1 answer", "Answer explained by quizzer")
+            .row
+                .col-md-6
+                    +card("img/w_css/q3.png", "", "Fill in the blank question", "Fill in the blanks are harder than multiple choice and test users thorough understanding of concepts")
+                .col-md-6
+                    +card("img/w_css/q4.png", "", "Videos", "Tutorial videos provided for learning purposes")

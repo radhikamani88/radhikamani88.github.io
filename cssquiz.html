@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Quizzer</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="https://use.typekit.net/tpy0zci.js"></script>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <script type="text/javascript">
+      try {
+          Typekit.load({
+          async: true
+          } );
+      } catch (e) {}
+    </script>
+    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="work.css"/>
+    <style>
+      .navbar-default {
+          background-color: #293E68;
+      }
+      
+      .navbar-brand {
+          color: white !important;
+      }
+      
+      .navbar-nav {
+          color: white !important;
+      }
+      
+      .navbar-default .navbar-nav>li>a {
+          color: white !important;
+      }
+      
+      .navbar-default .navbar-nav>li>a:hover {
+          color: black !important;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <style>
+      h1, h2, h3 {
+          color: #293E68;
+      }
+          
+    </style>
+    <div class="container-fluid home-project-cover" style="background-color:white">
+      <div class="row">
+        <div class="col-md-6 home-project-left">
+          <table>
+            <tr>
+              <td class="project">
+                <h4 class="home-project-title" style="padding-bottom:0">CSS Quizzer</h4>
+              </td>
+              <td class="line" style="padding-left:1em; vertical-align:middle">
+                <svg height="6" width="100%">
+                  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#222 ;stroke-width:3"></line>
+                </svg>
+              </td>
+            </tr>
+          </table>
+          <h3 class="home-project-subtitle">An journey filled with lessons and learnings as I ventured to build a portfolio capturing my work. Experiences in an UX approach to portfolio website design, website creation and front-end development.</h3>
+          <h6 class="home-project-tags">front-end development: HTML, CSS3, SCSS, Javascript, Jade, npm <br/> typography, IA</h6>
+          <p class="home-project-blurb">Dec'16 - Jan'17</p>
+        </div>
+        <div class="col-md-6 home-project-right"><img class="img-responsive center-image img-responsive" src="http://placehold.it/1500x925"/></div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="700">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <p><a class="navbar-brand" href="index.html">Home</a><span class="navbar-brand">/</span><span class="navbar-brand navbar-brand-currentpage"></span></p>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="challenge">Challenge</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <article class="nobottompadding">
+          <section>
+            <h1>Making of CSS Quizzer webapp</h1>
+            <p class="subtitle">Helping people learn CSS</p>
+            <h2>Problem statement</h2>
+            <p>For our Web design class, we had to do a small project involving 2 people. We decided to make a CSS Quizzer to help people learn CSS. The primarly purpose of this project was to practice our programming skills and learn how to use Python and Flask to create a web application. We also deployed this application on Heroku and learnt about Web application deployment processes. </p>
+            <h2>Solution</h2>
+            <p>We built a mobile-friendly webapp for CSS quiz. It has the following features:</p>
+            <ol>
+              <li>Supports two kinds of questions: Multiple choice and Fill in the blanks</li>
+              <li>Explanation of answers is provided in the quiz to aid in learning</li>
+            </ol>
+            <h2>Technologies learnt</h2>
+            <ol>
+              <li>Python</li>
+              <li>Flask</li>
+              <li>Heroku</li>
+              <li>Git</li>
+            </ol>
+            <h2>Hosted link</h2><a href="http://si539-css-quiz.herokuapp.com/">CSS Quizzer</a>
+          </section>
+        </article>
+      </div>
+    </div>
+    <div class="container-fluid showcase">
+      <div class="row" style="padding-bottom:5%;text-align:center">
+        <h2 class="h2tufte">Screenshots</h2>
+      </div>
+      <div class="row" style="padding-bottom:5%">
+        <div class="col-md-6">
+          <div class="card" style="padding:1rem"><a href="img/w_css/q1.png" target="_blank"><img class="img-responsive" src="img/w_css/q1.png" title="Click to see enlarged image"/></a>
+            <div class="container-fluid">
+              <div class="row">
+                <h3 class="h3tufte">Question 1</h3>
+                <p class="ptufte">Multiple choice questions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card" style="padding:1rem"><a href="img/w_css/q2.png" target="_blank"><img class="img-responsive" src="img/w_css/q2.png" title="Click to see enlarged image"/></a>
+            <div class="container-fluid">
+              <div class="row">
+                <h3 class="h3tufte">Question 1 answer</h3>
+                <p class="ptufte">Answer explained by quizzer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card" style="padding:1rem"><a href="img/w_css/q3.png" target="_blank"><img class="img-responsive" src="img/w_css/q3.png" title="Click to see enlarged image"/></a>
+            <div class="container-fluid">
+              <div class="row">
+                <h3 class="h3tufte">Fill in the blank question</h3>
+                <p class="ptufte">Fill in the blanks are harder than multiple choice and test users thorough understanding of concepts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card" style="padding:1rem"><a href="img/w_css/q4.png" target="_blank"><img class="img-responsive" src="img/w_css/q4.png" title="Click to see enlarged image"/></a>
+            <div class="container-fluid">
+              <div class="row">
+                <h3 class="h3tufte">Videos</h3>
+                <p class="ptufte">Tutorial videos provided for learning purposes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
