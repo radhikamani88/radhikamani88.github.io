@@ -124,7 +124,6 @@ article {
     }
     h2 {
         font-family: $header-stack;
-        font-style: italic;
         font-weight: $fontweight;
         margin-top: 2.1rem;
         font-size: 2.2rem; // 33px
@@ -132,7 +131,6 @@ article {
     }
     h3 {
         font-family: $header-stack;
-        font-style: italic;
         font-weight: $fontweight;
         font-size: 1.7rem; // 30px
         margin-top: 2.0rem;
@@ -201,6 +199,16 @@ article {
     font-size: 2.2rem; // 33px
     line-height: 1;
 }
+
+.h1tufte {
+    font-family: $header-stack;
+    font-weight: $fontweight;
+    margin-top: 4.2rem;
+    margin-bottom: 1rem;
+    font-size: 3.2rem; // 48px
+    line-height: 1;
+}
+
 
 .showcase {
     margin: 5px;

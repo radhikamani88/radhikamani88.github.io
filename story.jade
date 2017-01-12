@@ -1,0 +1,55 @@
+include common_head.jade
+include common_navbar.jade
+include common_clickable_image.jade
+
+- var pageTitle = "My story"
+
+doctype html
+
+html(lang="en")
+
+    +head_mixin(pageTitle)
+
+    body(data-spy="scroll" data-target=".navbar" data-offset="50")
+  
+        style.
+            h1, h2, h3 {
+                color: #293E68;
+            }
+            
+            .h1tufte {
+                font-family: "adobe-caslon-pro",serif;
+            }
+            
+            .h3tufte {
+                font-family: "ff-meta-web-pro", sans-serif;
+                font-weight: none;
+            }
+
+        +navbar_mixin(pageTitle, [])
+
+        .container-fluid(style="padding:3rem;")
+            .row(style="padding-bottom:3rem;")
+                .col-md-8
+                    +card_no_title("http://placehold.it/1280x640")
+                .col-md-4
+                    h1.h1tufte Hi,
+                    h3.h3tufte I am a UX designer with strengths in interaction design and prototyping. 
+                    br
+                    h3.h3tufte After studying engineering and business management, I realized the power of applying design thinking to business innovation.
+                    br
+                    h3.h3tufte Since then, I have designed for enterprise, graming and voice based interfaces &mdash; Redhat, Guardian, Callaway and  a small gaming company in Ann Arbor which is now fully funded in Kickstarter! to name a few!
+                    
+            .row
+                .col-md-4
+                    +hover_card_no_title("http://placehold.it/800x1600", "", "imghvr-flip-vert", "Born and brought up in delhi", "")
+                    br
+                    +hover_card_no_title("http://placehold.it/800x800", "", "imghvr-flip-vert", "Strategize", "I love strategy board games which allows me to look at problems from diverse perspectives")
+                .col-md-4.center-block
+                    +hover_card_no_title("http://placehold.it/800x800", "", "imghvr-flip-vert", "Resident of Seattle", "I moved to Seattle WA in 2013 and now I call it my US hometown! I love this beautiful city!")
+                    br
+                    +hover_card_no_title("http://placehold.it/800x1600", "", "imghvr-flip-vert", "Diverse education", "My background in management and engineering enables me to understand business process and technical feasibility")
+                .col-md-4.center-block
+                    +hover_card_no_title("http://placehold.it/800x1600", "", "imghvr-flip-vert", "Michigan Wolverine", "Currently studying at University of Michigan")
+                    br
+                    +hover_card_no_title("http://placehold.it/800x800", "", "imghvr-flip-vert", "Design", "I cannot live without design since the day we met!")
