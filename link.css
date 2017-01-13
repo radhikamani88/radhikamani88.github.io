@@ -28,19 +28,19 @@
   font-weight: normal;
   font-style: normal; }
 
-/* line 3, /home/local/ANT/ajgopala/portfolio_new/link.scss */
-a {
+/* line 4, /home/local/ANT/ajgopala/portfolio_new/link.scss */
+#site-menu1 a {
   position: relative;
   color: #000;
   text-decoration: none; }
 
-/* line 9, /home/local/ANT/ajgopala/portfolio_new/link.scss */
-a:hover {
+/* line 10, /home/local/ANT/ajgopala/portfolio_new/link.scss */
+#site-menu1 a:hover {
   color: #000;
   text-decoration: none; }
 
-/* line 14, /home/local/ANT/ajgopala/portfolio_new/link.scss */
-a:before {
+/* line 15, /home/local/ANT/ajgopala/portfolio_new/link.scss */
+#site-menu1 a:before {
   text-decoration: none;
   content: "";
   position: absolute;
@@ -55,8 +55,8 @@ a:before {
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s; }
 
-/* line 30, /home/local/ANT/ajgopala/portfolio_new/link.scss */
-a:hover:before {
+/* line 31, /home/local/ANT/ajgopala/portfolio_new/link.scss */
+#site-menu1 a:hover:before {
   text-decoration: none;
   visibility: visible;
   -webkit-transform: scaleX(1);

@@ -58,11 +58,15 @@ h6 {
     font-family: $font-stack;
     padding: 1rem;
     border: 1px solid darkgray;
+    background-color: $color-cobaltblue;
+    color: white;
 }
 
 .view-case-study a:hover {
-    color: white;
-    background-color: $color-cobaltblue;
+    color: black;
+    background-color: lighten($color-cobaltblue, 60%);
+    transition: 0.3s;
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {

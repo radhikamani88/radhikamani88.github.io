@@ -1,5 +1,6 @@
 @import 'variable.scss';
 
+#site-menu1 {
 a {
   position: relative;
   color: #000;
@@ -32,4 +33,5 @@ a:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+}
 }
