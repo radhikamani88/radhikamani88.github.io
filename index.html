@@ -1,351 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <script src="https://use.typekit.net/tpy0zci.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css">
-    
-    <script type="application/x-javascript"> 
-
-    function generateNodeSet() {
-      var spans = document.getElementsByClassName("step");
-      var retarr = [];
-      for(var i=0;i<spans.length; i++) { 
-         retarr[retarr.length] = spans[i].id; 
-      } 
-      return retarr; 
-    } 
- 
-    function generateLinks(nodeIds) { 
-      var retarr = []; 
-      for(var i=0; i<nodeIds.length; i++) { 
-      	var id = nodeIds[i];
-        var span = document.getElementById(id); 
-        var atts = span.attributes; 
-        var ids_str = false; 
-        if((atts.getNamedItem) && (atts.getNamedItem('ids'))) { 
-          ids_str = atts.getNamedItem('ids').value; 
-        } 
-        if(ids_str) { 
-          retarr[id] = ids_str.split(" ");
+<html lang="end">
+  <head>
+    <head>
+      <title>Radhika Kolathumani's portfolio</title>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+      <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+      <script src="https://use.typekit.net/tpy0zci.js"></script>
+      <script type="text/javascript">
+        try {
+            Typekit.load({
+            async: true
+            } );
+        } catch (e) {}
+      </script>
+      <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
+      <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <script src="statemachine.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="index.css"/>
+      <link rel="stylesheet" href="imagehover.min.css"/>
+      <style>
+        .navbar-default {
+            background-color: #293E68;
         }
-      } 
-      return retarr; 
-    } 
         
-    // degrees to radians, because most people think in degrees
-    function degToRad(angle_degrees) {
-       return angle_degrees/180*Math.PI;
-    }
-    // draw a horizontal arc
-    //   ctx: canvas context;
-    //   inax: first x point
-    //   inbx: second x point
-    //   y: y value of start and end
-    //   alpha_degrees: (tangential) angle of start and end
-    //   upside: true for arc above y, false for arc below y.
-    function drawHorizArc(ctx, inax, inbx, y, alpha_degrees, upside)
-    {
-      var alpha = degToRad(alpha_degrees);
-      var startangle = (upside ? ((3.0/2.0)*Math.PI + alpha) : ((1.0/2.0)*Math.PI - alpha));
-      var endangle = (upside ? ((3.0/2.0)*Math.PI - alpha) : ((1.0/2.0)*Math.PI + alpha));
-
-      var ax=Math.min(inax,inbx);
-      var bx=Math.max(inax,inbx);
-//      if(upside) {
-//        var startangle = (3.0/2.0)*Math.PI + alpha; //North plus alpha west
-//        var endangle = (3.0/2.0)*Math.PI - alpha; //North minus alpha east
-//      } else {
-//        var startangle = (1.0/2.0)*Math.PI - alpha; //South minus alpha west
-//        var endangle = (1.0/2.0)*Math.PI + alpha; //North plus alpha east
-//      }
-      // tan(alpha) = o/a = ((bx-ax)/2) / o
-      // o = ((bx-ax)/2/tan(alpha))
-      // centre of circle is (bx+ax)/2, y-o
-      var circleyoffset = ((bx-ax)/2)/Math.tan(alpha);
-      var circlex = (ax+bx)/2.0;
-      var circley = y + (upside ? 1 : -1) * circleyoffset;
-      var radius = Math.sqrt(Math.pow(circlex-ax,2) + Math.pow(circley-y,2));
-
-      ctx.beginPath();
-      if(upside) {
-	      ctx.moveTo(bx,y);
-        ctx.arc(circlex,circley,radius,startangle,endangle,1);
-      } else {
-      	ctx.moveTo(bx,y);
-        ctx.arc(circlex,circley,radius,startangle,endangle,0);
-      }
-      ctx.stroke();
-   }
-
-
-    // draw the head of an arrow (not the main line)
-    //  ctx: canvas context
-    //  x,y: coords of arrow point
-    //  angle_from_north_clockwise: angle of the line of the arrow from horizontal
-    //  upside: true=above the horizontal, false=below
-    //  barb_angle: angle between barb and line of the arrow
-    //  filled: fill the triangle? (true or false)
-    function drawArrowHead(ctx, x, y, angle_from_horizontal_degrees, upside, //mandatory
-                           barb_length, barb_angle_degrees, filled) {        //optional
-       (barb_length==undefined) && (barb_length=13);
-       (barb_angle_degrees==undefined) && (barb_angle_degrees = 20);
-       (filled==undefined) && (filled=true);
-       var alpha_degrees = (upside ? -1 : 1) * angle_from_horizontal_degrees; 
-      
-       //first point is end of one barb
-       var plus = degToRad(alpha_degrees - barb_angle_degrees);
-       a = x + (barb_length * Math.cos(plus));
-       b = y + (barb_length * Math.sin(plus));
-       
-       //final point is end of the second barb
-       var minus = degToRad(alpha_degrees + barb_angle_degrees);
-       c = x + (barb_length * Math.cos(minus));
-       d = y + (barb_length * Math.sin(minus));
-
-       ctx.beginPath();
-       ctx.moveTo(a,b);
-       ctx.lineTo(x,y);
-       ctx.lineTo(c,d);
-       if(filled) {
-       	ctx.fill();
-       } else {
-       	ctx.stroke();
-       }
-       return true;
-    }
-
-    // draw a horizontal arcing arrow
-    //  ctx: canvas context
-    //  inax: start x value
-    //  inbx: end x value
-    //  y: y value
-    //  alpha_degrees: angle of ends to horizontal (30=shallow, >90=silly)
-    function drawHorizArcArrow(ctx, inax, inbx, y,                 //mandatory
-                               alpha_degrees, upside, barb_length) { //optional
-       (alpha_degrees==undefined) && (alpha_degrees=45);
-       (upside==undefined) && (upside=true);
-       drawHorizArc(ctx, inax, inbx, y, alpha_degrees, upside);
-       if(inax>inbx) { 
-       	drawArrowHead(ctx, inbx, y, alpha_degrees*0.9, upside, barb_length); 
-       } else { 
-       	drawArrowHead(ctx, inbx, y, (180-alpha_degrees*0.9), upside, barb_length); 
-       }
-       return true;
-    }
-
-
-    function drawArrow(ctx,fromelem,toelem,    //mandatory
-                         above, angle) {        //optional
-      (above==undefined) && (above = true);
-      (angle==undefined) && (angle = 20); //degrees 
-      midfrom = fromelem.offsetLeft + (fromelem.offsetWidth / 2) - left - tofromseparation/2; 
-      midto   =   toelem.offsetLeft + (  toelem.offsetWidth / 2) - left + tofromseparation/2;
-      //var y = above ? (fromelem.offsetTop - top) : (fromelem.offsetTop + fromelem.offsetHeight - top);
-      var y = fromelem.offsetTop + (above ? 0 : fromelem.offsetHeight) - canvasTop;
-      drawHorizArcArrow(ctx, midfrom, midto, y, angle, above);
-    }
-
-    var canvasTop = 0;
-    function draw() {         
-      var canvasdiv = document.getElementById("canvas");
-      var spanboxdiv = document.getElementById("spanbox");
-      var ctx = canvasdiv.getContext("2d");
-
-      nodeset = generateNodeSet(); 
-      linkset = generateLinks(nodeset);
-      tofromseparation = 20;
-
-      left = canvasdiv.offsetLeft - spanboxdiv.offsetLeft;
-      canvasTop = canvasdiv.offsetTop - spanboxdiv.offsetTop; 
-      for(var key in linkset) {  
-        for (var i=0; i<linkset[key].length; i++) {  
-          fromid = key; 
-          toid = linkset[key][i]; 
-          var above = (i%2==1);
-          drawArrow(ctx,document.getElementById(fromid),document.getElementById(toid),above);
-        } 
-      } 
-    } 
-  </script> 
-
-</head>
-
-<body>
+        .navbar-brand {
+            color: white !important;
+        }
+        
+        .navbar-nav {
+            color: white !important;
+        }
+        
+        .navbar-default .navbar-nav>li>a {
+            color: white !important;
+        }
+        
+        .navbar-default .navbar-nav>li>a:hover {
+            color: black !important;
+        }
+      </style>
+    </head>
+  </head>
+  <body>
     <div class="container">
-        
-        <div class="row headline">
-            <div class="col-sm-6">
-                <h1 class="site-title">Radhika Kolathumani</h1>
-                <div style="position:relative">
-                    <canvas style="border: 1px solid white;" id="canvas" height="50px"></canvas>
-                    <div class="site-sub-title" id="spanbox" style='float:left; position:absolute; top:0; left:0'>
-                        <span id="T1" class="step">Ideation &mdash;</span>
-                        <span id="T2" class="step">Research &mdash;</span>
-                        <span id="T3" class="step">Design &mdash;</span>
-                        <span id="T4" class="step">Code &mdash;</span>
-                        <span id="T5" ids="T3" class="step">Measure</span>
-                    </div>
-                </div>
-            </div><!--
-                Comment is important to keep the menu items to the right side of title
-                and vertically centered.
-            --><div id="site-menu1" class="col-sm-6 site-menu">
-                <h6>
-                    <span class="selected" href="#">work</span>&nbsp;
-                    /&nbsp;
-                    <a href="story.html">my story</a>&nbsp;
-                    /&nbsp; <a href="resume.pdf">r&eacute;sum&eacute;</a>
-                </h6>
-                <h6>
-                    <a href="graphic.html">graphic design</a>
-<!--                &nbsp;/&nbsp;<a href="#">motion design</a>-->
-                </h6>
-                <h6>
-                    <a href="https://www.twitter.com/frosted2fire"><i class="fa fa-twitter"></i></a>&nbsp;/&nbsp;
-                    <a href="https://www.linkedin.com/in/radhikak1"><i class="fa fa-linkedin"></i></a>
-                </h6>
-            </div>
+      <div class="row headline">
+        <div class="col-sm-6">
+          <h1 class="site-title">Radhika Kolathumani</h1>
+          <div style="position:relative">
+            <canvas style="border 1px solid white" id="canvas" height="50px"></canvas>
+            <div class="site-sub-title" id="spanbox" style="float:left; position:absolute; top:0; left:0"><span class="step" id="T1">Ideation &mdash;</span><span class="step" id="T2">Research &mdash;</span><span class="step" id="T3">Design &mdash;</span><span class="step" id="T4">Code &mdash;</span><span class="step" id="T5" ids="T3">Measure</span></div>
+          </div>
         </div>
-
-        
-        <!-- InstaPark Brief -->
-        <div class="row home-brief">
-            <div class="col-sm-4 home-project-brief">
-                <p><i class="fa fa-car"></i></p>
-                <h5 class="home-project-title"><i class="fa fa-angle-double-right"></i>&nbsp;Instapark</h5>
-                <h3 class="home-project-subtitle">It's like Airbnb, but for Parking at Universities</h3>
-                <p class="home-project-blurb">There are several untapped opportunities for finding cheap parking spots in Ann Arbor. Parking prices vary through the day at various places and students are eager to rent out their personal spots for some extra money. Unfortunately, no centralized platform exists to make this happen. I built an app to address these needs</p>
-                <h6 class="home-project-tags">ideation, research, design, evaluate</h6>
-                <p class="home-project-blurb">Sep '15 - Dec '15</p>                
-                <div class="view-case-study0"><span class="view-case-study"><a href="instapark.html">View case study</a></span></div>
-            </div>
-            <div class="col-sm-8 project-banner-setting"><img class="img-fluid"  src="http://placehold.it/1500x925"></div>
+        <div class="site-menu col-sm-6" id="site-menu1">
+          <h6><span class="selected">work</span><span>&nbsp;/&nbsp;</span><a href="story.html">my story</a><span>&nbsp;/&nbsp;</span><a href="resume.pdf">r&eacute;sum&eacute;</a></h6>
+          <h6><a href="graphic.html">graphic design</a></h6>
+          <h6><a href="https://www.twitter.com/frosted2fire"><i class="fa fa-twitter"></i></a><span>&nbsp;/&nbsp;</span><a href="https://www.linkedin.com/in/radhikak1"><i class="fa fa-linkedin"></i></a></h6>
         </div>
-        
-        
-        <!-- Game Origin Brief -->
-        <div class="row home-brief">
-            <div class="col-sm-4 home-project-brief">
-                <p><i class="fa fa-gamepad"></i></p>
-                <h5 class="home-project-title"><i class="fa fa-angle-double-right"></i>&nbsp;Latitude 90 - the origin</h5>
-                <h3 class="home-project-subtitle">First of it's kind, mobile-social hybrid deduction game</h3>
-                <p class="home-project-blurb">Gaming company <a href="http://www.ghostroadhouse.com/">Ghost roadhouse</a> wanted us to redesign their game Latitude 90 for iOS. Latitude 90 is a first of it's kind hybrid mobile-social deduction game similar to werewolf and mafia. Client received addititional funding from Kickstarter due to this redesign.</p>
-                <h6 class="home-project-tags">research, redesign</h6>
-                <p class="home-project-blurb">Sep '15 - Dec '15</p>                
-                <div class="view-case-study0"><span class="view-case-study"><a href="origin.html">View case study</a></span></div>
-            </div>
-            <div class="col-sm-8 project-banner-setting"><a href="origin.html"><img class="img-fluid" src="img/origin_banner_resized_3.png"></a></div>
+      </div>
+      <div class="row home-brief">
+        <div class="col-sm-4 home-project-brief">
+          <p><i class="fa fa-car"></i></p>
+          <h5 class="home-project-title">
+            <i class="fa fa-angle-double-right"></i>
+            &nbsp;Instapark
+          </h5>
+          <h3 class="home-project-subtitle">The Airbnb for University parking</h3>
+          <p class="home-project-blurb">There are several untapped opportunities for finding cheap parking spots in Ann Arbor. Parking prices vary through the day at various places and students are eager to rent out their personal spots for some extra money. Unfortunately, no centralized platform exists to make this happen. I built an app to address these needs</p>
+          <h6 class="home-project-tags">ideation, research, design, evaluate</h6>
+          <p class="home-project-blurb">Sep '15 - Dec '15</p>
+          <div class="view-case-study0"><span class="view-case-study"><a href="instapark.html">View case study</a></span></div>
         </div>
-
-        <!-- Portfolio website design -->
-        <div class="row home-brief">
-            <div class="col-sm-4 home-project-brief">
-                <p><i class="fa fa-desktop"></i></p>
-                <h5 class="home-project-title"><i class="fa fa-angle-double-right"></i>&nbsp;My portfolio website design</h5>
-                <h3 class="home-project-subtitle">Applying UX principles and front-end development to my portfolio website</h3>
-                
-                <p class="home-project-blurb">An journey filled with lessons and learnings as I ventured to build a portfolio capturing my work. Experiences in an UX approach to portfolio website design, website creation and front-end development.</p>
-                <h6 class="home-project-tags">HTML, CSS3, SCSS, Jade, Bootstrap v3, Javascript</h6>
-                <p class="home-project-blurb">Dec'16 - Jan'17</p>                
-                <div class="view-case-study0"><span class="view-case-study"><a href="website_design.html">View case study</a></span></div>
-            </div>
-            <div class="col-sm-8 project-banner-setting"><a href="origin.html"><img class="img-fluid" src="http://placehold.it/1500x925  "></a></div>
-        </div>        
-        
-        <!-- Redhat Brief 
-        <div class="row home-brief">
-            <div class="col-sm-4 home-project-brief">
-                <p><i class="fa fa-linux"></i></p>                
-                <h5 class="home-project-title"><i class="fa fa-angle-double-right"></i>&nbsp;Fedora hubs</h5>
-                <h3 class="home-project-subtitle">An online collaboration tool for Fedora Linux OS contributors</h3>
-                <p>Fedora is a Linux OS distro that like other linux OS, wants to increase adoption among a non-developer user base. This is only possible if non-developers contribute to improving the user experience of the operating system. A modern online collaboration tool is needed to foster such contributions. I worked on design of this collaboration tool called <a href="https://fedoraproject.org/wiki/Fedora_Hubs">Fedora hubs</a></p>
-                <h6 class="home-project-tags">research, design, evaluate</h6>
-                <p>May '16 - Aug '16</p>                
-                <div class="view-case-study0"><span class="view-case-study"><a href="#">View case study</a></span></div>
-            </div>
-            <div class="col-sm-8 project-banner-setting"><img class="img-fluid"  src="http://placehold.it/1500x925"></div>
-        </div>       
-        -->
-        
-        <!-- CSS Quizzer -->
-        <div class="row home-brief">
-            <div class="col-sm-4 home-project-brief">
-                <p><i class="fa fa-linux"></i></p>                
-                <h5 class="home-project-title"><i class="fa fa-angle-double-right"></i>&nbsp;CSS Quizzer</h5>
-                <h3 class="home-project-subtitle">Developed a web application that quizzes on CSS concepts</h3>
-                <p  class="home-project-blurb">I learnt CSS myself through quizzing. I wanted to help others learn CSS the same way. So, I developed a web application using Python Flask and Bootstrap</p>
-                <h6 class="home-project-tags">Python, Flask, Jinja, Bootstrap</h6>
-                <p class="home-project-blurb">Nov'15 - Dec'15</p>                
-                <div class="view-case-study0"><span class="view-case-study"><a href="cssquiz.html">View case study</a></span></div>
-            </div>
-            <div class="col-sm-8 project-banner-setting"><img class="img-fluid"  src="http://placehold.it/1500x925"></div>
+        <div class="col-sm-8 project-banner-setting">
+          <div class="card1" style="padding:1rem"><a href="instapark.html"><img class="img-fluid" src="http://placehold.it/1500x925"/></a></div>
         </div>
-        
-        <!-- Shure design jam -->
-        <div class="row home-brief">
-            <div class="col-sm-4 home-project-brief">
-                <p><i class="fa fa-linux"></i></p>                
-                <h5 class="home-project-title"><i class="fa fa-angle-double-right"></i>&nbsp;Shure Design Jam</h5>
-                <h3 class="home-project-subtitle">Make music truly social</h3>
-                <p class="home-project-blurb">Many music apps focus on managing song libraries and listening. Shure wanted a music app that is social to help promote brand awareness of their Sound instruments.</p>
-                <p class="home-project-blurb">We <strong>designed an app in 1.5 hours and won 2nd place!</strong></p>
-                <h6 class="home-project-tags">Idea generator, Paper mockups, Material design</h6>
-                <p class="home-project-blurb">September 2015 - 1.5 hours</p>                
-                <div class="view-case-study0"><span class="view-case-study"><a href="shure.html">View case study</a></span></div>
-            </div>
-            <div class="col-sm-8 project-banner-setting"><img class="img-fluid"  src="http://placehold.it/1500x925"></div>
+      </div>
+      <div class="row home-brief">
+        <div class="col-sm-4 home-project-brief">
+          <p><i class="fa fa-gamepad"></i></p>
+          <h5 class="home-project-title">
+            <i class="fa fa-angle-double-right"></i>
+            &nbsp;Latitude 90 - the origin
+          </h5>
+          <h3 class="home-project-subtitle">First mobile-social hybrid deduction game</h3>
+          <p class="home-project-blurb">Gaming company <a href="http://www.ghostroadhouse.com/">Ghost roadhouse</a> wanted us to redesign their game Latitude 90 for iOS. Latitude 90 is a first of it's kind hybrid mobile-social deduction game similar to werewolf and mafia. Client received addititional funding from Kickstarter due to this redesign.</p>
+          <h6 class="home-project-tags">research, redesign</h6>
+          <p class="home-project-blurb">Sep '15 - Dec '15</p>
+          <div class="view-case-study0"><span class="view-case-study"><a href="origin.html">View case study</a></span></div>
         </div>
-
-        <!-- Data visualization -->
-        <div class="row home-brief">
-            <div class="col-sm-4 home-project-brief">
-                <table>
-                    <tr>
-                        <td><p><i class="fa fa-medkit"></i></p></td>
-                        <td class="line" style="padding-left:1em; vertical-align:middle;">                                                    
-                            <svg height="6" width="100%">
-                                <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#222 ;stroke-width:3"></line>
-                            </svg>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><h5 class="home-project-title"><i class="fa fa-angle-double-right"></i></h5></td>
-                        <td style="padding-left:1em; vertical-align:middle;"><h5 class="home-project-title">Diabetes prevalence visualiation</h5></td>
-                    </tr>
-                </table>
-<!--                <h5 class="home-project-title"><i class="fa fa-angle-double-right"></i>&nbsp;Diabetes prevalence visualiation</h5>-->
-                <h3 class="home-project-subtitle">Is there any relation between income and diabetes prevalence?</h3>
-                <p class="home-project-blurb">I applied data visualization principle to uncover relation between diabetes prevalence and income of nations.</p>
-                <h6 class="home-project-tags">Data set collection, Programming, Data visualization</h6>
-                <p class="home-project-blurb">February 2016 - 1 day</p>                
-                <div class="view-case-study0"><span class="view-case-study"><a href="diabetes.html">View case study</a></span></div>
-            </div>
-            <div class="col-sm-8 project-banner-setting"><img class="img-fluid"  src="http://placehold.it/1500x925"></div>
+        <div class="col-sm-8 project-banner-setting">
+          <div class="card1" style="padding:1rem"><a href="origin.html"><img class="img-fluid" src="img/origin_banner_resized_3.png"/></a></div>
         </div>
-
-        
-
+      </div>
+      <div class="row home-brief">
+        <div class="col-sm-4 home-project-brief">
+          <p><i class="fa fa-desktop"></i></p>
+          <h5 class="home-project-title">
+            <i class="fa fa-angle-double-right"></i>
+            &nbsp;My portfolio website design
+          </h5>
+          <h3 class="home-project-subtitle">User-centered portfolio design</h3>
+          <p class="home-project-blurb">An journey filled with lessons and learnings as I ventured to build a portfolio capturing my work. Experiences in an UX approach to portfolio website design, website creation and front-end development.</p>
+          <h6 class="home-project-tags">HTML, CSS3, SCSS, Jade, Bootstrap v3, Javascript</h6>
+          <p class="home-project-blurb">website_design.html</p>
+          <div class="view-case-study0"><span class="view-case-study"><a href="http://placehold.it/1500x925">View case study</a></span></div>
+        </div>
+        <div class="col-sm-8 project-banner-setting">
+          <div class="card1" style="padding:1rem"><a href="http://placehold.it/1500x925"><img class="img-fluid"/></a></div>
+        </div>
+      </div>
+      <div class="row home-brief">
+        <div class="col-sm-4 home-project-brief">
+          <p><i class="fa fa-linux"></i></p>
+          <h5 class="home-project-title">
+            <i class="fa fa-angle-double-right"></i>
+            &nbsp;CSS Quizzer
+          </h5>
+          <h3 class="home-project-subtitle">Teach CSS3 through quiz</h3>
+          <p class="home-project-blurb">I learnt CSS myself through quizzing. I wanted to help others learn CSS the same way. So, I developed a web application using Python Flask and Bootstrap</p>
+          <h6 class="home-project-tags">Python, Flask, Jinja, Bootstrap</h6>
+          <p class="home-project-blurb">Nov'15 - Dec'15</p>
+          <div class="view-case-study0"><span class="view-case-study"><a href="cssquiz.html">View case study</a></span></div>
+        </div>
+        <div class="col-sm-8 project-banner-setting">
+          <div class="card1" style="padding:1rem"><a href="cssquiz.html"><img class="img-fluid" src="http://placehold.it/1500x925"/></a></div>
+        </div>
+      </div>
+      <div class="row home-brief">
+        <div class="col-sm-4 home-project-brief">
+          <p><i class="fa fa-linux"></i></p>
+          <h5 class="home-project-title">
+            <i class="fa fa-angle-double-right"></i>
+            &nbsp;Shure design jam
+          </h5>
+          <h3 class="home-project-subtitle">Making music truly social</h3>
+          <p class="home-project-blurb">Many music apps focus on managing song libraries and listening. Shure wanted a music app that is social to help promote brand awareness of their Sound instruments.</p>
+          <p class="home-project-blurb">We <strong>designed an app in 1.5 hours and won 2nd place!</strong></p>
+          <h6 class="home-project-tags">Idea generator, Paper mockups, Material design</h6>
+          <p class="home-project-blurb">September 2015 - 1.5 hours</p>
+          <div class="view-case-study0"><span class="view-case-study"><a href="shure.html">View case study</a></span></div>
+        </div>
+        <div class="col-sm-8 project-banner-setting">
+          <div class="card1" style="padding:1rem"><a href="shure.html"><img class="img-fluid" src="http://placehold.it/1500x925"/></a></div>
+        </div>
+      </div>
+      <div class="row home-brief">
+        <div class="col-sm-4 home-project-brief">
+          <p><i class="fa fa-medkit"></i></p>
+          <h5 class="home-project-title">
+            <i class="fa fa-angle-double-right"></i>
+            &nbsp;Diabetes prevalence analysis
+          </h5>
+          <h3 class="home-project-subtitle">Is income &amp; diabetes prevalence related?</h3>
+          <p class="home-project-blurb">I applied data visualization principle to uncover relation between diabetes prevalence and income of nations.</p>
+          <h6 class="home-project-tags">Data set collection, Programming, Data visualization</h6>
+          <p class="home-project-blurb">February 2016 - 1 day</p>
+          <div class="view-case-study0"><span class="view-case-study"><a href="diabetes.html">View case study</a></span></div>
+        </div>
+        <div class="col-sm-8 project-banner-setting">
+          <div class="card1" style="padding:1rem"><a href="diabetes.html"><img class="img-fluid" src="http://placehold.it/1500x925"/></a></div>
+        </div>
+      </div>
     </div>
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-    
     <script>
-        $(window).bind("load", function() {
-           draw();
-        });
+      $(window).bind("load", function() {
+          draw();
+      });
     </script>
-</body>
-
+  </body>
 </html>
