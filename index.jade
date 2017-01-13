@@ -1,0 +1,23 @@
+include common_head.jade
+include common_clickable_image.jade
+
+mixin common_project_section(icon, title, subtitle, paragraphs, tags, date, detail_page_link, image_url)
+    - icon_style = "fa " + icon;
+    .row.home-brief
+        .col-sm-4.home-project-brief
+            p
+                i(class=icon_style)
+            h5.home-project-title
+                i.fa.fa-angle-double-right= &nbsp;title
+            h3.home-project-subtitle= subtitle
+            for para in paragraphs
+                p.home-project-blurb= para
+            h6.home-project-tags= tags
+            p.home-project-blurb= date
+            .view-case-study0
+                span.view-case-study
+                    a(href=detail_page_link) View case study
+        .col-sm-8.project-banner-setting
+            a(href=detail_page_link)
+                img.img-responsive(src=image_url)
+                

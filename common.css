@@ -165,15 +165,27 @@
   text-align: center; }
 
 /* line 12, /home/local/ANT/ajgopala/portfolio_new/common.scss */
+.card1 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: white; }
+
+/* On mouse-over, add a deeper shadow */
+/* line 20, /home/local/ANT/ajgopala/portfolio_new/common.scss */
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+/* line 25, /home/local/ANT/ajgopala/portfolio_new/common.scss */
 .selected {
   color: #0047AB; }
 
-/* line 16, /home/local/ANT/ajgopala/portfolio_new/common.scss */
+/* line 29, /home/local/ANT/ajgopala/portfolio_new/common.scss */
 .fa {
   color: #0047AB; }
 
 @media (min-width: 768px) {
-  /* line 21, /home/local/ANT/ajgopala/portfolio_new/common.scss */
+  /* line 34, /home/local/ANT/ajgopala/portfolio_new/common.scss */
   .site-title {
     text-align: left; } }
 
