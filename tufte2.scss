@@ -639,11 +639,47 @@ article {
         padding: 5rem 0 !important;
     }
     
+    p,
+    dd,
+    dt {
+        width: 100%;
+    }
+
+    p+p {
+        margin-top: $ledding;
+        text-indent: 0;
+    }
+
+    p,
+    footer {
+        width: 100%;
+    }
+    pre.code {
+        width: 97%;
+    }
+
+    section {
+        ul,
+        ol {
+            width: 100%;
+        }
+    }
+
+    .videowrapper2 {
+        width: 100%;
+    }
+
+
+    figure {
+        max-width: 90%;
+    }
+
     article {
         padding: 0 $pad;
         
         p,
-        dd {
+        dd,
+        dt {
             width: 100%;
         }
         
