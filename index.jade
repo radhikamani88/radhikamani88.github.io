@@ -3,18 +3,19 @@ include common_clickable_image.jade
 
 mixin project_row(icon, title, subtitle, paragraphs, tags, date, detail_page_link, image_url)
     - icon_style = "fa " + icon;
-    .row.home-brief
+    .row.home-brief(style="padding-bottom:5rem;")
         .col-sm-4.home-project-brief
-            p
+            hr.separator
+            h5.home-project-title
                 i(class=icon_style)
-            h5.home-project-title.
-                <i class="fa fa-angle-double-right"></i>
-                &nbsp;#{title}
-            h3.home-project-subtitle!= subtitle
+                span(style="padding-left:1rem;").
+                    &nbsp; #{title}
+            h2.home-project-subtitle!= subtitle
             for para in paragraphs
-                p.home-project-blurb!= para
-            h6.home-project-tags= tags
-            p.home-project-blurb= date
+                p.ptufte.home-project-blurb!= para
+            h6.ptufte.home-project-tags= tags
+            p.ptufte.home-project-blurb= date
+            br
             .view-case-study0
                 span.view-case-study
                     a(href=detail_page_link) View case study
@@ -32,14 +33,17 @@ html(lang="end")
             .row.headline
                 .col-sm-6
                     h1.site-title Radhika Kolathumani
-                    div(style="position:relative")
-                        canvas(style="border 1px solid white;" id="canvas" height="50px")
-                        .site-sub-title(id="spanbox" style='float:left; position:absolute; top:0; left:0')
-                            span#T1.step Ideation &mdash;
-                            span#T2.step Research &mdash;
-                            span#T3.step Design &mdash;
-                            span#T4.step Code &mdash;
-                            span#T5.step(ids="T3") Measure
+                    img(src="path1.png" class="img-responsive process_diagram")
+                    //-
+                        div(style="position:relative;")
+                            canvas(style="border 1px solid white; display:block; width: 100%; margin:0 auto; padding: 0 auto;" id="canvas" height="50px")
+                            div(style="position:absolute; left:50%; top: 0; width:100%;")
+                                .site-sub-title(id="spanbox" style='position: relative; left:-50%; top:0;')
+                                    span#T1.step Ideation &mdash;
+                                    span#T2.step Research &mdash;
+                                    span#T3.step Design &mdash;
+                                    span#T4.step Code &mdash;
+                                    span#T5.step(ids="T3") Measure
                 #site-menu1.site-menu.col-sm-6
                     h6
                         span.selected work
@@ -90,12 +94,13 @@ html(lang="end")
                     "An journey filled with lessons and learnings as I ventured to build a portfolio capturing my work. Experiences in an UX approach to portfolio website design, website creation and front-end development."                
                 ],
                 "HTML, CSS3, SCSS, Jade, Bootstrap v3, Javascript",
+                "Dec'16 - Jan'17",
                 "website_design.html",
                 "http://placehold.it/1500x925"
             )
             
             +project_row(
-                "fa-linux",
+                "fa-question-circle",
                 "CSS Quizzer",
                 "Teach CSS3 through quiz",
                 [
@@ -108,7 +113,7 @@ html(lang="end")
             )
             
             +project_row(
-                "fa-linux",
+                "fa-trophy",
                 "Shure design jam",
                 "Making music truly social",
                 [
@@ -134,6 +139,13 @@ html(lang="end")
                 "http://placehold.it/1500x925"   
             )
             
+            //-
+                .row
+                    .col-sm-12(style="padding-bottom: 2rem;")
+                        h2.h2tufte My UX approach
+                    .col-sm-12
+                        +card_no_title_v4("http://placehold.it/1500x925")
+                        
             
         script.                    
             $(window).bind("load", function() {

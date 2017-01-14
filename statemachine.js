@@ -57,9 +57,10 @@ function drawHorizArc(ctx, inax, inbx, y, alpha_degrees, upside) {
     var circley = y + (upside ? 1 : -1) * circleyoffset;
     var radius = Math.sqrt(Math.pow(circlex - ax, 2) + Math.pow(circley - y, 2));
 
+    alert("draing arc");
     ctx.beginPath();
     if (upside) {
-        ctx.moveTo(bx, y);
+        ctx.moveTo(bx, y);        
         ctx.arc(circlex, circley, radius, startangle, endangle, 1);
     } else {
         ctx.moveTo(bx, y);

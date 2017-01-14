@@ -20,6 +20,16 @@ h6 {
     padding: 10rem 0;
 }
 
+.process_diagram {
+    display: block;
+    margin: 0 auto;
+}
+
+.separator {
+    display: block;
+}
+
+
 .project1-banner {
     background-image: url("img/origin_banner_resized_3.png");
 }
@@ -51,7 +61,7 @@ h6 {
 }
 
 .view-case-study0 {
-    padding-top: 1rem; 
+    display: none;
 }
 
 .view-case-study a {
@@ -91,6 +101,20 @@ h6 {
     
     .home-brief {
         padding-bottom: 5rem;
+    }
+
+    .process_diagram {
+        display: inherit;
+        margin: 0;
+    }
+    
+    .separator {
+        display: none;
+    }
+
+    .view-case-study0 {
+        display: inherit;
+        padding-top: 1rem;
     }
 }
 

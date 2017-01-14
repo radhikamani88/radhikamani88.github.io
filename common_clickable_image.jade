@@ -2,7 +2,13 @@ mixin clickable_responsive_image(img_src, style_setting)
     - style_setting = style_setting || ''
     a(href=img_src target="_blank")
         img(class="img-responsive" src=img_src style=style_setting title="Click to see enlarged image")
+
+mixin clickable_responsive_image_v4(img_src, style_setting)
+    - style_setting = style_setting || ''
+    a(href=img_src target="_blank")
+        img(class="img-fluid" src=img_src style=style_setting title="Click to see enlarged image")
         
+
 mixin card(image_src, style_setting, Title, Blurb)
     - Title = Title || 'Title 1';
     - Blurb = Blurb || 'Blurb 1';    
@@ -16,7 +22,12 @@ mixin card(image_src, style_setting, Title, Blurb)
 mixin card_no_title(image_src, style_setting)
     .card(style="padding:1rem;")
         +clickable_responsive_image(image_src, style_setting)
-        
+
+mixin card_no_title_v4(image_src, style_setting)
+    .card(style="padding:1rem;")
+        +clickable_responsive_image_v4(image_src, style_setting)
+
+
 mixin hover_card_no_title(image_src, style_setting, hover_class, headline, fig_caption)
     .card(style="padding:1rem;")
         figure(class=hover_class style="background-color: #94001c;")
