@@ -635,7 +635,9 @@ article {
     
     article {
         padding: 0 $pad;
-        p {
+        
+        p,
+        dd {
             width: 100%;
         }
         
