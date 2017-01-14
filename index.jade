@@ -1,7 +1,7 @@
 include common_head.jade
 include common_clickable_image.jade
 
-mixin project_row(icon, title, subtitle, paragraphs, tags, date, detail_page_link, image_url)
+mixin project_row(icon, title, subtitle, paragraphs, tags, date, detail_page_link, image_url, code_url)
     - icon_style = "fa " + icon;
     .row.home-brief(style="padding-bottom:5rem;")
         .col-sm-4.home-project-brief
@@ -16,9 +16,18 @@ mixin project_row(icon, title, subtitle, paragraphs, tags, date, detail_page_lin
             h6.ptufte.home-project-tags= tags
             p.ptufte.home-project-blurb= date
             br
-            .view-case-study0
-                span.view-case-study
-                    a(href=detail_page_link) View case study
+            table
+                tr
+                    td                    
+                        .view-case-study0
+                            span.view-case-study.case-button
+                                a(href=detail_page_link target="_blank") View case study
+                    td(style="padding-left:1rem;")
+                        if code_url
+                            .view-case-study0
+                                span.view-case-study.code-button
+                                    a(href=code_url target="_blank") View code
+                    
         .col-sm-8.project-banner-setting
             .card1(style="padding:1rem;")
                 a(href=detail_page_link)
@@ -34,16 +43,6 @@ html(lang="end")
                 .col-sm-6
                     h1.site-title Radhika Kolathumani
                     img(src="path1.png" class="img-fluid process_diagram")
-                    //-
-                        div(style="position:relative;")
-                            canvas(style="border 1px solid white; display:block; width: 100%; margin:0 auto; padding: 0 auto;" id="canvas" height="50px")
-                            div(style="position:absolute; left:50%; top: 0; width:100%;")
-                                .site-sub-title(id="spanbox" style='position: relative; left:-50%; top:0;')
-                                    span#T1.step Ideation &mdash;
-                                    span#T2.step Research &mdash;
-                                    span#T3.step Design &mdash;
-                                    span#T4.step Code &mdash;
-                                    span#T5.step(ids="T3") Measure
                 #site-menu1.site-menu.col-sm-6
                     h6
                         span.selected work
@@ -96,7 +95,8 @@ html(lang="end")
                 "HTML, CSS3, SCSS, Jade, Bootstrap v3, Javascript",
                 "Dec'16 - Jan'17",
                 "website_design.html",
-                "img/insta_home.png"
+                "img/website_home.png",
+                "https://github.com/radhikamani88/radhikamani88.github.io"
             )
             
             +project_row(

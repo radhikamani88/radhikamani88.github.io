@@ -68,13 +68,30 @@ h6 {
     font-family: $font-stack;
     padding: 1rem;
     border: 1px solid darkgray;
-    background-color: $color-cobaltblue;
+
     color: white;
+}
+
+.code-button a {
+    color: white;
+    background-color: rgba(0,0,0,.8);
+}
+
+.case-button a {
+    background-color: $color-cobaltblue;    
+}
+
+.case-button a:hover {
+    background-color: lighten($color-cobaltblue, 60%);    
+}
+
+.code-button a:hover {
+    color: black;
+    background-color: rgba(0,0,0,.4);
 }
 
 .view-case-study a:hover {
     color: black;
-    background-color: lighten($color-cobaltblue, 60%);
     transition: 0.3s;
     text-decoration: none;
 }
