@@ -599,6 +599,12 @@ article {
     
     body {}
     
+    .col-md-4,
+    .col-md-6,
+    .col-md-8 {
+        padding-bottom: 2rem;
+    }
+    
     $pad: 1rem;
     
     .home-project-left {
@@ -675,12 +681,14 @@ article {
             max-width: none;
         }
         blockquote {
-            margin-left: 1.5em;
-            margin-right: 0em;
+//            margin-left: 1.5em;
+//            margin-right: 0em;
+            padding: 0;
+            margin: 0;
         }
         blockquote p,
         blockquote footer {
-            width: 100%;
+            width: 100% !important;
         }
         label.margin-toggle:not(.sidenote-number) {
             display: inline;

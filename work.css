@@ -791,79 +791,84 @@ article {
   /* line 596, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   html {
     font-size: 13px; }
-  /* line 604, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 602, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  .col-md-4,
+  .col-md-6,
+  .col-md-8 {
+    padding-bottom: 2rem; }
+  /* line 610, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .home-project-left {
     padding: 0 1rem; }
-  /* line 608, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 614, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .home-project-right {
     padding: 0 1rem; }
-  /* line 612, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 618, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .home-project-subtitle {
     font-size: 1.7rem; }
-  /* line 616, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 622, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .card-elt {
     padding: 0.5rem; }
-  /* line 620, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 626, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .card-col {
     padding-bottom: 1rem; }
-  /* line 624, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 630, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .card-row {
     padding: 0 !important; }
-  /* line 628, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 634, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .site-menu {
     padding-top: 3rem; }
-  /* line 632, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 638, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   .headline {
     padding: 5rem 0 !important; }
-  /* line 636, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+  /* line 642, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
   article {
     padding: 0 1rem; }
-    /* line 639, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 645, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article p,
     article dd {
       width: 100%; }
-    /* line 644, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 650, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article p + p {
       margin-top: 1.86rem;
       text-indent: 0; }
-    /* line 649, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 655, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article p,
     article footer {
       width: 100%; }
-    /* line 653, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 659, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article pre.code {
       width: 97%; }
-    /* line 658, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 664, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article section ul,
     article section ol {
       width: 100%; }
-    /* line 664, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 670, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article .videowrapper2 {
       width: 100%; }
-    /* line 669, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 675, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article figure {
       max-width: 90%; }
-    /* line 672, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 678, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article figcaption,
     article figure.fullwidth figcaption {
       margin-right: 0%;
       max-width: none; }
-    /* line 677, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 683, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article blockquote {
-      margin-left: 1.5em;
-      margin-right: 0em; }
-    /* line 681, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+      padding: 0;
+      margin: 0; }
+    /* line 689, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article blockquote p,
     article blockquote footer {
-      width: 100%; }
-    /* line 685, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+      width: 100% !important; }
+    /* line 693, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article label.margin-toggle:not(.sidenote-number) {
       display: inline; }
-    /* line 688, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 696, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article .sidenote,
     article .marginnote {
       display: none; }
-    /* line 692, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 700, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article .margin-toggle:checked + .sidenote,
     article .margin-toggle:checked + .marginnote {
       display: block;
@@ -874,14 +879,14 @@ article {
       margin: 1rem 2.5%;
       vertical-align: baseline;
       position: relative; }
-    /* line 703, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 711, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article label {
       cursor: pointer; }
-    /* line 706, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 714, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article div.table-wrapper,
     article table {
       width: 85%; }
-    /* line 710, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
+    /* line 718, /home/local/ANT/ajgopala/portfolio_new/tufte2.scss */
     article img {
       width: 100%; } }
 
