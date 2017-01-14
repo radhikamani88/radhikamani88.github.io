@@ -21,6 +21,31 @@ mixin head_mixin(PageTitle, is_work)
             script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")        
             link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
             link(rel="stylesheet" href="work.css")
+            style.
+                h1, h2, h3 {
+                    color: #293E68;
+                }
+    
+            script.
+                function reposition() {
+                    if( $('#mobile_checker').css('display')=='none') {
+                        // means it is a mobile
+                         $('#work_navbar').insertBefore($('#work_banner'));
+                    } else {
+                        $('#work_banner').insertBefore($('#work_navbar'));
+                    }                
+                }
+                
+                $(document).ready(function() {      
+                    reposition();
+                }); 
+                
+                var resizeId;
+                $(window).resize(function() {
+                    clearTimeout(resizeId);
+                    resizeId = setTimeout(reposition, 500);
+                });
+
         else
             script(src="statemachine.js")
             script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")

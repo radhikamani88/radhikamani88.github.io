@@ -19,6 +19,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">       </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="work.css"/>
+    <style>
+      h1, h2, h3 {
+          color: #293E68;
+      }
+      
+    </style>
+    <script>
+      function reposition() {
+          if( $('#mobile_checker').css('display')=='none') {
+              // means it is a mobile
+               $('#work_navbar').insertBefore($('#work_banner'));
+          } else {
+              $('#work_banner').insertBefore($('#work_navbar'));
+          }                
+      }
+      
+      $(document).ready(function() {      
+          reposition();
+      }); 
+      
+      var resizeId;
+      $(window).resize(function() {
+          clearTimeout(resizeId);
+          resizeId = setTimeout(reposition, 500);
+      });
+      
+    </script>
     <link rel="stylesheet" href="imagehover.min.css"/>
     <style>
       .navbar-default {
@@ -58,7 +85,7 @@
       }
       
     </style>
-    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="700">
+    <nav class="navbar navbar-default" id="work_navbar" data-spy="affix" data-offset-top="700">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -75,7 +102,7 @@
     <div class="container-fluid" style="padding:3rem">
       <div class="row" style="padding-bottom:3rem">
         <div class="col-md-8">
-          <div class="card" style="padding:1rem"><a href="http://placehold.it/1280x640" target="_blank"><img class="img-responsive" src="http://placehold.it/1280x640" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="http://placehold.it/1280x640" target="_blank"><img class="img-responsive" src="http://placehold.it/1280x640" title="Click to see enlarged image"/></a>
           </div>
         </div>
         <div class="col-md-4">

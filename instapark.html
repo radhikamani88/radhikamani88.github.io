@@ -19,6 +19,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">       </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="work.css"/>
+    <style>
+      h1, h2, h3 {
+          color: #293E68;
+      }
+      
+    </style>
+    <script>
+      function reposition() {
+          if( $('#mobile_checker').css('display')=='none') {
+              // means it is a mobile
+               $('#work_navbar').insertBefore($('#work_banner'));
+          } else {
+              $('#work_banner').insertBefore($('#work_navbar'));
+          }                
+      }
+      
+      $(document).ready(function() {      
+          reposition();
+      }); 
+      
+      var resizeId;
+      $(window).resize(function() {
+          clearTimeout(resizeId);
+          resizeId = setTimeout(reposition, 500);
+      });
+      
+    </script>
     <link rel="stylesheet" href="imagehover.min.css"/>
     <style>
       .navbar-default {
@@ -43,13 +70,7 @@
     </style>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <style>
-      h1, h2, h3 {
-          color: #293E68;
-      }
-      
-    </style>
-    <div class="container-fluid home-project-cover" style="background-color:white">
+    <div class="container-fluid home-project-cover" id="work_banner" style="background-color:white">
       <div class="row">
         <div class="col-md-6 home-project-left">
           <table>
@@ -68,10 +89,14 @@
           <h6 class="home-project-tags">ideation, competitive analysis, user interviews, wireframing, prototyping, usability testing</h6>
           <p class="home-project-blurb">Sept'15 - Dec'15</p>
         </div>
-        <div class="col-md-6 home-project-right"><img class="img-responsive center-image img-responsive" src="http://placehold.it/1500x925"/></div>
+        <div class="col-md-6 home-project-right">
+          <div class="card card-elt"><a href="http://placehold.it/1500x925" target="_blank"><img class="img-responsive" src="http://placehold.it/1500x925" title="Click to see enlarged image"/></a>
+          </div>
+        </div>
       </div>
+      <div class="row" id="mobile_checker"></div>
     </div>
-    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="700">
+    <nav class="navbar navbar-default" id="work_navbar" data-spy="affix" data-offset-top="700">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -96,7 +121,7 @@
               <label class="margin-toggle" for="mn-figure-1">&#8853;</label>
               <input class="margin-toggle" type="checkbox" id="mn-figure-1"><span class="marginnote">Talking to friends at other universities, I found out that this issue exists elsewhere as well. For this project I restricted the target audience to University of Michigan community.                        </span><span class="marginnote">Required technology exists to implement a solution.</span>
             </p>
-            <p>Parking is a problem at University of Michigan. During class hours, students and faculty find it hard to find parking inside the campus. Fortunately, however, parking spots do exist &mdash; it is just hard to find them. </p>
+            <p class="firstpara">Parking is a problem at University of Michigan. During class hours, students and faculty find it hard to find parking inside the campus. Fortunately, however, parking spots do exist &mdash; it is just hard to find them. </p>
             <p>Add to that, the prices of parking spots vary by place and time of day. This problem is amplified during Michigan events when everybody wants to for example, park close to the stadium. Students who are usually running short on cash have a tough time finding parking. Here too, students are willing to rent out their personal parking spots for additional money during events. </p>
             <p>Unfortunately, no application exists to solve these problems even when all the technology to implement a solution exists. As a student, I was myself frustrated by these problems and thought of building an application to address these needs.</p>
             <p>I built a solution to address these needs.</p>
@@ -115,7 +140,7 @@
     </div>
     <div class="container-fluid showcase">
       <div class="row">
-        <div class="card" style="padding:1rem"><a href="img/w_instapark/approach.png" target="_blank"><img class="img-responsive" src="img/w_instapark/approach.png" style="margin:0 auto" title="Click to see enlarged image"/></a>
+        <div class="card card-elt"><a href="img/w_instapark/approach.png" target="_blank"><img class="img-responsive" src="img/w_instapark/approach.png" style="margin:0 auto" title="Click to see enlarged image"/></a>
         </div>
       </div>
     </div>
@@ -145,7 +170,7 @@
               <li>Valet parking app</li>
             </ol>
             <figure>
-              <div class="card" style="padding:1rem"><a href="img/w_instapark/8concepts.png" target="_blank"><img class="img-responsive" src="img/w_instapark/8concepts.png" title="Click to see enlarged image"/></a>
+              <div class="card card-elt"><a href="img/w_instapark/8concepts.png" target="_blank"><img class="img-responsive" src="img/w_instapark/8concepts.png" title="Click to see enlarged image"/></a>
               </div>
             </figure>
             <h3>Competitive analysis</h3>
@@ -157,15 +182,15 @@
     <div class="container-fluid showcase">
       <div class="row">
         <div class="col-md-4">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/c1.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/c1.jpg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/c1.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/c1.jpg" title="Click to see enlarged image"/></a>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/c2.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/c2.jpg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/c2.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/c2.jpg" title="Click to see enlarged image"/></a>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/c3.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/c3.jpg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/c3.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/c3.jpg" title="Click to see enlarged image"/></a>
           </div>
         </div>
       </div>
@@ -191,11 +216,11 @@
     <div class="container-fluid showcase">
       <div class="row">
         <div class="col-md-6">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/story1.png" target="_blank"><img class="img-responsive" src="img/w_instapark/story1.png" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/story1.png" target="_blank"><img class="img-responsive" src="img/w_instapark/story1.png" title="Click to see enlarged image"/></a>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/story2.png" target="_blank"><img class="img-responsive" src="img/w_instapark/story2.png" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/story2.png" target="_blank"><img class="img-responsive" src="img/w_instapark/story2.png" title="Click to see enlarged image"/></a>
           </div>
         </div>
       </div>
@@ -214,11 +239,11 @@
     <div class="container-fluid showcase">
       <div class="row">
         <div class="col-md-6">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/p1.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/p1.jpg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/p1.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/p1.jpg" title="Click to see enlarged image"/></a>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/p2.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/p2.jpg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/p2.jpg" target="_blank"><img class="img-responsive" src="img/w_instapark/p2.jpg" title="Click to see enlarged image"/></a>
           </div>
         </div>
       </div>
@@ -260,7 +285,7 @@
         <h2 class="h2tufte">Evaluate multiple solutions for overall app IA</h2>
       </div>
       <div class="row">
-        <div class="card" style="padding:1rem"><a href="img/w_instapark/ia_alternatives.png" target="_blank"><img class="img-responsive" src="img/w_instapark/ia_alternatives.png" title="Click to see enlarged image"/></a>
+        <div class="card card-elt"><a href="img/w_instapark/ia_alternatives.png" target="_blank"><img class="img-responsive" src="img/w_instapark/ia_alternatives.png" title="Click to see enlarged image"/></a>
           <div class="container-fluid">
             <div class="row">
               <h3 class="h3tufte">Overall app IA</h3>
@@ -274,7 +299,7 @@
       </div>
       <div class="row card-row">
         <div class="col-md-4 card-col">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/br1.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br1.jpeg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/br1.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br1.jpeg" title="Click to see enlarged image"/></a>
             <div class="container-fluid">
               <div class="row">
                 <h3 class="h3tufte">Screen for find parking - First screen of app</h3>
@@ -284,7 +309,7 @@
           </div>
         </div>
         <div class="col-md-4 card-col">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/br2.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br2.jpeg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/br2.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br2.jpeg" title="Click to see enlarged image"/></a>
             <div class="container-fluid">
               <div class="row">
                 <h3 class="h3tufte">Explore various personal renting spots quickly</h3>
@@ -294,7 +319,7 @@
           </div>
         </div>
         <div class="col-md-4 card-col">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/br3.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br3.jpeg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/br3.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br3.jpeg" title="Click to see enlarged image"/></a>
             <div class="container-fluid">
               <div class="row">
                 <h3 class="h3tufte">Designing overall event parking flow</h3>
@@ -306,7 +331,7 @@
       </div>
       <div class="row card-row">
         <div class="col-md-4 card-col">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/br4.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br4.jpeg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/br4.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br4.jpeg" title="Click to see enlarged image"/></a>
             <div class="container-fluid">
               <div class="row">
                 <h3 class="h3tufte">Seller spot management</h3>
@@ -316,7 +341,7 @@
           </div>
         </div>
         <div class="col-md-4 card-col">
-          <div class="card" style="padding:1rem"><a href="img/w_instapark/br9.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br9.jpeg" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/w_instapark/br9.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br9.jpeg" title="Click to see enlarged image"/></a>
             <div class="container-fluid">
               <div class="row">
                 <h3 class="h3tufte">Finding parking spots by specifying destination location</h3>
@@ -339,7 +364,7 @@
     </div>
     <div class="container-fluid showcase">
       <div class="row">
-        <div class="card" style="padding:1rem"><a href="img/w_instapark/imap2.png" target="_blank"><img class="img-responsive" src="img/w_instapark/imap2.png" title="Click to see enlarged image"/></a>
+        <div class="card card-elt"><a href="img/w_instapark/imap2.png" target="_blank"><img class="img-responsive" src="img/w_instapark/imap2.png" title="Click to see enlarged image"/></a>
         </div>
       </div>
     </div>

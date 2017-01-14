@@ -19,6 +19,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">       </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="work.css"/>
+    <style>
+      h1, h2, h3 {
+          color: #293E68;
+      }
+      
+    </style>
+    <script>
+      function reposition() {
+          if( $('#mobile_checker').css('display')=='none') {
+              // means it is a mobile
+               $('#work_navbar').insertBefore($('#work_banner'));
+          } else {
+              $('#work_banner').insertBefore($('#work_navbar'));
+          }                
+      }
+      
+      $(document).ready(function() {      
+          reposition();
+      }); 
+      
+      var resizeId;
+      $(window).resize(function() {
+          clearTimeout(resizeId);
+          resizeId = setTimeout(reposition, 500);
+      });
+      
+    </script>
     <link rel="stylesheet" href="imagehover.min.css"/>
     <style>
       .navbar-default {
@@ -52,7 +79,7 @@
       }
       
     </style>
-    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="700">
+    <nav class="navbar navbar-default" id="work_navbar" data-spy="affix" data-offset-top="700">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>

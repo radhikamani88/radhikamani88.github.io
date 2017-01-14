@@ -1,5 +1,7 @@
+include common_clickable_image.jade
+
 mixin banner_mixin(Title, SubTitle, Tags, Date, Image)
-    div(class="container-fluid home-project-cover" style="background-color:white;")
+    div(id="work_banner" class="container-fluid home-project-cover" style="background-color:white;")
         div(class="row")
             div(class="col-md-6 home-project-left")
                 table
@@ -13,4 +15,5 @@ mixin banner_mixin(Title, SubTitle, Tags, Date, Image)
                 h6(class="home-project-tags")!= Tags                    
                 p(class="home-project-blurb")!= Date                    
             div(class="col-md-6 home-project-right")
-                img(class="img-responsive" src!=Image class="center-image img-responsive")
+                +card_no_title(Image)
+        div(class="row" id="mobile_checker")

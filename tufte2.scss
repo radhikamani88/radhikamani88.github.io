@@ -574,6 +574,21 @@ article {
     html {
         font-size: 15px;
     }
+    
+    .card-row {
+        padding: 1rem;
+    }
+    
+}
+
+.card-elt {
+    padding:1rem;
+}
+
+@media only screen and (min-height: 0) and (max-height: 989px) {
+    #mobile_checker {
+        display: none;
+    }    
 }
 
 /* @group Mobile, Tablets, Small Computers */
@@ -584,64 +599,115 @@ article {
     
     body {}
     
+    $pad: 1rem;
+    
+    .home-project-left {
+        padding: 0 $pad;
+    }
+    
+    .home-project-right {
+        padding: 0 $pad;
+    }
+    
+    .home-project-subtitle {
+        font-size: 1.7rem;
+    }
+    
+    .card-elt {
+        padding: 0.5rem;
+    }
+    
+    .card-col {
+        padding-bottom: 1rem;
+    }
+
+    .card-row {
+        padding: 0 !important;
+    }
+    
+    .site-menu {
+        padding-top: 3rem;
+    }
+    
+    .headline {
+        padding: 5rem 0 !important;
+    }
+    
     article {
+        padding: 0 $pad;
         p {
             width: 100%;
         }
-    p,
-    footer {
-        width: 100%;
-    }
-    pre.code {
-        width: 97%;
-    }
-    ul {
-        width: 85%;
-    }
-    figure {
-        max-width: 90%;
-    }
-    figcaption,
-    figure.fullwidth figcaption {
-        margin-right: 0%;
-        max-width: none;
-    }
-    blockquote {
-        margin-left: 1.5em;
-        margin-right: 0em;
-    }
-    blockquote p,
-    blockquote footer {
-        width: 100%;
-    }
-    label.margin-toggle:not(.sidenote-number) {
-        display: inline;
-    }
-    .sidenote,
-    .marginnote {
-        display: none;
-    }
-    .margin-toggle:checked + .sidenote,
-    .margin-toggle:checked + .marginnote {
-        display: block;
-        float: left;
-        left: 1rem;
-        clear: both;
-        width: 95%;
-        margin: 1rem 2.5%;
-        vertical-align: baseline;
-        position: relative;
-    }
-    label {
-        cursor: pointer;
-    }
-    div.table-wrapper,
-    table {
-        width: 85%;
-    }
-    img {
-        width: 100%;
-    }
+        
+        p+p {
+            margin-top: $ledding;
+            text-indent: 0;
+        }
+
+        p,
+        footer {
+            width: 100%;
+        }
+        pre.code {
+            width: 97%;
+        }
+
+        section {
+            ul,
+            ol {
+                width: 100%;
+            }
+        }
+        
+        .videowrapper2 {
+            width: 100%;
+        }
+        
+        
+        figure {
+            max-width: 90%;
+        }
+        figcaption,
+        figure.fullwidth figcaption {
+            margin-right: 0%;
+            max-width: none;
+        }
+        blockquote {
+            margin-left: 1.5em;
+            margin-right: 0em;
+        }
+        blockquote p,
+        blockquote footer {
+            width: 100%;
+        }
+        label.margin-toggle:not(.sidenote-number) {
+            display: inline;
+        }
+        .sidenote,
+        .marginnote {
+            display: none;
+        }
+        .margin-toggle:checked + .sidenote,
+        .margin-toggle:checked + .marginnote {
+            display: block;
+            float: left;
+            left: 1rem;
+            clear: both;
+            width: 95%;
+            margin: 1rem 2.5%;
+            vertical-align: baseline;
+            position: relative;
+        }
+        label {
+            cursor: pointer;
+        }
+        div.table-wrapper,
+        table {
+            width: 85%;
+        }
+        img {
+            width: 100%;
+        }
     }
     
 

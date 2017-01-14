@@ -19,6 +19,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">       </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="work.css"/>
+    <style>
+      h1, h2, h3 {
+          color: #293E68;
+      }
+      
+    </style>
+    <script>
+      function reposition() {
+          if( $('#mobile_checker').css('display')=='none') {
+              // means it is a mobile
+               $('#work_navbar').insertBefore($('#work_banner'));
+          } else {
+              $('#work_banner').insertBefore($('#work_navbar'));
+          }                
+      }
+      
+      $(document).ready(function() {      
+          reposition();
+      }); 
+      
+      var resizeId;
+      $(window).resize(function() {
+          clearTimeout(resizeId);
+          resizeId = setTimeout(reposition, 500);
+      });
+      
+    </script>
     <link rel="stylesheet" href="imagehover.min.css"/>
     <style>
       .navbar-default {
@@ -49,7 +76,7 @@
       }
           
     </style>
-    <div class="container-fluid home-project-cover" style="background-color:white">
+    <div class="container-fluid home-project-cover" id="work_banner" style="background-color:white">
       <div class="row">
         <div class="col-md-6 home-project-left">
           <table>
@@ -68,10 +95,14 @@
           <h6 class="home-project-tags">front-end development: HTML, CSS3, SCSS, Javascript, Jade, npm <br/> typography, IA</h6>
           <p class="home-project-blurb">Dec'16 - Jan'17</p>
         </div>
-        <div class="col-md-6 home-project-right"><img class="img-responsive center-image img-responsive" src="http://placehold.it/1500x925"/></div>
+        <div class="col-md-6 home-project-right">
+          <div class="card card-elt"><a href="http://placehold.it/1500x925" target="_blank"><img class="img-responsive" src="http://placehold.it/1500x925" title="Click to see enlarged image"/></a>
+          </div>
+        </div>
       </div>
+      <div class="row" id="mobile_checker"></div>
     </div>
-    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="700">
+    <nav class="navbar navbar-default" id="work_navbar" data-spy="affix" data-offset-top="700">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -152,37 +183,54 @@
       </div>
       <div class="row">
         <div class="col-md-4">               
-          <h3 class="h3tufte">Grid of projects</h3>
-          <figure class="fullwidth"><img class="img-responsive" src="img/w_portfoliio_design/ia1.png"></figure><br>
-          <p class="ptufte"><strong>Discarded</strong> because:</p>
-          <ul class="ptufte">
-            <li>didn't meet the criteria of allowing me to guide the user through the portfolio. </li>
-            <li>Presented with a grid of options, all the projects in a row are presented at an equal accessibility and importance level and the reader would be inclined to click any one of them.</li>
-          </ul>
+          <div class="card card-elt"><a href="img/w_portfoliio_design/ia2.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/ia2.png" title="Click to see enlarged image"/></a>
+            <div class="container-fluid">
+              <div class="row">
+                <h3 class="h3tufte">Grid of projects</h3><br>
+                <p class="ptufte"><strong>Discarded</strong> because:</p>
+                <ul class="ptufte">
+                  <li>didn't meet the criteria of allowing me to guide the user through the portfolio. </li>
+                  <li>Presented with a grid of options, all the projects in a row are presented at an equal accessibility and importance level and the reader would be inclined to click any one of them.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-md-4">                   
-          <h3 class="h3tufte">Vertical list of project cards</h3>
-          <figure class="fullwidth"><img class="img-responsive" src="img/w_portfoliio_design/ia2.png"></figure><br>
-          <p class="ptufte">The projects presented top-down in a list implicitly rank the projects and the reader is inclined to click and read the first one. However, I <strong>discarded it</strong> because:</p>
-          <ul class="ptufte"> 
-            <li>Each item's primary content is an image and doesn't allow me to provide some summary information about each project which will allow reader to quickly assess impact of reader. </li>
-            <li>An image alone may not give enough clues about the impact of this project and may not interest reader enough to read the project.</li>
-          </ul>
+          <div class="card card-elt"><a href="img/w_portfoliio_design/ia2.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/ia2.png" title="Click to see enlarged image"/></a>
+            <div class="container-fluid">
+              <div class="row">
+                <h3 class="h3tufte">Vertical list of project cards</h3><br>
+                <p class="ptufte">The projects presented top-down in a list implicitly rank the projects and the reader is inclined to click and read the first one. However, I <strong>discarded it</strong> because:</p>
+                <ul class="ptufte"> 
+                  <li>Each item's primary content is an image and doesn't allow me to provide some summary information about each project which will allow reader to quickly assess impact of reader. </li>
+                  <li>An image alone may not give enough clues about the impact of this project and may not interest reader enough to read the project.                                </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-md-4">
-          <h3 class="h3tufte"> Vertical list of projects w/ blurb and image</h3>
-          <figure class="fullwidth"><img class="img-responsive" src="img/w_portfoliio_design/ia3.png"></figure><br>
-          <p class="ptufte"><strong>Selected</strong> because:</p>
-          <ul class="ptufte"> 
-            <li>it allowed me to present information in a prioritized fashion</li>
-            <li>present a short blurb describing purpose, impact, role and technologies involved in this project along with the project image</li>
-            <li>allows readers to quickly scan through the crux of this project.</li>
-          </ul>
+          <div class="card card-elt"><a href="img/w_portfoliio_design/ia2.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/ia2.png" title="Click to see enlarged image"/></a>
+            <div class="container-fluid">
+              <div class="row">
+                <h3 class="h3tufte"> Vertical list of projects w/ blurb and image                                </h3><br>
+                <p class="ptufte"><strong>Selected</strong> because:</p>
+                <ul class="ptufte"> 
+                  <li>it allowed me to present information in a prioritized fashion</li>
+                  <li>present a short blurb describing purpose, impact, role and technologies involved in this project along with the project image</li>
+                  <li>allows readers to quickly scan through the crux of this project.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-8 center-block" style="float:none;padding-top:5%">
-          <h2 class="h2tufte" style="padding-bottom:5%;text-align:center"> Detailed wireframe of selected solution of Home page</h2><img class="img-responsive" src="img/w_portfoliio_design/home_page_ia1.png" style="margin: 0 auto;width:50%">
+        <div class="col-md-6 center-block" style="float:none;padding-top:5%">
+          <h2 class="h2tufte" style="padding-bottom:5%;text-align:center"> Detailed wireframe of selected solution of Home page</h2>
+          <div class="card card-elt"><a href="img/w_portfoliio_design/home_page_ia1.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/home_page_ia1.png" style="margin: 0 auto" title="Click to see enlarged image"/></a>
+          </div>
         </div>
       </div>
     </div>
@@ -204,15 +252,30 @@
     </div>
     <div class="container-fluid showcase">
       <div class="row">
-        <div class="col-md-4">
-          <h3 class="h3tufte">Page work detail page</h3><a href="img/w_portfoliio_design/work_page_ia1.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia1.png" title="click to see full size image" style="width:75%"></a>
-        </div>
-        <div class="col-md-4">
-          <h3 class="h3tufte">After scrolling past the navbar</h3><a href="img/w_portfoliio_design/work_page_ia2.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia2.png" title="click to see full size image" style="width:75%"></a>
-        </div>
-        <div class="col-md-4">
-          <h3 class="h3tufte">Ability to add wide containers</h3><a href="img/w_portfoliio_design/work_page_ia3.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia3.png" title="click to see full size image" style="width:75%"></a>
-        </div>
+        <div class="col-md-4"><a href="img/w_portfoliio_design/work_page_ia1.png" target="_blank">
+            <div class="card card-elt"><a href="img/w_portfoliio_design/work_page_ia1.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia1.png" style="width:75%" title="Click to see enlarged image"/></a>
+              <div class="container-fluid">
+                <div class="row">
+                  <h3 class="h3tufte">Page work detail page</h3>
+                </div>
+              </div>
+            </div></a></div>
+        <div class="col-md-4"><a href="img/w_portfoliio_design/work_page_ia2.png" target="_blank">
+            <div class="card card-elt"><a href="img/w_portfoliio_design/work_page_ia2.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia2.png" style="width:75%" title="Click to see enlarged image"/></a>
+              <div class="container-fluid">
+                <div class="row">
+                  <h3 class="h3tufte">After scrolling past the navbar</h3>
+                </div>
+              </div>
+            </div></a></div>
+        <div class="col-md-4"><a href="img/w_portfoliio_design/work_page_ia3.png" target="_blank">
+            <div class="card card-elt"><a href="img/w_portfoliio_design/work_page_ia3.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/work_page_ia3.png" style="width:75%" title="Click to see enlarged image"/></a>
+              <div class="container-fluid">
+                <div class="row">
+                  <h3 class="h3tufte">Ability to add wide containers</h3>
+                </div>
+              </div>
+            </div></a></div>
       </div>
     </div>
     <div class="container">
@@ -268,7 +331,9 @@
     <div class="container-fluid showcase">
       <div class="row">
         <div class="col-md-8 center-block" style="float:none">                       
-          <h2 class="h2tufte" style="padding-bottom:1%;text-align:center"> My IDE setup</h2><img class="img-responsive" src="img/w_portfoliio_design/brackets.png" style="margin: 0 auto">
+          <h2 class="h2tufte" style="padding-bottom:1%;text-align:center"> My IDE setup</h2>
+          <div class="card card-elt"><a href="img/w_portfoliio_design/brackets.png" target="_blank"><img class="img-responsive" src="img/w_portfoliio_design/brackets.png" style="margin: 0 auto" title="Click to see enlarged image"/></a>
+          </div>
         </div>
       </div>
     </div>

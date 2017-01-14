@@ -95,42 +95,45 @@ html(lang="en")
                 h2.h2tufte Different solutions evaluated for home page IA
             .row
                 .col-md-4                
-                        h3.h3tufte Grid of projects
-                        
-                        figure.fullwidth
-                            img(src="img/w_portfoliio_design/ia1.png" class="img-responsive")
-                        
-                        br
-                        p.ptufte <strong>Discarded</strong> because:
-                        ul.ptufte
-                            li didn't meet the criteria of allowing me to guide the user through the portfolio. 
-                            li Presented with a grid of options, all the projects in a row are presented at an equal accessibility and importance level and the reader would be inclined to click any one of them.
+                    .card.card-elt
+                        +clickable_responsive_image("img/w_portfoliio_design/ia2.png")
+                        .container-fluid
+                            .row
+                                h3.h3tufte Grid of projects
+                                br
+                                p.ptufte <strong>Discarded</strong> because:
+                                ul.ptufte
+                                    li didn't meet the criteria of allowing me to guide the user through the portfolio. 
+                                    li Presented with a grid of options, all the projects in a row are presented at an equal accessibility and importance level and the reader would be inclined to click any one of them.
+
                 .col-md-4                    
-                        h3.h3tufte Vertical list of project cards
-                        
-                        figure.fullwidth
-                            img(src="img/w_portfoliio_design/ia2.png" class="img-responsive")
-                        br
-                        p.ptufte The projects presented top-down in a list implicitly rank the projects and the reader is inclined to click and read the first one. However, I <strong>discarded it</strong> because:
-                        ul.ptufte 
-                            li Each item's primary content is an image and doesn't allow me to provide some summary information about each project which will allow reader to quickly assess impact of reader. 
-                            li An image alone may not give enough clues about the impact of this project and may not interest reader enough to read the project.
+                    .card.card-elt
+                        +clickable_responsive_image("img/w_portfoliio_design/ia2.png")
+                        .container-fluid
+                            .row
+                                h3.h3tufte Vertical list of project cards
+                                br
+                                p.ptufte The projects presented top-down in a list implicitly rank the projects and the reader is inclined to click and read the first one. However, I <strong>discarded it</strong> because:
+                                ul.ptufte 
+                                    li Each item's primary content is an image and doesn't allow me to provide some summary information about each project which will allow reader to quickly assess impact of reader. 
+                                    li An image alone may not give enough clues about the impact of this project and may not interest reader enough to read the project.                                
                 
                 .col-md-4
-                        h3.h3tufte  Vertical list of projects w/ blurb and image
-                        figure.fullwidth
-                            img(src="img/w_portfoliio_design/ia3.png" class="img-responsive")
-
-                        br   
-                        p.ptufte <strong>Selected</strong> because:
-                        ul.ptufte 
-                            li it allowed me to present information in a prioritized fashion
-                            li present a short blurb describing purpose, impact, role and technologies involved in this project along with the project image
-                            li allows readers to quickly scan through the crux of this project.
+                    .card.card-elt
+                        +clickable_responsive_image("img/w_portfoliio_design/ia2.png")
+                        .container-fluid
+                            .row
+                                h3.h3tufte  Vertical list of projects w/ blurb and image                                
+                                br   
+                                p.ptufte <strong>Selected</strong> because:
+                                ul.ptufte 
+                                    li it allowed me to present information in a prioritized fashion
+                                    li present a short blurb describing purpose, impact, role and technologies involved in this project along with the project image
+                                    li allows readers to quickly scan through the crux of this project.
             .row
-                .col-md-8.center-block(style="float:none;padding-top:5%;")
+                .col-md-6.center-block(style="float:none;padding-top:5%;")
                         h2.h2tufte(style="padding-bottom:5%;text-align:center;")  Detailed wireframe of selected solution of Home page
-                        img(src="img/w_portfoliio_design/home_page_ia1.png" class="img-responsive" style="margin: 0 auto;width:50%;")
+                        +card_no_title("img/w_portfoliio_design/home_page_ia1.png", "margin: 0 auto;")
 
         .container
             .row
@@ -147,17 +150,14 @@ html(lang="en")
         .container-fluid.showcase
             .row
                 .col-md-4
-                    h3.h3tufte Page work detail page
                     a(href="img/w_portfoliio_design/work_page_ia1.png" target="_blank")
-                        img(class="img-responsive" src="img/w_portfoliio_design/work_page_ia1.png" title="click to see full size image" style="width:75%;")
+                        +card("img/w_portfoliio_design/work_page_ia1.png", "width:75%;", "Page work detail page", "")
                 .col-md-4
-                    h3.h3tufte After scrolling past the navbar
                     a(href="img/w_portfoliio_design/work_page_ia2.png" target="_blank")
-                        img(class="img-responsive" src="img/w_portfoliio_design/work_page_ia2.png" title="click to see full size image" style="width:75%;")
+                        +card("img/w_portfoliio_design/work_page_ia2.png", "width:75%;", "After scrolling past the navbar", "")
                 .col-md-4
-                    h3.h3tufte Ability to add wide containers
                     a(href="img/w_portfoliio_design/work_page_ia3.png" target="_blank")
-                        img(class="img-responsive" src="img/w_portfoliio_design/work_page_ia3.png" title="click to see full size image" style="width:75%;")
+                        +card("img/w_portfoliio_design/work_page_ia3.png", "width:75%;", "Ability to add wide containers", "")
 
 
         .container
@@ -232,7 +232,7 @@ html(lang="en")
             .row
                 .col-md-8.center-block(style="float:none;")                        
                         h2.h2tufte(style="padding-bottom:1%;text-align:center;")  My IDE setup
-                        img(src="img/w_portfoliio_design/brackets.png" class="img-responsive" style="margin: 0 auto;")
+                        +card_no_title("img/w_portfoliio_design/brackets.png", "margin: 0 auto;")
                         
         .container
             .row
