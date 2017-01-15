@@ -15,4 +15,4 @@ mixin navbar_mixin(Title, NavItems)
                     ul.nav.navbar-nav
                         each val in NavItems
                             li
-                                a(href=val[0])= val[1]
+                                a(href="#"+val[0])= val[1]
