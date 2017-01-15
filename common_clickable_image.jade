@@ -19,6 +19,18 @@ mixin card(image_src, style_setting, Title, Blurb)
                 if Blurb
                     p.ptufte= Blurb    
 
+mixin card_center_title(image_src, style_setting, Title, Blurb)
+    - Title = Title || 'Title 1';    
+    .card.card-elt
+        +clickable_responsive_image(image_src, style_setting)
+        .container-fluid
+            .row(style="text-align:center;")
+                h3.h3tufte= Title
+                if Blurb
+                    p.ptufte= Blurb    
+
+
+
 mixin card_no_title(image_src, style_setting)
     .card.card-elt
         +clickable_responsive_image(image_src, style_setting)
