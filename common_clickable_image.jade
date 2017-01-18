@@ -9,15 +9,20 @@ mixin clickable_responsive_image_v4(img_src, style_setting)
         img(class="img-fluid" src=img_src style=style_setting title="Click to see enlarged image")
         
 
-mixin card(image_src, style_setting, Title, Blurb)
+mixin card(image_src, style_setting, Title, Blurb, num_breaks)
     - Title = Title || 'Title 1';    
+    - var n = 0;
+    - num_breaks = num_breaks || 0;
     .card.card-elt
         +clickable_responsive_image(image_src, style_setting)
         .container-fluid
             .row
                 h3.h3tufte= Title
                 if Blurb
-                    p.ptufte= Blurb    
+                    p.ptufte= Blurb
+                while n < num_breaks
+                    br
+                    - n++
 
 mixin card_center_title(image_src, style_setting, Title, Blurb)
     - Title = Title || 'Title 1';    
@@ -27,9 +32,11 @@ mixin card_center_title(image_src, style_setting, Title, Blurb)
             .row(style="text-align:center;")
                 h3.h3tufte= Title
                 if Blurb
-                    p.ptufte= Blurb    
+                    p.ptufte= Blurb
 
-
+mixin card_no_title1(image_src, style_setting)
+    .card2
+        +clickable_responsive_image(image_src, style_setting)
 
 mixin card_no_title(image_src, style_setting)
     .card.card-elt
@@ -40,10 +47,18 @@ mixin card_no_title_v4(image_src, style_setting)
         +clickable_responsive_image_v4(image_src, style_setting)
 
 
+mixin hover_card_no_title1(image_src, style_setting, hover_class, headline, fig_caption)
+    .card2(style="padding:0.7rem;")
+        figure(class=hover_class style="background-color: #94001c;")
+            img(class="img-responsive" src=image_src style=style_setting title="Click to see enlarged image")
+            figcaption(style="background-color: #242134;")
+                h2.h2tufte= headline
+                p.ptufte= fig_caption
+
 mixin hover_card_no_title(image_src, style_setting, hover_class, headline, fig_caption)
     .card(style="padding:1rem;")
         figure(class=hover_class style="background-color: #94001c;")
             img(class="img-responsive" src=image_src style=style_setting title="Click to see enlarged image")
-            figcaption(style="background-color: #94001c;")
+            figcaption(style="background-color: #242134;")
                 h2.h2tufte= headline
                 p.ptufte= fig_caption

@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="imagehover.min.css"/>
     <style>
       .navbar-default {
-          background-color: #293E68;
+          background-color: #242134;
       }
       
       .navbar-brand {
@@ -65,8 +65,13 @@
           color: white !important;
       }
       
+      .navbar-default .navbar-nav>li.active>a {
+          color: black !important;
+      }
+      
       .navbar-default .navbar-nav>li>a:hover {
           color: black !important;
+          background-color: #f5f5f5 !important;
       }
     </style>
   </head>
@@ -91,7 +96,7 @@
           <p class="home-project-blurb">Sept'15 - Dec'15</p>
         </div>
         <div class="col-md-6 home-project-right">
-          <div class="card card-elt"><a href="http://placehold.it/1500x925" target="_blank"><img class="img-responsive" src="http://placehold.it/1500x925" title="Click to see enlarged image"/></a>
+          <div class="card card-elt"><a href="img/instabanner.png" target="_blank"><img class="img-responsive" src="img/instabanner.png" title="Click to see enlarged image"/></a>
           </div>
         </div>
       </div>
@@ -109,6 +114,7 @@
               <li><a href="#process">Process</a></li>
               <li><a href="#define">Defining MVP1</a></li>
               <li><a href="#design">Designing MVP1</a></li>
+              <li><a href="#mvp2">Designing MVP2</a></li>
               <li><a href="#impact">Impact</a></li>
               <li><a href="#learnings">Learnings</a></li>
             </ul>
@@ -211,7 +217,7 @@
               <li>None provided support for events via a P2P marketplace to support the local student community</li>
             </ul>
             <h3>MVP1 list = ideation + competitive analysis</h3>
-            <p>Based on the research data collected during ideation and competitive analysis, I narrowed down the MVP1 feature list to provide cheap, real-time street parking and building a P2P parking marketplace.</p>
+            <p>Based on the research data collected during ideation and competitive analysis, I narrowed down the MVP1 feature list to provide safe, cheap, real-time street parking and building a P2P parking marketplace.</p>
             <h3>Storyboarding &mdash; Communicating MVP1 to stakeholders</h3>
             <p> With the initial features decided, I did storyboarding to communicate MVP1 with stakeholders and they were able to get a feel of the solution that could be provided by the application.</p>
           </section>
@@ -268,8 +274,10 @@
             <ol>
               <li>They found the event parking interactions long and confusing. </li>
               <li>They were not interested in payment through the application.</li>
+              <li>They cared very little about safety information. And cared a lot about price</li>
             </ol>
-            <p>I addressed these 2 issues in my next iteration</p>
+            <p>I addressed these 3 issues in my next iteration</p>
+            <h2 id="mvp2">Designing MVP2</h2>
             <h3>Rigorous evaluation of alternatives</h3>
             <p>The paper prototype indicated that app's IA and interactions need to be thought out carefully and I decided to take a more rigorous approach to get the information architecture and flow optimized for the use cases.</p>
             <p>I perused my research findings and came up with a list of <strong>design goals</strong> (criteria) to help me evaluate various design alternatives.</p>
@@ -318,7 +326,7 @@
             <div class="container-fluid">
               <div class="row">
                 <h3 class="h3tufte">Explore various personal renting spots quickly</h3>
-                <p class="ptufte">Brainstormed how to show parking spots available for events. Factors considered: (1) finding cheapest or cloest spot must be easy (2) Minimize interactions (3) Exploring various personal renting spots' information must be super easy</p>
+                <p class="ptufte">Brainstormed how to show parking spots available for events. Factors considered: (1) finding cheapest or cloest spot must be easy (2) Minimize interactions (3) Exploring various personal renting spots' information must be super easy</p><br/>
               </div>
             </div>
           </div>
@@ -328,7 +336,7 @@
             <div class="container-fluid">
               <div class="row">
                 <h3 class="h3tufte">Designing overall event parking flow</h3>
-                <p class="ptufte">Factors considered: (1) Minimize interactions to request parking (2) Make common and suggested cases very easy (3) Give options to explore deeper if needed.</p>
+                <p class="ptufte">Factors considered: (1) Minimize interactions to request parking (2) Make common and suggested cases very easy (3) Give options to explore deeper if needed.</p><br/><br/>
               </div>
             </div>
           </div>
@@ -349,7 +357,7 @@
           <div class="card card-elt"><a href="img/w_instapark/br9.jpeg" target="_blank"><img class="img-responsive" src="img/w_instapark/br9.jpeg" title="Click to see enlarged image"/></a>
             <div class="container-fluid">
               <div class="row">
-                <h3 class="h3tufte">Finding parking spots by specifying destination location</h3>
+                <h3 class="h3tufte">Finding parking spots by destination location</h3>
                 <p class="ptufte">How to design for advanced use case wherer user wants to find parking for a different location other than currently placed. Factors considered: (1) Don't make common cases hard. (2) Minimize interactions (3) Don't visually obstruct other useful information</p>
               </div>
             </div>
@@ -455,7 +463,9 @@
             <p>The hi-fidelity prototypes were well received by student participants. They really liked the P2P parking idea and the fact that they were provided suggestions for determining parking price. </p>
             <p>We then discussed about getting this implemented. I had researched earlier about the ParkWhiz API which would allow us to get the MVP1 for thiis app quickly implemented. Due to my commitments to other projects, I could not focus on developing an MVP1 app. I hope to do that soon though!</p>
             <h2 id="learnings">Learnings</h2>
-            <p>This project had many firsts. This was my first large interaction design project. I learnt a lot about applying UX design process when building a product. I learnt that when building new products, when requirements are unclear, we need to be heavily grounded in research, listen carefully to our customers and adjust our course based on that. We should adopt a UX process that allows us to remain lean and agile and pivot quickly based on customers and so that we can quickly test our ideas with customers. I learnt the value of different UX design techniques like paper prototypes, wireframes, story boarding and hi-fidelity prototypes and when/when not to use them. Overall, this project was a great learning experience.</p>
+            <p>This project had many firsts. This was my first large interaction design project. I learnt a lot about applying UX design process when building a product. </p>
+            <p>I learnt that when building new products, when requirements are unclear, we need to be heavily grounded in research, listen carefully to our customers and adjust our course based on that. We should adopt a UX process that allows us to remain lean and agile and pivot quickly based on customers and so that we can quickly test our ideas with customers.</p>
+            <p>I learnt the value of different UX design techniques like paper prototypes, wireframes, story boarding and hi-fidelity prototypes and when/when not to use them. Overall, this project was a great learning experience.</p>
           </section>
         </article>
       </div>

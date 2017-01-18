@@ -178,6 +178,18 @@ article {
     padding: 5rem 0rem;
 }
 
+.p1tufte {
+    font-size: $psize * 1.2;
+    font-family: $selected-stack !important;
+    font-weight: $fontweight;
+    line-height: $ledding * 1.0 / ($psize * 1.2);
+    margin-top: $ledding;
+    margin-bottom: 0;
+    padding-right: 0;
+    vertical-align: baseline;
+}
+
+
 .ptufte {
     font-family: $selected-stack !important;
     font-weight: $fontweight;

@@ -25,31 +25,41 @@ html(lang="en")
                 font-family: "ff-meta-web-pro", sans-serif;
                 font-weight: none;
             }
+            
+            .col-md-
 
         +navbar_mixin(pageTitle, [])
 
-        .container-fluid(style="padding:3rem;")
+        .container(style="padding:3rem;")
             .row(style="padding-bottom:3rem;")
+                .col-md-4
+                    +card_no_title1("img/dp.jpg")
                 .col-md-8
-                    +card_no_title("http://placehold.it/1280x640")
-                .col-md-4
-                    h1.h1tufte Hi,
-                    h3.h3tufte I am a UX designer with strengths in interaction design and prototyping. 
-                    br
-                    h3.h3tufte After studying engineering and business management, I realized the power of applying design thinking to business innovation.
-                    br
-                    h3.h3tufte Since then, I have designed for enterprise, gaming and voice based interfaces &mdash; Redhat, Guardian, Callaway and  a small gaming company in Ann Arbor which is now fully funded in Kickstarter! to name a few!
+                    h2.h2tufte Hi,
                     
+                    p.p1tufte I am a UX designer with strengths in interaction design and prototyping. I am passionate about user experience and I enjoy creatively solving problems and designing usable products that bring meaningful experiences into people's lives.
+
+                    p.p1tufte After studying engineering and business management, I realized the power of applying design thinking to business innovation.
+
+                    p.p1tufte Since then, I have designed for enterprise, gaming and voice based interfaces &mdash; Nova Technologies, Red Hat, Guardian, Callaway and a small gaming company in Ann Arbor which is now fully funded in Kickstarter!
+
             .row
-                .col-md-4
-                    +hover_card_no_title("https://s-media-cache-ak0.pinimg.com/736x/41/0f/d1/410fd1a10a683556668a81b3992154c9.jpg", "", "imghvr-flip-vert", "Born and brought up in delhi", "")
-                    br
-                    +hover_card_no_title("https://a248.e.akamai.net/secure.meetupstatic.com/photos/theme_body/5/f/8/e/full_4044462.jpeg", "", "imghvr-flip-vert", "Strategize", "I love strategy board games which allows me to look at problems from diverse perspectives")
-                .col-md-4.center-block
-                    +hover_card_no_title("http://www.silverlakevoice.com/wp-content/uploads/2015/03/VISITSEATTLE_SPACENEEDLE_FINAL-YELLOW-995x500.jpg", "", "imghvr-flip-vert", "Resident of Seattle", "I moved to Seattle WA in 2013 and now I call it my US hometown! I love this beautiful city!")
-                    br
-                    +hover_card_no_title("http://placehold.it/800x1600", "", "imghvr-flip-vert", "Diverse education", "My background in management and engineering enables me to understand business process and technical feasibility")
-                .col-md-4.center-block
-                    +hover_card_no_title("https://c1.staticflickr.com/9/8056/8127461785_0768c2012e_b.jpg", "", "imghvr-flip-vert", "Michigan Wolverine", "Currently studying at University of Michigan")
-                    br
-                    +hover_card_no_title("http://placehold.it/800x800", "", "imghvr-flip-vert", "Design", "I cannot live without design since the day we met!")
+                table(style="width:100%;")
+                    tbody
+                        tr
+                            td(style="width:33%;")
+                                +hover_card_no_title1("img/delhi.jpg", "", "imghvr-fade", "Growing up", "Delhi - I was born and brought up here. Sometimes I get nostalgic and realize how much I loved Delhi and everything about it.")
+                            td                                
+                                +hover_card_no_title1("img/seattle.png", "", "imghvr-fade", "Resident of Seattle", "I moved to Seattle WA in 2013 and now I call it my US hometown! I love this beautiful city!")
+                        tr
+                            td
+                                +hover_card_no_title1("img/board.png", "", "imghvr-fade", "Go Blue!", "I am currently a graduate student of University of Michigan Ann Arbor and proud of being being a wolverine. Because wherever you are in the world,we wolverines share a special bond from protecting the sacred M in the Diag.")                    
+                            td
+                                table
+                                    tbody
+                                        tr(height="50%")
+                                            td                                            
+                                                +hover_card_no_title1("img/umich.jpg", "", "imghvr-fade", "Design", "I enjoy problem solving and simplifying complex things")                                            
+                                        tr
+                                            td
+                                                +hover_card_no_title1("img/origami1.png", "", "imghvr-fade", "Design", "I enjoy problem solving and simplifying complex things")

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sample title</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <script src="https://use.typekit.net/tpy0zci.js"></script>
+    <script type="text/javascript">
+      try {
+          Typekit.load({
+          async: true
+          } );
+      } catch (e) {}
+    </script>
+    <script src="https://use.fontawesome.com/a3a5e3ece9.js"></script>
+    <link rel="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">       </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="work.css"/>
+    <style>
+      h1, h2, h3 {
+          // color: #293E68;
+          color: rgba(0,0,0,0.8); 
+      }
+      
+    </style>
+    <script>
+      function reposition() {
+          if( $('#mobile_checker').css('display')=='none') {
+              // means it is a mobile
+               $('#work_navbar').insertBefore($('#work_banner'));
+          } else {
+              $('#work_banner').insertBefore($('#work_navbar'));
+          }                
+      }
+      
+      $(document).ready(function() {      
+          reposition();
+      }); 
+      
+      var resizeId;
+      $(window).resize(function() {
+          clearTimeout(resizeId);
+          resizeId = setTimeout(reposition, 500);
+      });
+      
+    </script>
+    <link rel="stylesheet" href="imagehover.min.css"/>
+    <style>
+      .navbar-default {
+          background-color: #242134;
+      }
+      
+      .navbar-brand {
+          color: white !important;
+      }
+      
+      .navbar-nav {
+          color: white !important;
+      }
+      
+      .navbar-default .navbar-nav>li>a {
+          color: white !important;
+      }
+      
+      .navbar-default .navbar-nav>li.active>a {
+          color: black !important;
+      }
+      
+      .navbar-default .navbar-nav>li>a:hover {
+          color: black !important;
+          background-color: #f5f5f5 !important;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50"></body>
+  <div class="container-fluid home-project-cover" id="work_banner" style="background-color:white">
+    <div class="row">
+      <div class="col-md-6 home-project-left">
+        <table>
+          <tr>
+            <td class="project">
+              <h4 class="home-project-title" style="padding-bottom:0">Latitude 90 - the origin</h4>
+            </td>
+            <td class="line" style="padding-left:1em; vertical-align:middle">
+              <svg height="6" width="100%">
+                <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#222 ;stroke-width:3"></line>
+              </svg>
+            </td>
+          </tr>
+        </table>
+        <h3 class="home-project-subtitle">Indie gaming company, 		<a href='http://www.ghostroadhouse.com'>Ghost roadhouse</a> had an exciting game concept, but mobile app usage was very low. To do this, they hired us to redesign mobile game to improve app engagement. 		<br/> 		In <b>12 weeks</b>, they had an app that got rave reviews on kickstarter and 		<a href='https://www.kickstarter.com/projects/1479338853/latitude-90-the-origin'>$20,000</a> 		funding</h3>
+        <h6 class="home-project-tags">research, redesign</h6>
+        <p class="home-project-blurb">Sep '15 - Dec '15</p>
+      </div>
+      <div class="col-md-6 home-project-right">
+        <div class="card card-elt"><a href="img/origin_banner_resized_3.png" target="_blank"><img class="img-responsive" src="img/origin_banner_resized_3.png" title="Click to see enlarged image"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="mobile_checker"></div>
+  </div>
+  <nav class="navbar navbar-default" id="work_navbar" data-spy="affix" data-offset-top="700">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <p><a class="navbar-brand" href="index.html">Home</a><span class="navbar-brand">/</span><span class="navbar-brand navbar-brand-currentpage">Latitude 90 - the origin</span></p>
+      </div>
+      <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#0">0</a></li>
+            <li><a href="#1">1</a></li>
+            <li><a href="#2">2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row"></div>
+    <div class="column-md-12">
+      <article class="nobottompadding">
+        <section>
+          <h1>Re-making of Bodhi</h1>
+          <p class="subtitle">An enterprise Operating system testing platform</p>
+          <h2>Role
+            <p>As an intern, I led the entire project with assistance from my mentor Mo. My mentor had given me sufficient accesss and freedom to pursue this project on my own and she was always available to provide me assistance and reviews.</p>
+          </h2>
+          <h2>The challenge</h2>
+          <p>Bodhi is a modular web-based system where red hat's developers, testers and the open source community users collaborate on testing, voting and updating packages. Upon taking up this project, I quickly wanted to get a sense of the problem space before I plan my approach to solving the problems. With that in mind, I quickly had some discussions with some Bodhi users who were already present that day on that floor and nearby floors. Here are a few things I heard:</p>
+          <blockquote>
+            <p>I use bodhi everyday, but I often get confused by what package to work on</p>
+          </blockquote>
+          <blockquote>
+            <p>I feel I am comfortable using the command line interface. It's easier to use than the UI</p>
+          </blockquote>
+          <p>I got a sense that developers were not too keen on using the web interface and testers had a hard time navigating the web interface. This was especially true when new testers were introduced to the web UI. The challenge was to increase the Web UI engagement amongst the community.</p>
+          <h2>User research</h2>
+          <p>As I sat down to ponder more on the problems being faced by the users, I divided them into 3 main categories for my redesign project.</p>
+          <ul>
+            <li><strong>Testers and release engineers</strong> working for Redhat who frequently use the web application.</li>
+            <li><strong>Packagers and Developers</strong> working for Redhat who sometimes use the web UI as well as the command line interface.</li>
+            <li><strong>Open-source contributors</strong> who were not employees of Redhat</li>
+          </ul>
+          <h3>The Contextual Inquiry</h3>
+          <p>Then, I interviewed testers, developers, packagers and release engineers and observed their day to day process while they are in office. This way it helped me understand their process flow better and note down any problems they were facing. Based on the interviews, I built an affinity wall to understand their concerns and find any potential use cases for redesign.</p>
+          <dl>
+            <dt>What about the workflow of remote open-source contributors</dt>
+            <dd>It was hard to interview and observe open source community users as most of them were often in different timezones and spread various the country. However, I was able to interview a few during a open source hackathon event held in our office. This enabled me to observe and see what problems they were facing with the web ui. I included their interview answers in my affinity wall and collated the most important use cases for our redesign below</dd>
+          </dl>
+          <h3>Issues identified through user research</h3>
+          <p>Here is a summary of issues I found through user research grouped by user category.</p>
+        </section>
+      </article>
+    </div>
+  </div>
+  <div class="container-fluid showcase">
+    <div class="table-responsive">
+      <style>
+        .x1 {
+        	width: 25%;
+        }
+        .r1 {
+        	padding: 0 1em;
+        }
+      </style>
+      <table class="table-bordered table-striped">
+        <thead>
+          <tr class="r1">
+            <th class="x1 r1">
+              <h3 class="h3tufte"> <strong>Areas of improvement</strong></h3>
+            </th>
+            <th class="x1 r1">
+              <h3 class="h3tufte"> <strong>Testers</strong></h3>
+            </th>
+            <th class="x1 r1"> 
+              <h3 class="h3tufte"> <strong>Packager and Developer</strong></h3>
+            </th>
+            <th class="x1 r1"> 
+              <h3 class="h3tufte"> <strong>Open source community user</strong></h3>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="r1">
+              <h3 class="h3tufte">Must have</h3>
+            </td>
+            <td>
+              <ol class="ptufte">
+                <li>No download link for the koji (The user was describing it as a drop down menu in case of multiple downloads) and command line download link as well</li>
+                <li>Karma cycle is very confusing as he could not figure out the functionality of the untested button.</li>
+                <li>No direct contact link to the submitter.</li>
+                <li>Updates to the bugzilla.</li>
+              </ol>
+            </td>
+            <td class="r1">
+              <ol class="ptufte">
+                <li>Some ideas about the "New override" It will be interesting to be able to submit more than 1 package at a time as we can for "new update".</li>
+                <li>There is a need to have a check-box for being able to "push to stable" various package in a single action</li>
+                <li>It could also be nice to be able to change the content like "number of lines" in list or the "time in testing"</li>
+              </ol>
+            </td>
+            <td class="r1">
+              <ol class="ptufte">
+                <li>Website navigation is very confusing</li>
+                <li>They often get confused about the types of packages available for testing</li>
+                <li>Further, I figured that developers actually had little idea about the Bodhi update system and often never used the web ui interface. I had to refocus the entire redesign on testers as our major target audience. They were the ones frequently using the update system daily and had problems navigating the page</li>
+              </ol>
+            </td>
+          </tr>
+          <tr class="r1">
+            <td class="r1">
+              <h3 class="h3tufte">Nice to have</h3>
+            </td>
+            <td class="r1">
+              <ol class="ptufte">
+                <li>Previous searches</li>
+                <li>Edit the replies to the thread.</li>
+              </ol>
+            </td>
+            <td class="r1">
+              <ol class="ptufte">
+                <li>The content under these tabs can be changed as follows :</li>
+                <li>The "status" can have some more refined content which can be filtered according to "status since"</li>
+                <li>Similarly "testing" can be filtered according to "testing for 7 days" or "Stable for 2 months"</li>
+                <li>This would allow the user to have more accurate information about the current state of the process</li>
+              </ol>
+            </td>
+            <td class="r1">
+              <p>&nbsp;</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row"></div>
+    <div class="column-md-12">
+      <article class="nobottompadding">
+        <section></section>
+        <h3>Don't forget the heuristic evaluation!</h3>
+        <p>Even after collecting all that data from user interviews, there were certain pages for which I did not have enough information. So, I conducted a heuristics evaluation of the website to see what all other problems that website might have and zeroed on the following problems in the UI. Here's a summary of the issues.</p>
+        <dl>
+          <dt>Flexibility and efficiency of use</dt>
+          <dd>The primary problem was finding the right package or searching a package to work on. Currently in the system it was not easy to distinguish whether the package belonged to F25, EPEL or F24. Easily guiding the user to find what they were looking was the key to a better update system.</dd>
+          <dt>Aesthetic and minimalist design</dt>
+          <dd>There was way too much information and it was not hierarchically organized in the page which led to making the page appear more cluttered and confusing to use.</dd>
+          <dt>Help users recognize, diagnose, and recover from errors</dt>
+          <dd>No error messages was displayed when the user was about to make mistakes while changing the package contents.</dd>
+          <dt>Help and documentation</dt>
+          <dd>Further, having to search for fedora wiki pages for documentation was both time consuming and cumbersome.</dd>
+        </dl>
+        <h2>Personas</h2>
+        <p>Equipped with the data collected from user research and heuristic evaluation, I conducted personas to help me guide the design stage.</p>
+        <h3>Micah</h3>
+        <p>Micah is a red hat tester who has been working on packages and giving karma through the update system. His typical day involved meeting with the developers about the packages and often updating the status of these packages in Bodhi. In between he attends the stand up meeting about his work in progress and finishes up the technical documentation required for the package.</p>
+        <h3>Nancy</h3>
+        <p>Nancy has been with redhat for many years and often enjoyed working on fedora release cycle code. She is a passionate about open source software and has been contributing to various open source projects online. Her typical day at red hat includes (kunjoos fill in here , I don’t know what a coder day looks like)</p>
+        <h3>James</h3>
+        <p>James is currently a senior at the University of Boston majoring in computer science. He wants to contribute to the open source community and is often seen checking out the open source projects to contribute. He wants to prepare for his interviews so feels contributing to real projects would help him understand the fundamentals better. He just read about the bodhi project and starts checking the web ui for packages to test.</p>
+        <h2>Brainstorming multiple solutions</h2>
+        <p>I brainstormed multiple flows for comment and website navigation</p>
+        <h3>Survey for evaluation of alternatives</h3>
+        <p>Once I brainstormed several solutions, I wanted to gather some data on which alternatives might be better. First, I reviewed my ideas with my mentor. My mentor's response was positive on the ideas. We thought it might be better to gather data from real customers on the ideas that I had. Instead of showing customers with all the alternative solutions that I had, I prepared a survey that included some basic questions to understand the audience and a question each for each of the various tasks for which I had evaluated multiple solutions. For each of them, I provided them a view of the current system as well as my proposed solution and asked them a bunch of questions to help me find out how much they preferred the second solution.</p>
+        <p>Here is a link to the<a href="https://www.surveymonkey.com/r/XNZ76TT">survey</a></p>
+        <p>The 2 tasks for which I gathered data in this survey were the Download widget and the Bugzilla integration. I chose these two only because they were the only new features that I was proposing we add to the website. Because they were new features they would also require additional back-end integration work and quantifying the benefit of these new features would make it easy for management to prioritize the implementation of these features. Below, is a screenshot from the survey.</p>
+        <h2>Final design</h2>
+        <p>Based on the positive feedback from the survey and from my mentor on the design proposals presented as low-fi designs, I went forward and made the hi-fidelity designs for the same. Redhat had recently come up with a new style guide called <a href="http://www.patternfly.org">Patternfly</a> for enterprise applications. Since I was re-designing Bodhi from the ground up I decided to use this new style guide. Since, CSS files were already available for patternfly, it turned out to be easier to build the hi-fidelity prototype by just coding it using the <a href="https://github.com/patternfly/patternfly">Patternfly library</a></p>
+        <h3>Information architecture</h3>
+        <p>For the design of the website, I grouped some of the webpage elements into the headers given below. I basically grouped them into Home page, Updates page and Statistics page</p>
+        <dl>
+          <dt>Home page</dt>
+          <dd>This home page will consists of critical path in need of testing, Security and Normal updates grouped under the release F25, EPEL to allow for more clearer representation of the information</dd>
+          <dt>Statistics</dt>
+          <dd>Will have the overall metrics and weekly top testers information</dd>
+          <dt>Update details</dt>
+          <dd>This page will show the package details, Bugzilla updates, Download widget, comments and Karma</dd>
+        </dl>
+        <h3>Interaction map</h3>
+        <h3>Task flows</h3>
+        <h2>What I learned from this experience</h2>
+        <p>I felt that employees suffer more because most enterprise applications do not provide engaging user experience. This is because of the fact that most of the decisions taken by the software managers are primarily concerned with stability, security and scalability and not usability. Thus, it is not an easy goal to achieve and more often than not there are lot of that a lot of esoteric constraints when designing an enterprise application. So,sometimes it becomes very hard  to resist becoming a pushover designer. However, that itself can be taken as a good challenge.</p>
+        <p>What I enjoyed most in my internship at Red Hat is that, my users were literally down the hall and I can always meet and emphatize  with them. I really enjoyed the informal conversations I had with them. Having such relaxed conservations enabled them to speak freely about their problems and pain points. Well, who doesn't like the company of honest people!</p>
+      </article>
+    </div>
+  </div>
+</html>

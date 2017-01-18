@@ -22,10 +22,10 @@ html(lang="en")
 
             "Sept'15 - Dec'15",
 
-            "http://placehold.it/1500x925"
+            "img/instabanner.png"
         )
 
-        +navbar_mixin(pageTitle, [["process", "Process"], ["define", "Defining MVP1"], ["design", "Designing MVP1"], ["impact", "Impact"], ["learnings", "Learnings"]])
+        +navbar_mixin(pageTitle, [["process", "Process"], ["define", "Defining MVP1"], ["design", "Designing MVP1"], ["mvp2", "Designing MVP2"], ["impact", "Impact"], ["learnings", "Learnings"]])
 
         .container
             .row
@@ -124,7 +124,7 @@ html(lang="en")
                     
                         h3 MVP1 list = ideation + competitive analysis
 
-                        p Based on the research data collected during ideation and competitive analysis, I narrowed down the MVP1 feature list to provide cheap, real-time street parking and building a P2P parking marketplace.
+                        p Based on the research data collected during ideation and competitive analysis, I narrowed down the MVP1 feature list to provide safe, cheap, real-time street parking and building a P2P parking marketplace.
                         
                         h3 Storyboarding &mdash; Communicating MVP1 to stakeholders
                         
@@ -170,8 +170,11 @@ html(lang="en")
                         ol
                             li They found the event parking interactions long and confusing. 
                             li They were not interested in payment through the application.
+                            li They cared very little about safety information. And cared a lot about price
                         
-                        p I addressed these 2 issues in my next iteration
+                        p I addressed these 3 issues in my next iteration
+                        
+                        h2(id="mvp2") Designing MVP2
                         
                         h3 Rigorous evaluation of alternatives
                         
@@ -198,14 +201,14 @@ html(lang="en")
                 .col-md-4.card-col
                     +card("img/w_instapark/br1.jpeg", "", "Screen for find parking - First screen of app", "Brainstormed how to show the nearby parking spots available. Factors considered: (1) locating cheapest or closest spot out of N available spots must be easy. (2) Useful spot information must be easy visible (3) Minimize interactions. Did QOC analysis and picked best solution")
                 .col-md-4.card-col
-                    +card("img/w_instapark/br2.jpeg", "", "Explore various personal renting spots quickly", "Brainstormed how to show parking spots available for events. Factors considered: (1) finding cheapest or cloest spot must be easy (2) Minimize interactions (3) Exploring various personal renting spots' information must be super easy")
+                    +card("img/w_instapark/br2.jpeg", "", "Explore various personal renting spots quickly", "Brainstormed how to show parking spots available for events. Factors considered: (1) finding cheapest or cloest spot must be easy (2) Minimize interactions (3) Exploring various personal renting spots' information must be super easy",1)
                 .col-md-4.card-col
-                    +card("img/w_instapark/br3.jpeg", "", "Designing overall event parking flow", "Factors considered: (1) Minimize interactions to request parking (2) Make common and suggested cases very easy (3) Give options to explore deeper if needed.")
+                    +card("img/w_instapark/br3.jpeg", "", "Designing overall event parking flow", "Factors considered: (1) Minimize interactions to request parking (2) Make common and suggested cases very easy (3) Give options to explore deeper if needed.", 2)
             .row.card-row
                 .col-md-4.card-col
                     +card("img/w_instapark/br4.jpeg", "", "Seller spot management", "How does seller manage the spots? Factors considered: (1) Improve engagement. Help the seller price spot correctly. (2) Provide good at-a-glance views so that user is engaged constantly (3) Minimize interactions (4) Optmized for sellers who are selling personal home parking spots first")
                 .col-md-4.card-col
-                    +card("img/w_instapark/br9.jpeg", "", "Finding parking spots by specifying destination location", "How to design for advanced use case wherer user wants to find parking for a different location other than currently placed. Factors considered: (1) Don't make common cases hard. (2) Minimize interactions (3) Don't visually obstruct other useful information")
+                    +card("img/w_instapark/br9.jpeg", "", "Finding parking spots by destination location", "How to design for advanced use case wherer user wants to find parking for a different location other than currently placed. Factors considered: (1) Don't make common cases hard. (2) Minimize interactions (3) Don't visually obstruct other useful information")
                     
         .container
             .row
@@ -267,4 +270,6 @@ html(lang="en")
                         
                         h2(id="learnings") Learnings
                         
-                        p This project had many firsts. This was my first large interaction design project. I learnt a lot about applying UX design process when building a product. I learnt that when building new products, when requirements are unclear, we need to be heavily grounded in research, listen carefully to our customers and adjust our course based on that. We should adopt a UX process that allows us to remain lean and agile and pivot quickly based on customers and so that we can quickly test our ideas with customers. I learnt the value of different UX design techniques like paper prototypes, wireframes, story boarding and hi-fidelity prototypes and when/when not to use them. Overall, this project was a great learning experience.
+                        p This project had many firsts. This was my first large interaction design project. I learnt a lot about applying UX design process when building a product. 
+                        p I learnt that when building new products, when requirements are unclear, we need to be heavily grounded in research, listen carefully to our customers and adjust our course based on that. We should adopt a UX process that allows us to remain lean and agile and pivot quickly based on customers and so that we can quickly test our ideas with customers.
+                        p I learnt the value of different UX design techniques like paper prototypes, wireframes, story boarding and hi-fidelity prototypes and when/when not to use them. Overall, this project was a great learning experience.

@@ -57,7 +57,7 @@ body {
 
 /* line 32, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
 .navbar-brand {
-  color: #0047AB !important; }
+  color: #242124 !important; }
 
 /* line 36, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
 .navbar-brand-currentpage {
@@ -65,10 +65,9 @@ body {
 
 /* line 40, /home/local/ANT/ajgopala/portfolio_new/navbar.scss */
 .navbar-default {
-/*  background-color: #FFFFFF !important;*/
   -webkit-box-shadow: 0px 2px 6px 0px black;
   -moz-box-shadow: 0px 2px 6px 0px black;
-  box-shadow: 0px 2px 6px 0px #d3d3d3;
+  box-shadow: 0px 2px 6px 0px #000000;
   border-radius: 2px; }
 
 /*# sourceMappingURL=navbar.css.map */
