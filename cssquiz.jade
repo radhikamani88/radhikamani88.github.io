@@ -20,10 +20,10 @@ html(lang="en")
             
             "Dec'16 - Jan'17",
             
-            "http://placehold.it/1500x925"
+            "img/hcf1.png"
         )
         
-        +navbar_mixin(pageTitle, [["challenge","Challenge"]])
+        +navbar_mixin(pageTitle, [["problem", "Problem"], ["solution", "Solution"]])
         
         .container
             .row
@@ -32,12 +32,12 @@ html(lang="en")
                         h1 Making of CSS Quizzer webapp
                         p.subtitle Helping people learn CSS
                         
-                        h2 Problem statement
+                        h2(id="problem") Problem statement
                         
                         p For our Web design class, we had to do a small project involving 2 people. We decided to make a CSS Quizzer to help people learn CSS. The primarly purpose of this project was to practice our programming skills and learn how to use Python and Flask to create a web application. We also deployed this application on Heroku and learnt about Web application deployment processes. 
 
 
-                        h2 Solution
+                        h2(id="solution") Solution
                         
                         p We built a mobile-friendly webapp for CSS quiz. It has the following features:
                         ol

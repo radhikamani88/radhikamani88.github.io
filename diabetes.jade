@@ -25,10 +25,10 @@ html(lang="en")
             
             "Feb '16 - 1 day",
             
-            "http://placehold.it/1500x925"
+            "img/viz.png"
         )
         
-        +navbar_mixin(pageTitle, [["challenge","Challenge"]])
+        +navbar_mixin(pageTitle, [["process", "Process"], ["design", "Design"], ["visualization","Visualization"], ["insights", "Insights"]])
         
         .container
             .row
@@ -39,18 +39,18 @@ html(lang="en")
                         
                         p.firstpara I did this project out of my own interest when I started studying data visualization during my free time. Here, I decided to use visualization to gain insights in the diabetes prevalence dataset provided by World bank. I wanted to know if there was any relationship between the income group of the country and the diabetes prevalence percentages.
                         
-                        h2 Process
+                        h2(id="process") Process
                         
                         p The dataset consisted of 2 files. One described the diabetes prevalence percentages per country. Another file provided the income category of each country. To plot the bubbles at the right coordinates on the geographical map, I also needed latitude and longitude data for each country which I got from the Open geocode website. I then combined all the data from various files into a single JSON object. I used D3.js to build this visualization and the JSON data produced earlier the data fed to D3.js code.
                         
-                        h2 Design choices
+                        h2(id="design") Design choices
                         
                         ol
                             li To aid in this analysis I constructed the visualization provided below where I used a proportional symbol map to encode the diabetes prevalence percentages in the size of the bubble and the color of the bubble indicates the income category. 
                             li There are only 5 categories but these rankings can be ranked in descending order by income and hence I decided to use various tints of the same color to indicate the drop in income.
                             li I used violet color because it is usually used in health related contexts.
                             
-                        h2 Interactive visualization
+                        h2(id="visualization") Interactive visualization
 
         .container-fluid.showcase
             .row.
@@ -1335,7 +1335,7 @@ html(lang="en")
             .row
                 article
                     section 
-                        h2 Insights
+                        h2(id="insights") Insights
                         
                         p One interesting insight you can get immediately from this visualization is that the larger bubbles are always lighter than the smaller bubbles. What this means is that diabetes prevalence is more common in low-income countries compared to high-income countries.Smaller islands like French Polynesia have the highest diabetes prevalence percentages. You can find the interactive D3visualiation below. Code is available on Github here Github
 
