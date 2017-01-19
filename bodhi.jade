@@ -2,26 +2,21 @@ include common_head.jade
 include common_banner.jade
 include common_navbar.jade
 
-- var pageTitle = "Latitude 90 - the origin"
+- var pageTitle = "Bodhi - Fedora update management portal"
 
 doctype html
 
 html(lang="en")
-	+head_mixin("Sample title")
+	+head_mixin(pageTitle)
 	body(data-spy="scroll" data-target=".navbar" data-offset="50")
 	+banner_mixin(
 		pageTitle,
-		"Indie gaming company, \
-		<a href='http://www.ghostroadhouse.com'>Ghost roadhouse</a> had an exciting game concept, but mobile app usage was very low. To do this, they hired us to redesign mobile game to improve app engagement. \
-		<br/> \
-		In <b>12 weeks</b>, they had an app that got rave reviews on kickstarter and \
-		<a href='https://www.kickstarter.com/projects/1479338853/latitude-90-the-origin'>$20,000</a> \
-		funding",
-		"research, redesign",
-		"Sep '15 - Dec '15",
+		"",
+		"research, redesign, evaluation",
+		"May'16 - Aug'16",
 		"img/origin_banner_resized_3.png"
 	)
-	+navbar_mixin(pageTitle, [[0,0],[1,1],[2,2]])
+	+navbar_mixin(pageTitle, [["role","Role"], ["challenge","Challenge"], ["research", "Research"], ["brainstorming", "Brainstorming"], ["design", "Final design"], ["takeaway","Takeaways"]])
 
 	.container
 		.row
@@ -31,10 +26,10 @@ html(lang="en")
 					h1 Re-making of Bodhi
 					p.subtitle An enterprise Operating system testing platform
 
-					h2 Role
+					h2(id="role") Role
 						p As an intern, I led the entire project with assistance from my mentor Mo. My mentor had given me sufficient accesss and freedom to pursue this project on my own and she was always available to provide me assistance and reviews.
 
-					h2 The challenge
+					h2(id="challenge") The challenge
 
 					p Bodhi is a modular web-based system where red hat's developers, testers and the open source community users collaborate on testing, voting and updating packages. Upon taking up this project, I quickly wanted to get a sense of the problem space before I plan my approach to solving the problems. With that in mind, I quickly had some discussions with some Bodhi users who were already present that day on that floor and nearby floors. Here are a few things I heard:
 
@@ -47,7 +42,7 @@ html(lang="en")
 
 					p I got a sense that developers were not too keen on using the web interface and testers had a hard time navigating the web interface. This was especially true when new testers were introduced to the web UI. The challenge was to increase the Web UI engagement amongst the community.
 
-					h2 User research
+					h2(id="research") User research
 
 					p As I sat down to ponder more on the problems being faced by the users, I divided them into 3 main categories for my redesign project.
 
@@ -154,7 +149,7 @@ html(lang="en")
 							dt Help and documentation
 							dd Further, having to search for fedora wiki pages for documentation was both time consuming and cumbersome.
 
-						h2 Personas
+						h2(id="brainstorming") Personas
 
 						p Equipped with the data collected from user research and heuristic evaluation, I conducted personas to help me guide the design stage.
 
@@ -178,7 +173,7 @@ html(lang="en")
 							a(href="https://www.surveymonkey.com/r/XNZ76TT") survey
 						p The 2 tasks for which I gathered data in this survey were the Download widget and the Bugzilla integration. I chose these two only because they were the only new features that I was proposing we add to the website. Because they were new features they would also require additional back-end integration work and quantifying the benefit of these new features would make it easy for management to prioritize the implementation of these features. Below, is a screenshot from the survey.
 
-						h2 Final design
+						h2(id="design") Final design
 
 						p Based on the positive feedback from the survey and from my mentor on the design proposals presented as low-fi designs, I went forward and made the hi-fidelity designs for the same. Redhat had recently come up with a new style guide called <a href="http://www.patternfly.org">Patternfly</a> for enterprise applications. Since I was re-designing Bodhi from the ground up I decided to use this new style guide. Since, CSS files were already available for patternfly, it turned out to be easier to build the hi-fidelity prototype by just coding it using the <a href="https://github.com/patternfly/patternfly">Patternfly library</a>
 
@@ -222,6 +217,7 @@ html(lang="en")
 
 						h3 Task flows
 
-						h2 What I learned from this experience
+						h2(id="takeaway") What I learned from this experience
+						
 						p I felt that employees suffer more because most enterprise applications do not provide engaging user experience. This is because of the fact that most of the decisions taken by the software managers are primarily concerned with stability, security and scalability and not usability. Thus, it is not an easy goal to achieve and more often than not there are lot of that a lot of esoteric constraints when designing an enterprise application. So,sometimes it becomes very hard  to resist becoming a pushover designer. However, that itself can be taken as a good challenge.
 						p What I enjoyed most in my internship at Red Hat is that, my users were literally down the hall and I can always meet and emphatize  with them. I really enjoyed the informal conversations I had with them. Having such relaxed conservations enabled them to speak freely about their problems and pain points. Well, who doesn't like the company of honest people!
