@@ -2,7 +2,7 @@ include common_head.jade
 include common_banner.jade
 include common_navbar.jade
 
-- var pageTitle = "Bodhi"
+- var pageTitle = "Bodhi at Redhat Inc."
 
 doctype html
 
@@ -11,10 +11,10 @@ html(lang="en")
 	body(data-spy="scroll" data-target=".navbar" data-offset="50")
 	+banner_mixin(
 		pageTitle,
-		"",
-		"research, redesign, evaluation",
-		"May'16 - Aug'16",
-		"img/origin_banner_resized_3.png"
+		"Existing OS update management portal had several usability issues which primarily led to low productivity amongst developers and testers and difficulty in onboarding of new open-source contributors.<br/><br/> As an intern, I led the redesign and delivered prototypes for newer version",
+		"research, redesign, prototype, evaluate",
+		"Jul'16 - Aug'16",
+		"img/bodhi1.png"
 	)
 	+navbar_mixin(pageTitle, [["role","Role"], ["challenge","Challenge"], ["research", "Research"], ["brainstorming", "Brainstorming and Surveys"], ["design", "Final design"], ["takeaway","Takeaways"]])
 
@@ -383,7 +383,12 @@ html(lang="en")
 				article.nobottompadding
 					section
 						h3 Interaction map						
-								
+
+	.container-fluid
+		.row
+			.col-md-12.center-block(style="float:none")
+				+card_no_title("img/w_bodhi/bodhi.png", "margin: 0 auto;")
+				
 	.container
 		.row
 			.col-md-12
