@@ -40,8 +40,10 @@ html(lang="en")
 
 					blockquote
 						p I use bodhi everyday, but I often get confused by what package to work on
+						footer Developer-1, Redhat Inc.
 					blockquote
 						p I feel I am comfortable using the command line interface. It's easier to use than the UI
+						footer Developer-2, Redhat Inc.
 
 					p I got a sense that developers were not too keen on using the web interface and testers had a hard time navigating the web interface. This was especially true when new testers were introduced to the web UI. The challenge was to increase the Web UI engagement amongst the community.
 
@@ -92,7 +94,8 @@ html(lang="en")
 				tbody
 					tr
 						td.r1
-							h3.h3tufte Must have
+							h3.h3tufte
+								strong Must have
 						td
 							ol.ptufte
 								li No download link for the koji (The user was describing it as a drop down menu in case of multiple downloads) and command line download link as well
@@ -111,7 +114,8 @@ html(lang="en")
 								li Further, I figured that developers actually had little idea about the Bodhi update system and often never used the web ui interface. I had to refocus the entire redesign on testers as our major target audience. They were the ones frequently using the update system daily and had problems navigating the page
 					tr.r1
 						td.r1
-							h3.h3tufte Nice to have
+							h3.h3tufte 
+								strong Nice to have
 						td.r1
 							ol.ptufte
 								li Previous searches
@@ -127,74 +131,97 @@ html(lang="en")
 
 	.container
 		.row
-		.column-md-12
-			article.nobottompadding
-				section
+			.column-md-12
+				article.nobottompadding
+					section
 
-				h3 Don't forget the heuristic evaluation!
-				p Even after collecting all that data from user interviews, there were certain pages for which I did not have enough information. So, I conducted a heuristics evaluation of the website to see what all other problems that website might have and zeroed on the following problems in the UI. Here's a summary of the issues.
+						h3 Don't forget the heuristic evaluation!
+						p Even after collecting all that data from user interviews, there were certain pages for which I did not have enough information. So, I conducted a heuristics evaluation of the website to see what all other problems that website might have and zeroed on the following problems in the UI. 
+						p Here's a summary of the issues.
 
-				dl
-					dt Flexibility and efficiency of use
+						dl
+							dt Flexibility and efficiency of use
 
-					dd The primary problem was finding the right package or searching a package to work on. Currently in the system it was not easy to distinguish whether the package belonged to F25, EPEL or F24. Easily guiding the user to find what they were looking was the key to a better update system.
+							dd The primary problem was finding the right package or searching a package to work on. Currently in the system it was not easy to distinguish whether the package belonged to F25, EPEL or F24. Easily guiding the user to find what they were looking was the key to a better update system.
 
-					dt Aesthetic and minimalist design
-					dd There was way too much information and it was not hierarchically organized in the page which led to making the page appear more cluttered and confusing to use.
+							dt Aesthetic and minimalist design
+							dd There was way too much information and it was not hierarchically organized in the page which led to making the page appear more cluttered and confusing to use.
 
-					dt Help users recognize, diagnose, and recover from errors
+							dt Help users recognize, diagnose, and recover from errors
 
-					dd No error messages was displayed when the user was about to make mistakes while changing the package contents.
+							dd No error messages was displayed when the user was about to make mistakes while changing the package contents.
 
-					dt Help and documentation
-					dd Further, having to search for fedora wiki pages for documentation was both time consuming and cumbersome.
+							dt Help and documentation
+							dd Further, having to search for fedora wiki pages for documentation was both time consuming and cumbersome.
 
-				h2 Personas
+						h2 Personas
 
-				p Equipped with the data collected from user research and heuristic evaluation, I conducted personas to help me guide the design stage.
+						p Equipped with the data collected from user research and heuristic evaluation, I conducted personas to help me guide the design stage.
 
-				h3 Micah
-				p Micah is a red hat tester who has been working on packages and giving karma through the update system. His typical day involved meeting with the developers about the packages and often updating the status of these packages in Bodhi. In between he attends the stand up meeting about his work in progress and finishes up the technical documentation required for the package.
+						h3 Micah
+						p Micah is a red hat tester who has been working on packages and giving karma through the update system. His typical day involved meeting with the developers about the packages and often updating the status of these packages in Bodhi. In between he attends the stand up meeting about his work in progress and finishes up the technical documentation required for the package.
 
-				h3 Nancy
-				p Nancy has been with redhat for many years and often enjoyed working on fedora release cycle code. She is a passionate about open source software and has been contributing to various open source projects online. Her typical day at red hat includes (kunjoos fill in here , I don’t know what a coder day looks like)
+						h3 Nancy
+						p Nancy has been with redhat for many years and often enjoyed working on fedora release cycle code. She is a passionate about open source software and has been contributing to various open source projects online. Her typical day at red hat includes (kunjoos fill in here , I don’t know what a coder day looks like)
 
-				h3 James
-				p James is currently a senior at the University of Boston majoring in computer science. He wants to contribute to the open source community and is often seen checking out the open source projects to contribute. He wants to prepare for his interviews so feels contributing to real projects would help him understand the fundamentals better. He just read about the bodhi project and starts checking the web ui for packages to test.
+						h3 James
+						p James is currently a senior at the University of Boston majoring in computer science. He wants to contribute to the open source community and is often seen checking out the open source projects to contribute. He wants to prepare for his interviews so feels contributing to real projects would help him understand the fundamentals better. He just read about the bodhi project and starts checking the web ui for packages to test.
 
-				h2 Brainstorming multiple solutions
+						h2 Brainstorming multiple solutions
 
-				p I brainstormed multiple flows for comment and website navigation
+						p I brainstormed multiple flows for comment and website navigation
 
-				h3 Survey for evaluation of alternatives
+						h3 Survey for evaluation of alternatives
 
-				p Once I brainstormed several solutions, I wanted to gather some data on which alternatives might be better. First, I reviewed my ideas with my mentor. My mentor's response was positive on the ideas. We thought it might be better to gather data from real customers on the ideas that I had. Instead of showing customers with all the alternative solutions that I had, I prepared a survey that included some basic questions to understand the audience and a question each for each of the various tasks for which I had evaluated multiple solutions. For each of them, I provided them a view of the current system as well as my proposed solution and asked them a bunch of questions to help me find out how much they preferred the second solution.
-				p Here is a link to the
-					a(href="https://www.surveymonkey.com/r/XNZ76TT") survey
-				p The 2 tasks for which I gathered data in this survey were the Download widget and the Bugzilla integration. I chose these two only because they were the only new features that I was proposing we add to the website. Because they were new features they would also require additional back-end integration work and quantifying the benefit of these new features would make it easy for management to prioritize the implementation of these features. Below, is a screenshot from the survey.
+						p Once I brainstormed several solutions, I wanted to gather some data on which alternatives might be better. First, I reviewed my ideas with my mentor. My mentor's response was positive on the ideas. We thought it might be better to gather data from real customers on the ideas that I had. Instead of showing customers with all the alternative solutions that I had, I prepared a survey that included some basic questions to understand the audience and a question each for each of the various tasks for which I had evaluated multiple solutions. For each of them, I provided them a view of the current system as well as my proposed solution and asked them a bunch of questions to help me find out how much they preferred the second solution.
+						p Here is a link to the
+							a(href="https://www.surveymonkey.com/r/XNZ76TT") survey
+						p The 2 tasks for which I gathered data in this survey were the Download widget and the Bugzilla integration. I chose these two only because they were the only new features that I was proposing we add to the website. Because they were new features they would also require additional back-end integration work and quantifying the benefit of these new features would make it easy for management to prioritize the implementation of these features. Below, is a screenshot from the survey.
 
-				h2 Final design
+						h2 Final design
 
-				p Based on the positive feedback from the survey and from my mentor on the design proposals presented as low-fi designs, I went forward and made the hi-fidelity designs for the same. Redhat had recently come up with a new style guide called <a href="http://www.patternfly.org">Patternfly</a> for enterprise applications. Since I was re-designing Bodhi from the ground up I decided to use this new style guide. Since, CSS files were already available for patternfly, it turned out to be easier to build the hi-fidelity prototype by just coding it using the <a href="https://github.com/patternfly/patternfly">Patternfly library</a>
+						p Based on the positive feedback from the survey and from my mentor on the design proposals presented as low-fi designs, I went forward and made the hi-fidelity designs for the same. Redhat had recently come up with a new style guide called <a href="http://www.patternfly.org">Patternfly</a> for enterprise applications. Since I was re-designing Bodhi from the ground up I decided to use this new style guide. Since, CSS files were already available for patternfly, it turned out to be easier to build the hi-fidelity prototype by just coding it using the <a href="https://github.com/patternfly/patternfly">Patternfly library</a>
 
-				h3 Information architecture
+						h3 Information architecture
 
-				p For the design of the website, I grouped some of the webpage elements into the headers given below. I basically grouped them into Home page, Updates page and Statistics page
+						p For the design of the website, I grouped some of the webpage elements into the headers given below. I basically grouped them into Home page, Updates page and Statistics page
 
-				dl
-					dt Home page
-					dd This home page will consists of critical path in need of testing, Security and Normal updates grouped under the release F25, EPEL to allow for more clearer representation of the information
+	.container-fluid
+		.row(style="padding-bottom:3rem;")
+			.col-md-8
+				+card_no_title("img/w_bodhi/f_home2.png")
+			.col-md-4
+				h3.h3tufte 
+					strong Home page
+				p.ptufte This home page will consists of critical path in need of testing, Security and Normal updates grouped under the release F25, EPEL to allow for more clearer representation of the information
 
-					dt Statistics
-					dd Will have the overall metrics and weekly top testers information
+	.container-fluid
+		.row(style="padding-bottom:3rem;")
+			.col-md-8
+				+card_no_title("img/w_bodhi/f_stats.png")
+			.col-md-4
+				h3.h3tufte 
+					strong Statistsics
+				p.ptufte Will have the overall metrics and weekly top testers information
 
-					dt Update details
-					dd This page will show the package details, Bugzilla updates, Download widget, comments and Karma
+	.container-fluid
+		.row(style="padding-bottom:3rem;")
+			.col-md-8
+				+card_no_title("img/w_bodhi/f_detail.png")
+			.col-md-4
+				h3.h3tufte  
+					strong Update details
+				p.ptufte This page will show the package details, Bugzilla updates, Download widget, comments and Karma
 
-				h3 Interaction map
+	.container
+		.row
+			.col-md-12
+				article.nobottompadding
+					section
+						h3 Interaction map
 
-				h3 Task flows
+						h3 Task flows
 
-				h2 What I learned from this experience
-				p I felt that employees suffer more because most enterprise applications do not provide engaging user experience. This is because of the fact that most of the decisions taken by the software managers are primarily concerned with stability, security and scalability and not usability. Thus, it is not an easy goal to achieve and more often than not there are lot of that a lot of esoteric constraints when designing an enterprise application. So,sometimes it becomes very hard  to resist becoming a pushover designer. However, that itself can be taken as a good challenge.
-				p What I enjoyed most in my internship at Red Hat is that, my users were literally down the hall and I can always meet and emphatize  with them. I really enjoyed the informal conversations I had with them. Having such relaxed conservations enabled them to speak freely about their problems and pain points. Well, who doesn't like the company of honest people!
+						h2 What I learned from this experience
+						p I felt that employees suffer more because most enterprise applications do not provide engaging user experience. This is because of the fact that most of the decisions taken by the software managers are primarily concerned with stability, security and scalability and not usability. Thus, it is not an easy goal to achieve and more often than not there are lot of that a lot of esoteric constraints when designing an enterprise application. So,sometimes it becomes very hard  to resist becoming a pushover designer. However, that itself can be taken as a good challenge.
+						p What I enjoyed most in my internship at Red Hat is that, my users were literally down the hall and I can always meet and emphatize  with them. I really enjoyed the informal conversations I had with them. Having such relaxed conservations enabled them to speak freely about their problems and pain points. Well, who doesn't like the company of honest people!
