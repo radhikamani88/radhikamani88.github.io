@@ -2,7 +2,7 @@ include common_head.jade
 include common_banner.jade
 include common_navbar.jade
 
-- var pageTitle = "Bodhi - Fedora update management portal"
+- var pageTitle = "Bodhi"
 
 doctype html
 
@@ -16,7 +16,7 @@ html(lang="en")
 		"May'16 - Aug'16",
 		"img/origin_banner_resized_3.png"
 	)
-	+navbar_mixin(pageTitle, [["role","Role"], ["challenge","Challenge"], ["research", "Research"], ["brainstorming", "Brainstorming"], ["design", "Final design"], ["takeaway","Takeaways"]])
+	+navbar_mixin(pageTitle, [["role","Role"], ["challenge","Challenge"], ["research", "Research"], ["brainstorming", "Brainstorming and Surveys"], ["design", "Final design"], ["takeaway","Takeaways"]])
 
 	.container
 		.row
@@ -31,7 +31,9 @@ html(lang="en")
 
 					h2(id="challenge") The challenge
 
-					p Bodhi is a modular web-based system where red hat's developers, testers and the open source community users collaborate on testing, voting and updating packages. Upon taking up this project, I quickly wanted to get a sense of the problem space before I plan my approach to solving the problems. With that in mind, I quickly had some discussions with some Bodhi users who were already present that day on that floor and nearby floors. Here are a few things I heard:
+					p Bodhi is a modular web-based system where red hat's developers, testers and the open source community users collaborate on testing, voting and updating packages. 
+					p Upon taking up this project, I quickly wanted to get a sense of the problem space before I plan my approach to solving the problems. With that in mind, I quickly had some discussions with some Bodhi users who were already present that day on that floor and nearby floors. 
+					p Here are a few things I heard:
 
 					blockquote
 						p I use bodhi everyday, but I often get confused by what package to work on
@@ -51,14 +53,13 @@ html(lang="en")
 						li <strong>Packagers and Developers</strong> working for Redhat who sometimes use the web UI as well as the command line interface.
 						li <strong>Open-source contributors</strong> who were not employees of Redhat
 
-					h3 The Contextual Inquiry
-					p Then, I interviewed testers, developers, packagers and release engineers and observed their day to day process while they are in office. This way it helped me understand their process flow better and note down any problems they were facing. Based on the interviews, I built an affinity wall to understand their concerns and find any potential use cases for redesign.
+					h2 The Contextual Inquiry
+					p I interviewed testers, developers, packagers and release engineers and observed their day to day process while they are in office. This way it helped me understand their process flow better and note down any problems they were facing. Based on the interviews, I built an affinity wall to understand their concerns and find any potential use cases for redesign.
 
-					dl
-						dt What about the workflow of remote open-source contributors
-						dd It was hard to interview and observe open source community users as most of them were often in different timezones and spread various the country. However, I was able to interview a few during a open source hackathon event held in our office. This enabled me to observe and see what problems they were facing with the web ui. I included their interview answers in my affinity wall and collated the most important use cases for our redesign below
+					h3 How I studied workflow of remote <br/> open-source contributors
+					p It was hard to interview and observe open source community users as most of them were often in different timezones and spread various the country. However, I was able to interview a few during a open source hackathon event held in our office. This enabled me to observe and see what problems they were facing with the web ui. I included their interview answers in my affinity wall and collated the most important use cases for our redesign below
 
-					h3 Issues identified through user research
+					h3 Results
 
 					p Here is a summary of issues I found through user research grouped by user category.
 
@@ -166,13 +167,77 @@ html(lang="en")
 
 						p I brainstormed multiple flows for comment and website navigation
 
-						h3 Survey for evaluation of alternatives
+	.container-fluid
+		.row
+			.col-md-6
+				+card_no_title("img/w_bodhi/s1.jpg")
+			.col-md-6
+				+card_no_title("img/w_bodhi/s2.jpg")
 
+	.container
+		.row
+			.col-md-12
+				article.nobottompadding
+					section
+						h2 Survey for evaluation of alternatives
+
+						h3 Survey design
+						
 						p Once I brainstormed several solutions, I wanted to gather some data on which alternatives might be better. First, I reviewed my ideas with my mentor. My mentor's response was positive on the ideas. We thought it might be better to gather data from real customers on the ideas that I had. Instead of showing customers with all the alternative solutions that I had, I prepared a survey that included some basic questions to understand the audience and a question each for each of the various tasks for which I had evaluated multiple solutions. For each of them, I provided them a view of the current system as well as my proposed solution and asked them a bunch of questions to help me find out how much they preferred the second solution.
-						p Here is a link to the
+						p Here is a link to the 
 							a(href="https://www.surveymonkey.com/r/XNZ76TT") survey
 						p The 2 tasks for which I gathered data in this survey were the Download widget and the Bugzilla integration. I chose these two only because they were the only new features that I was proposing we add to the website. Because they were new features they would also require additional back-end integration work and quantifying the benefit of these new features would make it easy for management to prioritize the implementation of these features. Below, is a screenshot from the survey.
+						
+	.container-fluid
+		.row
+			.col-md-12.center-block(style="float:none;")
+				+card_no_title("img/w_bodhi/ctotal.png","margin:0 auto;")
 
+	//-
+		.container-fluid
+			style.
+				.c1 {
+					padding: 1rem;
+				}
+			.row
+				.col-md-4.c1
+					.row.c1(style="padding-bottom: 7rem;")
+						+card_no_title1("img/w_bodhi/c1.png")
+					.row.c1
+						+card_no_title1("img/w_bodhi/c2.png")
+				.col-md-4.c1
+					.row.c1(style="padding-bottom: 13rem;")
+						+card_no_title1("img/w_bodhi/c6.png")
+					.row.c1
+						+card_no_title1("img/w_bodhi/c5.png")
+				.col-md-4.c1
+					.row.c1
+						+card_no_title1("img/w_bodhi/c3.png")
+					.row.c1
+						+card_no_title1("img/w_bodhi/c4.png")
+
+	.container
+		.row
+			.col-md-12
+				article.nobottompadding
+					section
+						h3 Survey results
+						
+						p The survey results are publicly viewable 
+							a(href='https://www.surveymonkey.com/results/SM-KF8HNX5F/') here on survey monkey
+							| . Screenshots pasted here for convenience.
+						
+	
+	.container-fluid
+		.row
+			.col-md-12.center-block(style="float:none;")
+				+card_no_title("img/w_bodhi/sstotal.png","margin:0 auto;")
+	
+	.container
+		.row
+			.col-md-12
+				article.nobottompadding
+					section
 						h2(id="design") Final design
 
 						p Based on the positive feedback from the survey and from my mentor on the design proposals presented as low-fi designs, I went forward and made the hi-fidelity designs for the same. Redhat had recently come up with a new style guide called <a href="http://www.patternfly.org">Patternfly</a> for enterprise applications. Since I was re-designing Bodhi from the ground up I decided to use this new style guide. Since, CSS files were already available for patternfly, it turned out to be easier to build the hi-fidelity prototype by just coding it using the <a href="https://github.com/patternfly/patternfly">Patternfly library</a>
@@ -196,7 +261,7 @@ html(lang="en")
 				+card_no_title("img/w_bodhi/f_stats.png")
 			.col-md-4
 				h3.h3tufte 
-					strong Statistsics
+					strong Statistics
 				p.ptufte Will have the overall metrics and weekly top testers information
 
 	.container-fluid
