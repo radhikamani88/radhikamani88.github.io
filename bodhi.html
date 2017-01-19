@@ -145,6 +145,23 @@
             <footer>Developer-2, Redhat Inc.</footer>
           </blockquote>
           <p>I got a sense that developers were not too keen on using the web interface and testers had a hard time navigating the web interface. This was especially true when new testers were introduced to the web UI. The challenge was to increase the Web UI engagement amongst the community.</p>
+          <h2>Existing system</h2>
+        </section>
+      </article>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6"><a href="img/w_bodhi/before.png" target="_blank"><img class="img-responsive" src="img/w_bodhi/before.png" title="Click to see enlarged image"/></a>
+      </div>
+      <div class="col-md-6"><a href="img/w_bodhi/oldflow2.png" target="_blank"><img class="img-responsive" src="img/w_bodhi/oldflow2.png" title="Click to see enlarged image"/></a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <article class="nobottompadding">
+        <section>
           <h2 id="research">User research</h2>
           <p>As I sat down to ponder more on the problems being faced by the users, I divided them into 3 main categories for my redesign project.</p>
           <ul>
@@ -192,28 +209,23 @@
         <tbody>
           <tr>
             <td class="r1">
-              <h3 class="h3tufte"><strong>Must have</strong></h3>
+              <h3 class="h3tufte"><strong>Critical</strong></h3>
             </td>
             <td>
               <ol class="ptufte">
-                <li>No download link for the koji (The user was describing it as a drop down menu in case of multiple downloads) and command line download link as well</li>
-                <li>Karma cycle is very confusing as he could not figure out the functionality of the untested button.</li>
+                <li>A download link for the koji and CMD download link as well</li>
+                <li>Karma cycle is very confusing; could not figure out the functionality of the untested button.</li>
                 <li>No direct contact link to the submitter.</li>
-                <li>Updates to the bugzilla.</li>
+                <li>Show bugs related to an update</li>
               </ol>
             </td>
             <td class="r1">
-              <ol class="ptufte">
-                <li>Some ideas about the "New override" It will be interesting to be able to submit more than 1 package at a time as we can for "new update".</li>
-                <li>There is a need to have a check-box for being able to "push to stable" various package in a single action</li>
-                <li>It could also be nice to be able to change the content like "number of lines" in list or the "time in testing"</li>
-              </ol>
+              <ol class="ptufte"></ol>
             </td>
             <td class="r1">
               <ol class="ptufte">
                 <li>Website navigation is very confusing</li>
                 <li>They often get confused about the types of packages available for testing</li>
-                <li>Further, I figured that developers actually had little idea about the Bodhi update system and often never used the web ui interface. I had to refocus the entire redesign on testers as our major target audience. They were the ones frequently using the update system daily and had problems navigating the page</li>
               </ol>
             </td>
           </tr>
@@ -229,10 +241,10 @@
             </td>
             <td class="r1">
               <ol class="ptufte">
-                <li>The content under these tabs can be changed as follows :</li>
-                <li>The "status" can have some more refined content which can be filtered according to "status since"</li>
-                <li>Similarly "testing" can be filtered according to "testing for 7 days" or "Stable for 2 months"</li>
-                <li>This would allow the user to have more accurate information about the current state of the process</li>
+                <li>To be able to submit more than 1 package at a time as we can for "new update".</li>
+                <li>Ability to mark an update as stable in single action</li>
+                <li>Ability to edit information regarding an Update. e.g. Number of lines or Time in testing			</li>
+                <li>To have more accurate information about the current state of the process, the "status" can have some more refined content which can be filtered according to "status since" and "testing" can be filtered according to "testing for 7 days" or "Stable for 2 months"</li>
               </ol>
             </td>
             <td class="r1">
@@ -248,6 +260,7 @@
       <div class="column-md-12">
         <article class="nobottompadding">
           <section>
+            <p>Overall, I figured that developers actually had little idea about the Bodhi update system and often never used the web ui interface. I had to refocus the entire redesign on testers as our major target audience. They were the ones frequently using the update system daily and had problems navigating the page</p>
             <h3>Don't forget the heuristic evaluation!</h3>
             <p>Even after collecting all that data from user interviews, there were certain pages for which I did not have enough information. So, I conducted a heuristics evaluation of the website to see what all other problems that website might have and zeroed on the following problems in the UI. </p>
             <p>Here's a summary of the issues.</p>
@@ -262,13 +275,13 @@
               <dd>Further, having to search for fedora wiki pages for documentation was both time consuming and cumbersome.</dd>
             </dl>
             <h2 id="brainstorming">Personas</h2>
-            <p>Equipped with the data collected from user research and heuristic evaluation, I conducted personas to help me guide the design stage.</p>
-            <h3>Micah</h3>
+            <p>Equipped with the data collected from user research and heuristic evaluation, I created personas to help me guide the design stage.</p>
+            <h3>Micah</h3><img src="img/w_bodhi/p3.png">
             <p>Micah is a red hat tester who has been working on packages and giving karma through the update system. His typical day involved meeting with the developers about the packages and often updating the status of these packages in Bodhi. In between he attends the stand up meeting about his work in progress and finishes up the technical documentation required for the package.</p>
-            <h3>Nancy</h3>
-            <p>Nancy has been with redhat for many years and often enjoyed working on fedora release cycle code. She is a passionate about open source software and has been contributing to various open source projects online. Her typical day at red hat includes (kunjoos fill in here , I don’t know what a coder day looks like)</p>
-            <h3>James</h3>
-            <p>James is currently a senior at the University of Boston majoring in computer science. He wants to contribute to the open source community and is often seen checking out the open source projects to contribute. He wants to prepare for his interviews so feels contributing to real projects would help him understand the fundamentals better. He just read about the bodhi project and starts checking the web ui for packages to test.</p>
+            <h3>Nancy</h3><img src="img/w_bodhi/p2.png">
+            <p>Nancy has been with redhat for many years and often enjoyed working on fedora release cycle code. She is a passionate about open source software and has been contributing to various open source projects online. Her typical day at red hat includes a daily standup in the morning, followed by some work on her project and then some meetings in the afternoon with stakeholders, designers or testers.</p>
+            <h3>James</h3><img src="img/w_bodhi/p1.png">
+            <p>James is currently a senior at the University of Boston majoring in computer science. He wants to contribute to the open source community and is often seen checking out the open source projects to contribute. He wants to prepare for his interviews so feels contributing to real projects would help him understand the fundamentals better. He just read about the bodhi project and starts checking the web UI for packages to test.</p>
             <h2>Brainstorming multiple solutions</h2>
             <p>I brainstormed multiple flows for comment and website navigation</p>
           </section>
@@ -278,12 +291,20 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
-        <div class="card card-elt"><a href="img/w_bodhi/s1.jpg" target="_blank"><img class="img-responsive" src="img/w_bodhi/s1.jpg" title="Click to see enlarged image"/></a>
+      <div class="col-md-4">
+        <div class="card2"><a href="img/w_bodhi/s1.jpg" target="_blank"><img class="img-responsive" src="img/w_bodhi/s1.jpg" title="Click to see enlarged image"/></a>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card card-elt"><a href="img/w_bodhi/s2.jpg" target="_blank"><img class="img-responsive" src="img/w_bodhi/s2.jpg" title="Click to see enlarged image"/></a>
+      <div class="col-md-4">
+        <div class="card2"><a href="img/w_bodhi/s2.jpg" target="_blank"><img class="img-responsive" src="img/w_bodhi/s2.jpg" title="Click to see enlarged image"/></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card2"><a href="img/w_bodhi/n1.png" target="_blank"><img class="img-responsive" src="img/w_bodhi/n1.png" title="Click to see enlarged image"/></a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card2"><a href="img/w_bodhi/n2.png" target="_blank"><img class="img-responsive" src="img/w_bodhi/n2.png" title="Click to see enlarged image"/></a>
         </div>
       </div>
     </div>
@@ -336,10 +357,183 @@
       <div class="col-md-12">
         <article class="nobottompadding">
           <section>
+            <h3>Information architecture &mdash; closed card sorting</h3>
+            <p>To decide the IA of the website, I constructed page elements (nouns) out of the features I was going to include in the re-designing application and invited participants to conduct a closed card sorting session. Participants were encouraged to place these nouns under the 3 categories of Update, Home and Statistics</p>
+            <p>Table below, shows the old and new IA of the website. The "Before" row explains the IA of the existing system. The "After" row is based on the results of the closed card sorting exercise.</p>
+            <p>Nouns are color-coded to indicate what kind of change I introduced to the IA of the website.</p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <style>
+      .sl {
+      	margin:2rem;
+      	// padding:1rem;
+      	font-size: 1rem;
+      	line-height: 2;
+      }
+      .sl2 {
+      	margin-right:1rem;
+      }	
+    </style>
+    <div class="row" style="padding-bottom: 1em">
+      <div class="col-md-12"><span class="label label-default sl sl2">Kept as is</span><span class="label label-warning sl sl2">Moved</span><span class="label label-danger sl sl2">Removed</span><span class="label label-info sl sl2">Improved from</span><span class="label label-primary sl sl2">Improved to</span><span class="label label-success sl sl2">Added</span></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 center-block" style="float:none">
+        <table class="table-bordered table-striped" style="margin: 0 auto">
+          <style>
+            .th1 {						
+            	margin: 1em 1em;
+            }
+          </style>
+          <thead>
+            <tr>
+              <th>
+                <h3 class="h3tufte th1"><strong>&nbsp;</strong></h3>
+              </th>
+              <th> 
+                <h3 class="h3tufte th1"><strong>Home</strong></h3>
+              </th>
+              <th>
+                <h3 class="h3tufte th1"><strong>Update</strong></h3>
+              </th>
+              <th>
+                <h3 class="h3tufte th1"><strong>Masher updates</strong></h3>
+              </th>
+              <th>
+                <h3 class="h3tufte th1"><strong>Statistics									</strong></h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <h3 class="h3tufte th1"><strong>Before</strong></h3>
+              </td>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><span class="label label-warning sl">Top 5 testers</span></td>
+                      <td><span class="label label-danger sl">Update system stream</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="label label-default sl">Critcal path updates</span></td>
+                      <td><span class="label label-default sl">Security updates</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><span class="label label-default sl">Update Overview</span></td>
+                      <td><span class="label label-danger sl">Automated test results</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="label label-info sl">Related bugs w/o comments</span></td>
+                      <td><span class="label label-info sl">Flat comments</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="label label-info sl">Feedback</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><span class="label label-danger sl">Masher updates</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><span class="label label-info sl">Update distribution per release</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3 class="h3tufte th1"><strong>After</strong></h3>
+              </td>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><span class="label label-success sl">Hierarchical update info</span></td>
+                      <td><span class="label label-success sl">Update statistics at each hierarchy level</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="label label-default sl">Critcal path updates</span></td>
+                      <td><span class="label label-default sl">Security updates</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><span class="label label-default sl">Update Overview</span></td>
+                      <td><span class="label label-success sl">Builds included in update</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="label label-primary sl">Related bugs with comments</span></td>
+                      <td><span class="label label-primary sl">Nested comments</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="label label-primary sl">update rating</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td>
+                <x></x>
+              </td>
+              <td>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><span class="label label-warning sl">Top 5 testers</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <article class="nobottompadding">
+          <section>
+            <h3>Interaction map						</h3>
+          </section>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <article class="nobottompadding">
+          <section>
             <h2 id="design">Final design</h2>
             <p>Based on the positive feedback from the survey and from my mentor on the design proposals presented as low-fi designs, I went forward and made the hi-fidelity designs for the same. Redhat had recently come up with a new style guide called <a href="http://www.patternfly.org">Patternfly</a> for enterprise applications. Since I was re-designing Bodhi from the ground up I decided to use this new style guide. Since, CSS files were already available for patternfly, it turned out to be easier to build the hi-fidelity prototype by just coding it using the <a href="https://github.com/patternfly/patternfly">Patternfly library</a></p>
-            <h3>Information architecture</h3>
-            <p>For the design of the website, I grouped some of the webpage elements into the headers given below. I basically grouped them into Home page, Updates page and Statistics page</p>
           </section>
         </article>
       </div>
@@ -386,8 +580,6 @@
       <div class="col-md-12">
         <article class="nobottompadding">
           <section>
-            <h3>Interaction map</h3>
-            <h3>Task flows</h3>
             <h2 id="takeaway">What I learned from this experience</h2>
             <p>I felt that employees suffer more because most enterprise applications do not provide engaging user experience. This is because of the fact that most of the decisions taken by the software managers are primarily concerned with stability, security and scalability and not usability. Thus, it is not an easy goal to achieve and more often than not there are lot of that a lot of esoteric constraints when designing an enterprise application. So,sometimes it becomes very hard  to resist becoming a pushover designer. However, that itself can be taken as a good challenge.</p>
             <p>What I enjoyed most in my internship at Red Hat is that, my users were literally down the hall and I can always meet and emphatize  with them. I really enjoyed the informal conversations I had with them. Having such relaxed conservations enabled them to speak freely about their problems and pain points. Well, who doesn't like the company of honest people!</p>
